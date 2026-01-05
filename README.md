@@ -20,9 +20,9 @@ A static HTML demo archive showcasing the output of [Redd-Archiver v1.0.0](https
 
 | Community | Platform | Posts | Comments | Users | Last Archived |
 |-----------|----------|-------|----------|-------|---------------|
-| **[v/programming](v/programming/)** | Voat | 4,003 | 17,719 | 4,875 | April 2020 |
-| **[r/RedditCensors](r/RedditCensors/)** | Reddit | 1,998 | 40,188 | 9,915 | February 2024 |
-| **[g/technology](g/technology/)** | Ruqqus | 3,591 | 7,812 | 1,187 | October 2021 |
+| **[v/programming](https://online-archives.github.io/redd-archiver-example/v/programming/index.html)** | Voat | 4,003 | 17,719 | 4,875 | April 2020 |
+| **[r/RedditCensors](https://online-archives.github.io/redd-archiver-example/r/RedditCensors/index.html)** | Reddit | 1,998 | 40,188 | 9,915 | February 2024 |
+| **[g/technology](https://online-archives.github.io/redd-archiver-example/g/technology/index.html)** | Ruqqus | 3,591 | 7,812 | 1,187 | October 2021 |
 
 ## Features
 
