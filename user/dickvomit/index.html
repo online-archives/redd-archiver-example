@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="View archived post by u/dickvomit in v/programming">
+<meta name="keywords" content="reddit, user, posts, archive, dickvomit, programming">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/user/dickvomit/">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="u/dickvomit - Archived Voat Post in v/programming">
+<meta property="og:description" content="View archived post by u/dickvomit in v/programming">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/user/dickvomit/">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="u/dickvomit - Archived Voat Post in v/programming">
+<meta name="twitter:description" content="View archived post by u/dickvomit in v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../static/site.webmanifest">
+
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../static/css/redd-archiver-universal.css">
+
+
+    <title>u/dickvomit - Archived Voat Post in v/programming</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="./">u/dickvomit</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html">home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="user-profile-header pt-3">
+  <h2>u/dickvomit</h2>
+  <p class="lead">
+    0 posts ·
+    1 comment ·
+    1 total
+  </p>
+  <p class="text-muted">Active in: v/programming (1)</p>
+</div>
+
+<ul class="pagination pagination-sm mt-3">
+  <li class="page-item first-page disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item skip-back disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item prev-page disabled"><a class="page-link" href="index-0.html" tabindex="-1">&lsaquo;</a></li>
+
+
+      <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+
+  <li class="page-item next-page disabled"><a class="page-link" href="index-1.html" tabindex="-1">&rsaquo;</a></li>
+
+  <li class="page-item skip-forward disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;</a></li>
+
+  <li class="page-item last-page disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;&rsaquo;</a></li>
+</ul>
+
+
+<div class="links">
+
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/1116456#5548132">Between &#34;async event based&#34; and &#34;multi-threading&#34; programming models, which one gives better performance and why?</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Systems programmer here who's worked on both for more than a decade, I'll try my best to describe the tradeoffs I've learned and used, though my background is entirely C and C++.</p>
+<p>First, &quot;async event based&quot; is common and necessary in threaded environments, so lets call the two competing solutions &quot;thread based&quot; and &quot;event loop&quot; based. Event loop is I think what you are really referring to, where a single event is processed from beginning to end, where flow is explicitly yielded back to a dispatcher for processing of another event.</p>
+<p>Second, lets restrict this to single-core programming for a second. In any multicore environment you obviously need either multithreading or multiprocess design to get full utilization of your CPU. When &quot;possible&quot;, as in your threads don't really need to be sharing data, I advise multiprocess over multithread but that's for simplicity and safety. But when thinking about each single core in that multicore solution...</p>
+<p>Event loop programming is way faster (and actually easier to write) when your items of work (the things to be accomplished by the event) are all relatively the same length in terms of execution time AND have few IO operations. You don't need to worry about concurrency/races and there's no context switching. The moment either of those two conditions are violated, and threading starts becoming the better solution.</p>
+<p>In a single threaded environment, IO means either blocking (shitty for perf) or making that IO a new event, and hand-writing state to store to continue processing the overall event later. Its a hand-optimized version of threading. You can do it and the payoffs are large, but as the complexity of each item of work grows, or the amount of IO you have to do grows, you will be writing more and more state structures and the efficiency of your coding (not the code execution) just keeps slowing down. In its worst case, you may have non-IO operations that are just really CPU intensive that make you save state as well to just avoid holding up everything else and creating large latencies. I remember having to write state off for a large signal processing routine that ground the CPU for seconds, gritting my teeth wishing we had threading for that particular project.</p>
+<p>So threading becomes increasingly tantalizing as those items of work grow in complexity. When you have lots of IO in one item of work, or some items of work take way longer than others, you probably want to separate those off into threads. When you find items of work that are similar in computational size and without vast amounts of IO, put those into state machines / event-loops.</p>
+<p>The two can even co-exist in the same project, with some threads hosting event loops, and others dedicated to special long running tasks.</p></div>
+    <a href="../../v/programming/comments/1116456#5548132">
+        <span class="badge badge-success-bright"
+              title="Comment score: 5">
+            5
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2016-06-18 05:53:56 UTC">18 Jun 2016 05:53</span>
+        <span ><a class="user-link" href="../../user/dickvomit/">u/dickvomit</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div></div>
+
+<ul class="pagination pagination-sm mt-3">
+  <li class="page-item first-page disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item skip-back disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item prev-page disabled"><a class="page-link" href="index-0.html" tabindex="-1">&lsaquo;</a></li>
+
+
+      <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+
+  <li class="page-item next-page disabled"><a class="page-link" href="index-1.html" tabindex="-1">&rsaquo;</a></li>
+
+  <li class="page-item skip-forward disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;</a></li>
+
+  <li class="page-item last-page disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;&rsaquo;</a></li>
+</ul>
+
+    </main>
+
+<footer class="container-fluid">
+  <p class="small mb-0">
+    archive has 9,592 posts and 65,719 comments.
+    <a href="https://github.com/19-84/redd-archiver">source code</a>.
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

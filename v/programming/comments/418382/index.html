@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Hi, I started learning C++ earlier this week. Today I learned about variable types such as integers and floats, but one part the instructor... - v/programming">
+<meta name="keywords" content="programming, integer, int, quot, endl, code, cout, pre, output, bytes">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/418382.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Help for C++ beginner? Cannot declare long int">
+<meta property="og:description" content="Hi, I started learning C++ earlier this week. Today I learned about variable types such as integers and floats, but one part the instructor... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/418382.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Help for C++ beginner? Cannot declare long int">
+<meta name="twitter:description" content="Hi, I started learning C++ earlier this week. Today I learned about variable types such as integers and floats, but one part the instructor... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Help for C++ beginner? Cannot declare long int",
+  "author": {
+    "@type": "Person",
+    "name": "ROCKduhHOUSE"
+  },
+  "datePublished": "2015-08-16T06:22:32Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 3
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "Hi, I started learning C++ earlier this week. Today I learned about variable types such as integers and floats, but one part the instructor did that I couldn't is make a long int. I am using Code::Blocks with GNU GCC Compiler, whereas my instructor is using Eclipse with MinGW if I am not mistaken. Declaring a long int didn't seem to change the size of the numbers I could input. I even used tips he gave to show whether it was working or not. Here is the code: Edit: For clarification, I write..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Help for C++ beginner? Cannot declare long int</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_418382">
+  <h3 class="title">
+      Help for C++ beginner? Cannot declare long int
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2015-08-16 06:22:32 UTC">16 Aug 2015 06:22</span>
+    by <span ><a class="user-link" href="../../../../user/ROCKduhHOUSE/">u/ROCKduhHOUSE</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>Hi, I started learning C++ earlier this week. Today I learned about variable types such as integers and floats, but one part the instructor did that I couldn't is make a long int. I am using Code::Blocks with GNU GCC Compiler, whereas my instructor is using Eclipse with MinGW if I am not mistaken.</p>
+<p>Declaring a long int didn't seem to change the size of the numbers I could input. I even used tips he gave to show whether it was working or not. Here is the code: </p>
+<p>Edit: For clarification, I write comments above the lines that I am referring to except for the last comment.</p>
+<pre><code>#include &lt;iostream&gt;
+//allows use of INT_MAX and INT_MIN
+#include &lt;limits.h&gt;
+using namespace std;
+int main()
+{
+    //Declare integer variable &quot;value&quot;
+    int value = 47283;
+    cout &lt;&lt; value &lt;&lt; endl;
+    //Should output the max value an integer can hold
+    cout &lt;&lt; &quot;Maximum integer value: &quot; &lt;&lt; INT_MAX &lt;&lt; endl;
+    //Should output the min value an integer can hold
+    cout &lt;&lt; &quot;Minimum integer value: &quot; &lt;&lt; INT_MIN &lt;&lt; endl;
+    //Is supposed to declare a long integer. I gave it a value 1 above INT_MAX for testing purposes.
+    long int absurdValue = 2147483648;
+    cout &lt;&lt; endl &lt;&lt; &quot;Longer integer: &quot; &lt;&lt; absurdValue &lt;&lt; endl;
+    //Should tell the number of bytes of memory used by an integer.
+    cout &lt;&lt; &quot;Size of integer: &quot; &lt;&lt; sizeof(int) &lt;&lt; endl;
+    //Should tell the number of bytes of memory used by a long integer.
+    cout &lt;&lt; &quot;Size of long int: &quot; &lt;&lt; sizeof(long int) &lt;&lt; endl;
+    //Both output the same number of bytes?
+    return 0;
+}
+</code></pre>
+<p>And here's what it output:</p>
+<pre><code>47283
+Maximum integer value: 2147483647
+Minimum integer value: -2147483648
+Longer integer: -2147483648
+Size of integer: 4
+Size of long int: 4
+</code></pre>
+<p>Notice how even when I choose a value just one above the max for a regular integer, it goes negative as though I had declared a regular integer instead of a long int. Also notice that when I use sizeof(long int) and sizeof(int), they both return 4, meaning 4 bytes. Am I using incorrect syntax or declarations for my compiler? </p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>3 comments</h4>
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

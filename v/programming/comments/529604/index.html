@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="&#39;goto&#39; in Python by re-writing the bytecode - Discussion in v/programming with 10 comments">
+<meta name="keywords" content="programming, goto, python, writing, bytecode">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/529604.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: &#39;goto&#39; in Python by re-writing the bytecode">
+<meta property="og:description" content="&#39;goto&#39; in Python by re-writing the bytecode - Discussion in v/programming with 10 comments">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/529604.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: &#39;goto&#39; in Python by re-writing the bytecode">
+<meta name="twitter:description" content="&#39;goto&#39; in Python by re-writing the bytecode - Discussion in v/programming with 10 comments">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "'goto' in Python by re-writing the bytecode",
+  "author": {
+    "@type": "Person",
+    "name": "svipbo"
+  },
+  "datePublished": "2015-09-21T11:03:40Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 5
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "url": "https://github.com/snoack/python-goto",
+  "mentions": {
+    "@type": "WebPage",
+    "url": "https://github.com/snoack/python-goto"
+  }
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: &#39;goto&#39; in Python by re-writing the bytecode</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_529604">
+  <h3 class="title">
+      <a href="https://github.com/snoack/python-goto" title="https://github.com/snoack/python-goto">&#39;goto&#39; in Python by re-writing the bytecode</a>
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 13">13</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2015-09-21 11:03:40 UTC">21 Sep 2015 11:03</span>
+    by <span ><a class="user-link" href="../../../../user/svipbo/">u/svipbo</a>
+</span>
+    
+    
+    <span title="https://github.com/snoack/python-goto"></span>
+  </p>
+</div>
+
+<div class="comments">
+  <h4>10 comments</h4>
+        <details class="comment "
+         id="comment-voat_2526669"
+         data-depth="0"
+         data-id="voat_2526669"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 5">
+            5
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/0x7a69/">u/0x7a69</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-09-21 14:11:34 UTC">21 Sep 2015 14:11</span>
+        </span>
+    </summary>
+    <div class="md"><p>Before the peanut gallery starts to come down on this guy, you have to understand why goto was so problematic to begin with. The kneejerk response is &quot;Spaghetti code!&quot;, and I applaud you at being able to parrot, however the actual reason has more meat to it.</p>
+<p>Way back before the invention of context based returning, you would have to write a bunch of additional code at the end of a block of code in able to go back where you came from. So if you wanted to reuse a code block, you would have to set a global variable (because originally you couldn't pass one) and once you got there, you would have to use that variable to get back, so the best reusable code would invariably end up looking like spaghetti to the untrained eye.  These days with functions, classes, inheritance, switches, exceptions returns and whatnot this is no longer an issue; You can write code without generating spaghetti, in fact most languages use it in such limited way that it is impossible. Its use is no more dangerous than using a return in the wrong place.</p>
+<p>*edit - &quot;meat more&quot;, I just woke up.</p></div>
+            <details class="comment "
+         id="comment-voat_2527288"
+         data-depth="1"
+         data-id="voat_2527288"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/svipbo/">u/svipbo</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-09-21 15:28:30 UTC">21 Sep 2015 15:28</span>
+        </span>
+    </summary>
+    <div class="md"><p>Surely all you need is a call stack to implement functions that can be called more than once at a single time?</p>
+<blockquote>
+<p>invariably end up looking like spaghetti to the untrained eye</p>
+</blockquote>
+<p>IIRC the function call procedure in the machine language used by Donald Knuth in his Art of Computer Programming books (MIX) modified the jump instruction at the end of the function to jump back to the function call site.</p>
+<p>I guess early compilers for FORTRAN that didn't allow recursion must have done something similar.</p></div>
+            <details class="comment "
+         id="comment-voat_2528278"
+         data-depth="2"
+         data-id="voat_2528278"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/0x7a69/">u/0x7a69</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-09-21 16:50:07 UTC">21 Sep 2015 16:50</span>
+        </span>
+    </summary>
+    <div class="md"><p>My earliest machine only had 12k to work with, and a lot of that was wasted by the programming language if it was interpreted, so I have to say that this was not always the case to make a call stack with low memory machines. Also consider that many programs weren't even threaded and people were still using machines that couldn't multiprocess for years</p></div>
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_2529511"
+         data-depth="1"
+         data-id="voat_2529511"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/TAz00/">u/TAz00</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-09-21 18:24:08 UTC">21 Sep 2015 18:24</span>
+        </span>
+    </summary>
+    <div class="md"><p>hehe, has meat more</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_2525956"
+         data-depth="0"
+         data-id="voat_2525956"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 3">
+            3
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/PolishPandaBear/">u/PolishPandaBear</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-09-21 11:49:00 UTC">21 Sep 2015 11:49</span>
+        </span>
+    </summary>
+    <div class="md"><p>Yay! Finally an easy way to write spaghetti code in Python!</p></div>
+            <details class="comment "
+         id="comment-voat_2526083"
+         data-depth="1"
+         data-id="voat_2526083"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/TAz00/">u/TAz00</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-09-21 12:21:45 UTC">21 Sep 2015 12:21</span>
+        </span>
+    </summary>
+    <div class="md"><p>Asuming the hard way is to use deprecated and obscure libraries instead?</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_2528702"
+         data-depth="0"
+         data-id="voat_2528702"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Master_Admin/">u/Master_Admin</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-09-21 17:22:25 UTC">21 Sep 2015 17:22</span>
+        </span>
+    </summary>
+    <div class="md"><p>Why would you want to use goto anyway?</p></div>
+            <details class="comment "
+         id="comment-voat_2546244"
+         data-depth="1"
+         data-id="voat_2546244"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/svipbo/">u/svipbo</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-09-22 20:13:25 UTC">22 Sep 2015 20:13</span>
+        </span>
+    </summary>
+    <div class="md"><p>In case that wasn't a rhetorical question, constructs using goto can be equivalent to a tail-recursive function call, and can also be used to simulate a return from a function, and even a return from multiple functions, as with <code>setjmp</code> or exception handling. Usually you wouldn't need this, but it can be useful in a language without coroutines, where you maintain what would be a separate call stack as an explicit data structure. It's also useful in languages without continuations for implementing backtracking algorithms, where you want your program to, in a sense, go back in time. If you're interested in exploring this subject, read Donald Knuth's paper &quot;Structured Programming with Goto Statements&quot;, and look into.the Lambda Papers by Steele and Sussman, for example &quot;Lambda the Ultimate GOTO&quot;.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_2531653"
+         data-depth="0"
+         data-id="voat_2531653"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/multidan/">u/multidan</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-09-21 21:09:23 UTC">21 Sep 2015 21:09</span>
+        </span>
+    </summary>
+    <div class="md"><p>That icon though.</p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

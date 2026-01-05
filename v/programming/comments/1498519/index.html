@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="The Lost Art of C Structure Packing - Discussion in v/programming with 5 comments">
+<meta name="keywords" content="programming, art, structure, packing">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1498519.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: The Lost Art of C Structure Packing">
+<meta property="og:description" content="The Lost Art of C Structure Packing - Discussion in v/programming with 5 comments">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1498519.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: The Lost Art of C Structure Packing">
+<meta name="twitter:description" content="The Lost Art of C Structure Packing - Discussion in v/programming with 5 comments">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "The Lost Art of C Structure Packing",
+  "author": {
+    "@type": "Person",
+    "name": "GrislyAtoms"
+  },
+  "datePublished": "2016-12-17T23:25:49Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 5
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "url": "http://www.catb.org/esr/structure-packing/",
+  "mentions": {
+    "@type": "WebPage",
+    "url": "http://www.catb.org/esr/structure-packing/"
+  }
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: The Lost Art of C Structure Packing</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_1498519">
+  <h3 class="title">
+      <a href="http://www.catb.org/esr/structure-packing/" title="http://www.catb.org/esr/structure-packing/">The Lost Art of C Structure Packing</a>
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 16">16</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2016-12-17 23:25:49 UTC">17 Dec 2016 23:25</span>
+    by <span ><a class="user-link" href="../../../../user/GrislyAtoms/">u/GrislyAtoms</a>
+</span>
+    
+    
+    <span title="http://www.catb.org/esr/structure-packing/"></span>
+  </p>
+</div>
+
+<div class="comments">
+  <h4>5 comments</h4>
+        <details class="comment "
+         id="comment-voat_7277230"
+         data-depth="0"
+         data-id="voat_7277230"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 4">
+            4
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/rwbj/">u/rwbj</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-12-18 05:42:46 UTC">18 Dec 2016 05:42</span>
+        </span>
+    </summary>
+    <div class="md"><p>Is there any compiler that doesn't take care of this? I wrote a C compiler myself (for a compiler class years ago) and one of the specs there was optimized type alignment which is pretty straight forward on a compiler level. I think knowledge of this would be relatively important for somebody writing a low level compiler, but doing this for software in general seems like it's going to be wasting lots of time and best and decreased performance at worst. And of course you need to rethink all your assumptions when you want to deploy on a different architecture. Nasty business.</p>
+<p>Something for instance I was surprised to discover is that in some cases esoteric bit hackery for various mathematical operations ends up with a worse performance than doing things 'naively'. I have no clue why or how this is but I assume it's the compiler taking advantage of those 3 and 4 letter acronyms for hardware level optimizations that I've lost track of after SIMD that might do better at optimizing 'normal' code, yet struggle with 'optimized' code.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_7352829"
+         data-depth="0"
+         data-id="voat_7352829"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/MaxDemian/">u/MaxDemian</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-12-24 03:18:50 UTC">24 Dec 2016 03:18</span>
+        </span>
+    </summary>
+    <div class="md"><p>Fun, but basically irrelevant information in 2016 where optimizing compilers are MUCH smarter than people at how to do this stuff. </p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

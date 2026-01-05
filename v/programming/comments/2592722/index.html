@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Logging should never be used as a debugging tool for your code. Yes you know who you are: Those that logs useless stack traces when they... - v/programming">
+<meta name="keywords" content="programming, code, logging, customers, log, failed, company, debugging, tool, purpose">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/2592722.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Logging should never be used as a debugging tool for your code.">
+<meta property="og:description" content="Logging should never be used as a debugging tool for your code. Yes you know who you are: Those that logs useless stack traces when they... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/2592722.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Logging should never be used as a debugging tool for your code.">
+<meta name="twitter:description" content="Logging should never be used as a debugging tool for your code. Yes you know who you are: Those that logs useless stack traces when they... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Logging should never be used as a debugging tool for your code.",
+  "author": {
+    "@type": "Person",
+    "name": "roznak"
+  },
+  "datePublished": "2018-06-14T21:30:55Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 4
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "Logging should never be used as a debugging tool for your code. Yes you know who you are: Those that logs useless stack traces when they get this exception. It is not the purpose of your log file to show you how your code functions. You code should make that clear in the code and not through logging. If the only way to understand your code us using a log file then your design is wrong. The purpose of log files is to guide the none-developer IT service team and testers to what the program is..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Logging should never be used as a debugging tool for your code.</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_2592722">
+  <h3 class="title">
+      Logging should never be used as a debugging tool for your code.
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2018-06-14 21:30:55 UTC">14 Jun 2018 21:30</span>
+    by <span ><a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>Logging should never be used as a debugging tool for your code.</p>
+<p>Yes you know who you are: Those that logs useless stack traces when they get this exception.</p>
+<p>It is not the purpose of your log file to show you how your code functions. You code should make that clear in the code and not through logging. If the only way to understand your code us using a log file then your design is wrong.</p>
+<p>The purpose of log files is to guide the none-developer IT service team and testers to what the program is doing so they don't need to contact you to fix the issue. Even when you have long gone and the company lost the source code, the log files should be easy enough to read so an analyst can reconstruct the program.</p>
+<p>It is harder than you think it is. You probably need to redesign your code in such a way that methods returns useful information that can be used for logging and normal functionality.</p>
+<p>In addition tell the logging what you are going to do next. </p>
+<p>Rough example to get the idea.</p>
+<pre><code>10:30:40  - Retrieving list of customers for company 'WYZ'
+10.30:41  - 100 customers retrieved.
+10:30:42  - Verifying the list if we have corrupt date
+10:30;42  - 2 instances of corrupt data found and removed
+10:30:42 - emailing  98 customers for company 'WYZ'
+10:30:45 - 97 customers successfully emailed, 2 failed.
+10;30:45 -     - Customer 'abbbcc@hotmal.com' failed to deliver
+10;30:45 -     - Customer 'abbbcc122@Live.com' failed to deliver
+10:30:45 - Updating database for 97 customers that succeeded and 2 failed.
+</code></pre>
+<p>People share your experiences! :-)</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>8 comments</h4>
+        <details class="comment "
+         id="comment-voat_13034501"
+         data-depth="0"
+         data-id="voat_13034501"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/MrBoneCrusher/">u/MrBoneCrusher</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-06-14 22:39:53 UTC">14 Jun 2018 22:39</span>
+        </span>
+    </summary>
+    <div class="md"><p>Completely retarded. No, logging shouldn't be your <em>first</em> line of debugging, but when a piece of software craps out on a customer's computer then logs are <em>essential</em> to understanding the problem. Have you ever even had a real development job?</p></div>
+            <details class="comment "
+         id="comment-voat_13039609"
+         data-depth="1"
+         data-id="voat_13039609"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2018-06-15 17:32:48 UTC">15 Jun 2018 17:32</span>
+        </span>
+    </summary>
+    <div class="md"><p>Logs should be the <strong>last</strong> resource to find the cause. Your job as a developer is to create good code. You should test every possibility <strong>before</strong> you deploy it. </p>
+<p>The interesting thing is when you develop your code in such a way that it makes logs very readable, it actually helps you developing better products and way easier to test. On top of that your development will speed up making you even a better developer.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_13035381"
+         data-depth="0"
+         data-id="voat_13035381"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/PointsOutIdiots/">u/PointsOutIdiots</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-06-15 00:43:56 UTC">15 Jun 2018 00:43</span>
+        </span>
+    </summary>
+    <div class="md"><p>You're an idiot.</p></div>
+            <details class="comment "
+         id="comment-voat_13036604"
+         data-depth="1"
+         data-id="voat_13036604"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/MrBoneCrusher/">u/MrBoneCrusher</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-06-15 03:46:20 UTC">15 Jun 2018 03:46</span>
+        </span>
+    </summary>
+    <div class="md"><p>I don't get why this dude thinks he can essentially hijack <a href="https://voat.co/v/programming">/v/programming</a> and treat it like his blog and post shitty programming advice.</p></div>
+            <details class="comment "
+         id="comment-voat_13040607"
+         data-depth="2"
+         data-id="voat_13040607"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2018-06-15 19:47:48 UTC">15 Jun 2018 19:47</span>
+        </span>
+    </summary>
+    <div class="md"><p>Stop complaining  and discuss <strong>why</strong> it is shitty.</p></div>
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_13037013"
+         data-depth="0"
+         data-id="voat_13037013"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Wrathfullyawakenedww/">u/Wrathfullyawakenedww</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-06-15 04:52:34 UTC">15 Jun 2018 04:52</span>
+        </span>
+    </summary>
+    <div class="md"><p>Beavers might infest your computer... dammit!</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_13037566"
+         data-depth="0"
+         data-id="voat_13037566"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/JosKodify/">u/JosKodify</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-06-15 06:42:36 UTC">15 Jun 2018 06:42</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>The purpose of log files is to guide the none-developer IT service team and testers to what the program is doing so they don't need to contact you to fix the issue. Even when you have long gone and the company lost the source code, the log files should be easy enough to read so an analyst can reconstruct the program.</p>
+</blockquote>
+<p>This is quite contradictory advice. If log files are meant to help non-developers offer program support, logs should not be so verbose that people use it to reconstruct the whole program. </p>
+<p>For people on the support desk, logs should be as focused as possible to help aid a quick response. They have no need for thousands of lines, each describing what action a program took.</p>
+<p>And for reverse-engineering a program, wouldn't it make more sense to interact with the actual program itself? That would be an easier and quicker way than reading the log files for all kinds of situations.</p></div>
+            <details class="comment "
+         id="comment-voat_13040662"
+         data-depth="1"
+         data-id="voat_13040662"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2018-06-15 19:57:09 UTC">15 Jun 2018 19:57</span>
+        </span>
+    </summary>
+    <div class="md"><p>This was just a quick example. </p>
+<blockquote>
+<p>For people on the support desk, logs should be as focused as possible to help aid a quick response.</p>
+</blockquote>
+<pre><code>10:30:40  - Retrieving list of customers for company 'WYZ'
+10.30:41  - 100 customers retrieved.
+10:30:42  - Verifying the list if we have corrupt date
+10:30;42  - 2 instances of corrupt data found and removed
+10:30:42 - emailing  98 customers for company 'WYZ'
+10:30:45 - 95 customers successfully emailed, 3 failed.
+10;30:45 -     - Customer 'abbbcc@hotmal.com' failed to deliver (Will be retried later)
+10;30:45 -            -  (User is over the quota. You can try again later.) 
+10;30:45 -     - Customer 'abbbcc122@Live.com' failed to deliver (Will be retried later)
+10;30:45 -            -  (552 Message size exceeds fixed maximum message size (5000000) )
+10;30:45 -     - Customer 'abbbcc122@doesnotexist.com' failed to deliver (Will not be retried)
+10;30:45 -            -  (550 Invalid recipient )
+10:30:45 - Updating database for 98 customers that succeeded and 3 failed .
+10:30:45 -    -  Customer 'abbbcc122@doesnotexist.com' will be marked as to be verified by customer care.
+</code></pre></div>
+</details>
+
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

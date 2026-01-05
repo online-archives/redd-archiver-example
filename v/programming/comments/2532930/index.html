@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="I have been poking around on the Internet, and have not found any mention of something which should be an obvious idea. As a big fan of... - v/programming">
+<meta name="keywords" content="programming, empty, pre, code, closing, shorthand, name, tag, hello, world">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/2532930.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Thoughts on XML - possible extra shorthand for closing tags">
+<meta property="og:description" content="I have been poking around on the Internet, and have not found any mention of something which should be an obvious idea. As a big fan of... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/2532930.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Thoughts on XML - possible extra shorthand for closing tags">
+<meta name="twitter:description" content="I have been poking around on the Internet, and have not found any mention of something which should be an obvious idea. As a big fan of... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Thoughts on XML - possible extra shorthand for closing tags",
+  "author": {
+    "@type": "Person",
+    "name": "SithEmpire"
+  },
+  "datePublished": "2018-05-06T14:08:48Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 5
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "I have been poking around on the Internet, and have not found any mention of something which should be an obvious idea. As a big fan of XML, I was thinking about one of its main disadvantages of imposing unnecessary extra bytes to markup the elements, and how it could be improved. While shorthand already exists for closing an empty element, it seems to me that any closing tag in general pairs unambiguously with the presently-open element regardless of the opening tag name, therefore it should..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Thoughts on XML - possible extra shorthand for closing tags</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_2532930">
+  <h3 class="title">
+      Thoughts on XML - possible extra shorthand for closing tags
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2018-05-06 14:08:48 UTC">06 May 2018 14:08</span>
+    by <span ><a class="user-link" href="../../../../user/SithEmpire/">u/SithEmpire</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>I have been poking around on the Internet, and have not found any mention of something which should be an obvious idea. As a big fan of XML, I was thinking about one of its main disadvantages of imposing unnecessary extra bytes to markup the elements, and how it could be improved.</p>
+<p>While shorthand already exists for closing an empty element, it seems to me that <em>any</em> closing tag in general pairs unambiguously with the presently-open element regardless of the opening tag name, therefore it should not matter to an XML parser whether the closing tag name actually matches, nor indeed whether any such name need be repeated at all. In practice it would be a good idea to require a match if a name is supplied since the continuity self-test can be useful and increase readability, but I would be all for allowing empty closing tags to work implicitly.</p>
+<p>Existing long-form XML:</p>
+<pre><code>&lt;element&gt;
+    &lt;content&gt;Hello world&lt;/content&gt;
+    &lt;empty&gt;&lt;/empty&gt;
+&lt;/element&gt;
+</code></pre>
+<p>Existing shorthand:</p>
+<pre><code>&lt;element&gt;
+    &lt;content&gt;Hello world&lt;/content&gt;
+    &lt;empty/&gt;
+&lt;/element&gt;
+</code></pre>
+<p>Proposed shorthand extension:</p>
+<pre><code>&lt;element&gt;
+    &lt;content&gt;Hello world&lt;/&gt;
+    &lt;empty/&gt;
+&lt;/&gt;
+</code></pre>
+<p>As best as I can determine, that structure should work. Since element names cannot be the empty string, the &lt;/&gt; notation can only be to close the present open/top element, which <em>should</em> be a valid exercise in DRY.</p>
+<p>Is this:</p>
+<ul>
+<li>A bad idea - in which case, why?</li>
+<li>A good idea - in which case, should I propose it somehow, or just start implementing it in my own parsers for my own XML-based config files?</li>
+</ul></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>7 comments</h4>
+        <details class="comment "
+         id="comment-voat_12687512"
+         data-depth="0"
+         data-id="voat_12687512"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/curomo/">u/curomo</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-05-06 14:16:04 UTC">06 May 2018 14:16</span>
+        </span>
+    </summary>
+    <div class="md"><p>Why not just move to json or yaml? Xml is just a pita.</p></div>
+            <details class="comment "
+         id="comment-voat_12687845"
+         data-depth="1"
+         data-id="voat_12687845"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/SithEmpire/">u/SithEmpire</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2018-05-06 14:55:41 UTC">06 May 2018 14:55</span>
+        </span>
+    </summary>
+    <div class="md"><p>I'm okay with JSON, though this was only about a possible enhancement to XML.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_12687539"
+         data-depth="0"
+         data-id="voat_12687539"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/boredTech/">u/boredTech</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-05-06 14:20:13 UTC">06 May 2018 14:20</span>
+        </span>
+    </summary>
+    <div class="md"><pre><code>&lt;cap&gt;what&lt;red&gt;the&lt;/&gt;hell&lt;/&gt;
+</code></pre>
+<p>is hell red or capitalized?</p></div>
+            <details class="comment "
+         id="comment-voat_12687762"
+         data-depth="1"
+         data-id="voat_12687762"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/SithEmpire/">u/SithEmpire</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2018-05-06 14:47:27 UTC">06 May 2018 14:47</span>
+        </span>
+    </summary>
+    <div class="md"><p>Capitalized - by the spec, tags cannot overlap.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_12697874"
+         data-depth="0"
+         data-id="voat_12697874"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/SquarebobSpongebutt/">u/SquarebobSpongebutt</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-05-07 17:19:47 UTC">07 May 2018 17:19</span>
+        </span>
+    </summary>
+    <div class="md"><p>While I don't think it is necessarily a bad idea, it won't ever happen as it is not backwards compatible.  All parsers currently in use would choke on it and refuse to process as the file would be invalid.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_13129181"
+         data-depth="0"
+         data-id="voat_13129181"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/whambamthankyouham/">u/whambamthankyouham</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-06-26 04:14:25 UTC">26 Jun 2018 04:14</span>
+        </span>
+    </summary>
+    <div class="md"><p>It'd work.  You should be able to get a working model of this using llvm.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_12692880"
+         data-depth="0"
+         data-id="voat_12692880"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-danger"
+              title="Comment score: -1">
+            -1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/SpoonBoy/">u/SpoonBoy</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-05-07 02:07:16 UTC">07 May 2018 02:07</span>
+        </span>
+    </summary>
+    <div class="md"><p><a href="http://imghst.co/94/jsduN8rrF7.jpg">http://imghst.co/94/jsduN8rrF7.jpg</a></p>
+<p>I imagine that right now, you're feeling a bit like Alice. Hmm? Tumbling down the rabbit hole?</p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="I am working on a text synthesis program that reads in text and makes markov chains, but I need to weight the chains. Instead of having... - v/programming">
+<meta name="keywords" content="programming, list, about, trying, sample, lists, text, chains, just, words">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/41542.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: I&#39;m looking for a way to sample lists of probabilities.">
+<meta property="og:description" content="I am working on a text synthesis program that reads in text and makes markov chains, but I need to weight the chains. Instead of having... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/41542.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: I&#39;m looking for a way to sample lists of probabilities.">
+<meta name="twitter:description" content="I am working on a text synthesis program that reads in text and makes markov chains, but I need to weight the chains. Instead of having... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "I'm looking for a way to sample lists of probabilities.",
+  "author": {
+    "@type": "Person",
+    "name": "gunfourhigher"
+  },
+  "datePublished": "2015-01-29T21:41:16Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 3
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "I am working on a text synthesis program that reads in text and makes markov chains, but I need to weight the chains. Instead of having nodes that just have a list of words ex:(cat, dog) after \"a\", I need to have something like (cat:30, dog:70) where if I sample the letter a a hundred times, I get ~30ish cats and ~70ish dogs. I am sure that this problem has been solved efficiently, or at least more so than what I am about to write. I am thinking of having a lists of 100 elements, and having the..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: I&#39;m looking for a way to sample lists of probabilities.</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_41542">
+  <h3 class="title">
+      I&#39;m looking for a way to sample lists of probabilities.
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 7">7</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2015-01-29 21:41:16 UTC">29 Jan 2015 21:41</span>
+    by <span ><a class="user-link" href="../../../../user/gunfourhigher/">u/gunfourhigher</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>I am working on a text synthesis program that reads in text and makes markov chains, but I need to weight the chains. Instead of having nodes that just have a list of words ex:(cat, dog) after &quot;a&quot;, I need to have something like (cat:30, dog:70) where if I sample the letter a a hundred times, I get ~30ish cats and ~70ish dogs.</p>
+<p>I am sure that this problem has been solved efficiently, or at least more so than what I am about to write. I am thinking of having a lists of 100 elements, and having the ratios of dogs to cats match the elements, and sampling the entire list randomly. I could then increase the size of the list later to account for granularity, but since I am going to be dealing with thousands of words, this isnt the best option as far as memory goes.</p>
+<p>I hope someone understands what I'm trying to say!</p>
+<p>It's worth noting that I can write whatever backend to this that I need, I'm not worried about details. I'm not trying to get the code written for me, I just need to know what this is called, and where I can find out more about it. I don't want to appear like someone trying to bamboozle you into doing my homework!</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>6 comments</h4>
+        <details class="comment "
+         id="comment-voat_41309"
+         data-depth="0"
+         data-id="voat_41309"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Atko/">u/Atko</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-01-29 21:55:26 UTC">29 Jan 2015 21:55</span>
+        </span>
+    </summary>
+    <div class="md"><p>This reminds me of a school task I worked on with MapReduce. Perhaps MapReduce might be helpful?</p></div>
+            <details class="comment "
+         id="comment-voat_41328"
+         data-depth="1"
+         data-id="voat_41328"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/gunfourhigher/">u/gunfourhigher</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-01-29 23:24:26 UTC">29 Jan 2015 23:24</span>
+        </span>
+    </summary>
+    <div class="md"><p>No, not really. I'm using Ruby for this project, and the solution will be pure ruby. I've run across probability vectors since my initial post, and I haven't had much time to look, but I think that's what I need.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_41344"
+         data-depth="0"
+         data-id="voat_41344"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/tabularassa/">u/tabularassa</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-01-30 03:25:28 UTC">30 Jan 2015 03:25</span>
+        </span>
+    </summary>
+    <div class="md"><p>Problem description is not too clear</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_41384"
+         data-depth="0"
+         data-id="voat_41384"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/seiyria/">u/seiyria</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-01-30 22:18:24 UTC">30 Jan 2015 22:18</span>
+        </span>
+    </summary>
+    <div class="md"><p>I did this in <a href="https://github.com/IdleLands/IdleLands/blob/master/src/character/base/Character.coffee#L43-L65">CoffeeScript</a>. Let me explain the algorithm:</p>
+<ul>
+<li>gather all of your probability objects</li>
+<li>sort them in ascending order</li>
+<li>sum your probabilities</li>
+<li>create a sum sequence of your probabilities</li>
+<li>choose an int in the range [smallest..sum]</li>
+<li>choose the first probability larger than your int chosen above</li>
+</ul>
+<p>note, this assumes positive probabilities (but really, who uses negative probabilities)</p>
+<p>a sample run could be below:</p>
+<ul>
+<li>[10, 100, 500, 800, 1000] (sorted)</li>
+<li>sum: 2410</li>
+<li>[10, 110, 610, 1410, 2410] (sequenced)</li>
+<li>chosen: 705</li>
+<li>[<em>10, 110, 610,</em> 1410, 2410] (ignore anything &lt;705)</li>
+<li>result: 1410 (choose first result)</li>
+</ul>
+<p>Let me know how this works out, or if you have questions.</p></div>
+            <details class="comment "
+         id="comment-voat_41420"
+         data-depth="1"
+         data-id="voat_41420"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/gunfourhigher/">u/gunfourhigher</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-01-31 06:53:34 UTC">31 Jan 2015 06:53</span>
+        </span>
+    </summary>
+    <div class="md"><p>That's basically a probability vector, but instead of using 1.0, you're running your own limit and adjusting it on the fly. Thanks for sharing though, I hadn't even thought about doing it that way!</p></div>
+            <details class="comment "
+         id="comment-voat_41438"
+         data-depth="2"
+         data-id="voat_41438"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/seiyria/">u/seiyria</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-01-31 17:14:11 UTC">31 Jan 2015 17:14</span>
+        </span>
+    </summary>
+    <div class="md"><p>No problem. Sorry I couldn't be more helpful.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

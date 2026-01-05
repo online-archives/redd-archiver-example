@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="How to learn basics of sql in a simple way? - Discussion in v/programming with 7 comments">
+<meta name="keywords" content="programming, learn, basics, sql, simple">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/701387.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: How to learn basics of sql in a simple way?">
+<meta property="og:description" content="How to learn basics of sql in a simple way? - Discussion in v/programming with 7 comments">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/701387.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: How to learn basics of sql in a simple way?">
+<meta name="twitter:description" content="How to learn basics of sql in a simple way? - Discussion in v/programming with 7 comments">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "How to learn basics of sql in a simple way?",
+  "author": {
+    "@type": "Person",
+    "name": "opmjc"
+  },
+  "datePublished": "2015-12-04T09:40:53Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 7
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  }
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: How to learn basics of sql in a simple way?</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_701387">
+  <h3 class="title">
+      How to learn basics of sql in a simple way?
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 6">6</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2015-12-04 09:40:53 UTC">04 Dec 2015 09:40</span>
+    by <span ><a class="user-link" href="../../../../user/opmjc/">u/opmjc</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+</div>
+
+<div class="comments">
+  <h4>7 comments</h4>
+        <details class="comment "
+         id="comment-voat_3418339"
+         data-depth="0"
+         data-id="voat_3418339"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 5">
+            5
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/rwbj/">u/rwbj</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-12-04 10:43:57 UTC">04 Dec 2015 10:43</span>
+        </span>
+    </summary>
+    <div class="md"><p>To what end? If you just need to use a database in your project then I can have you going in a paragraph or two: </p>
+<ul>
+<li>
+<p>Transactions are your friend. A transaction is a chunk of statements that are all executed synchronously. If one statement fails (for instance the database becomes locked or inaccessible) then the whole transaction is generally rolled back to ensure consistency of the database. It's not only for safety but also performance. Without transactions for each operation you must open the database, access/write what you need, close the database. Using transactions increases performance by some orders of magnitude.</p>
+</li>
+<li>
+<p>Databases should be indexed. Indexes allow data to be searched for in ideally logarithmic time. Create indices on the columns you plan to search by routinely. Columns with high cardinality (or repeated values) make poor indexes for grabbing a distinct row. You generally do not want to go index crazy and index everything as each index requires space and can begin negatively impacting performance.</p>
+</li>
+<li>
+<p>SQL has caching, but as its general purpose its performance is less than amazing. And if you're storing anything complex in your database then there will be a significant penalty on marshaling/deserializing (or putting your objects in/out of the format you put them in when writing/reading from the database) your data anyhow. In other words avoid using the database so much as reasonably possible. It can very quickly become a bottleneck.</p>
+</li>
+<li>
+<p>SQL is, at least in my opinion, an incredibly ugly and awkward language. It's one of those languages that kind of sort of wanted to try to be understandable/usable by non programmers, but reality made that impossible and so you end up with a syntax that just feels bloated and less than concise for the sake of natural language readability that's not really readable. It's gone through nearly 5 decades of revisions, and it shows in the interface. Once you get the basics down - toss a wrapper around the functionality in the language of your choice, and never touch SQL again.</p>
+</li>
+</ul></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_3418211"
+         data-depth="0"
+         data-id="voat_3418211"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThisIsMyRealName/">u/ThisIsMyRealName</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-12-04 10:12:53 UTC">04 Dec 2015 10:12</span>
+        </span>
+    </summary>
+    <div class="md"><p>Codecademy has <a href="https://www.codecademy.com/learn/learn-sql">a SQL course</a> that is a decent introduction. Once you have the basics down, download some database software <a href="http://www.postgresql.org/download/">like postgres</a> and just play around with it.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_3418449"
+         data-depth="0"
+         data-id="voat_3418449"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/tame/">u/tame</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-12-04 11:25:35 UTC">04 Dec 2015 11:25</span>
+        </span>
+    </summary>
+    <div class="md"><p>Last I looked at it, <a href="http://www.w3schools.com/sql/default.asp">w3schools</a> had a good SQL primer.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_3420329"
+         data-depth="0"
+         data-id="voat_3420329"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Silver_Tube/">u/Silver_Tube</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-12-04 16:40:51 UTC">04 Dec 2015 16:40</span>
+        </span>
+    </summary>
+    <div class="md"><p>&quot;Learn SQL the hard way&quot; is what you want. It will walk you through beginner level SQL in the form of a series of exercises. If you use your imagination a little you can use those exercises as a template to get real work done. </p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_3422702"
+         data-depth="0"
+         data-id="voat_3422702"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/paulcarroty/">u/paulcarroty</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-12-04 19:56:42 UTC">04 Dec 2015 19:56</span>
+        </span>
+    </summary>
+    <div class="md"><p><strong>How to leart it = work with it</strong></p>
+<p>Universal for all.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_3430096"
+         data-depth="0"
+         data-id="voat_3430096"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/StupidDrunkenIdiot/">u/StupidDrunkenIdiot</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-12-05 13:26:58 UTC">05 Dec 2015 13:26</span>
+        </span>
+    </summary>
+    <div class="md"><p><a href="https://www.khanacademy.org/computing/computer-programming/sql">Kahn Academy</a> has an interactive SQL course that's fairly easy to follow.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_3643178"
+         data-depth="0"
+         data-id="voat_3643178"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/flat_hedgehog/">u/flat_hedgehog</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-12-24 01:37:49 UTC">24 Dec 2015 01:37</span>
+        </span>
+    </summary>
+    <div class="md"><p>This guide has saved me so many times: <a href="https://docs.oracle.com/cd/B19306_01/server.102/b14200.pdf">Oracle SQL guide</a> It's not magic but it'll give you instructions on how to use different operators. </p>
+<p>Really, you'll want to start by creating a few simple tables in a database.</p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

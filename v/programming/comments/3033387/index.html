@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="On mac, pip3 install iso8601, pip3 install selenium, brew cask install chromedriver. This script should work on windows and linux also, but... - v/programming">
+<meta name="keywords" content="programming, quot, href, driver, click, print, try, code, datetime, sleep">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/3033387.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Selenium script to delete comments and submissions on voat">
+<meta property="og:description" content="On mac, pip3 install iso8601, pip3 install selenium, brew cask install chromedriver. This script should work on windows and linux also, but... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/3033387.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Selenium script to delete comments and submissions on voat">
+<meta name="twitter:description" content="On mac, pip3 install iso8601, pip3 install selenium, brew cask install chromedriver. This script should work on windows and linux also, but... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Selenium script to delete comments and submissions on voat",
+  "author": {
+    "@type": "Person",
+    "name": "aGameCalledCountries"
+  },
+  "datePublished": "2019-02-12T22:42:14Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 5
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "On mac, pip3 install iso8601, pip3 install selenium, brew cask install chromedriver. This script should work on windows and linux also, but I'm not tech support. This is a repost of this script, because I ran this script after posting the last one. #!/usr/bin/env python3 \"\"\" Module for running selenium tests on a web page \"\"\" import time from datetime import datetime, timezone, timedelta # run `pip3 install iso8601` if you get an error about missing this library import iso8601 # run `pip3..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Selenium script to delete comments and submissions on voat</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_3033387">
+  <h3 class="title">
+      Selenium script to delete comments and submissions on voat
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2019-02-12 22:42:14 UTC">12 Feb 2019 22:42</span>
+    by <span ><a class="user-link" href="../../../../user/aGameCalledCountries/">u/aGameCalledCountries</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>On mac, <code>pip3 install iso8601</code>, <code>pip3 install selenium</code>, <code>brew cask install chromedriver</code>.</p>
+<p>This script should work on windows and linux also, but I'm not tech support.</p>
+<p>This is a repost of this script, because I ran this script after posting the last one.</p>
+<pre><code>#!/usr/bin/env python3
+&quot;&quot;&quot;
+Module for running selenium tests on a web page
+&quot;&quot;&quot;
+import time
+from datetime import datetime, timezone, timedelta
+# run `pip3 install iso8601` if you get an error about missing this library
+import iso8601
+# run `pip3 install selenium` if you get an error about missing this library
+from selenium import webdriver
+# Add your login credentials for voat here
+USERNAME = &quot;&quot;
+PASS = &quot;&quot;
+# List of subs you do not want your content deleted from
+# e.g. EXCLUDED_SUBS = [&quot;TheBible&quot;, &quot;HardPreaching&quot;]
+EXCLUDED_SUBS = []
+# Length of time to keep your posts.  When this script is run,
+# comments and submissions newer than the entered duration will
+# not be deleted. Available options are arguments to timedelta
+# object.
+# See here: https://docs.python.org/3/library/datetime.html#datetime.timedelta
+TIME_DELTA = {&quot;days&quot;: 10}
+def login(d):
+    body = d.find_element_by_tag_name(&quot;body&quot;)
+    body.click()
+    c1 = d.find_element_by_id(&quot;container&quot;)
+    c = c1.find_element_by_id(&quot;loginForm&quot;)
+    for l in c.find_elements_by_tag_name(&quot;label&quot;):
+        try:
+            l.click()
+        except:
+            pass
+    c.find_element_by_id(&quot;UserName&quot;).send_keys(USERNAME)
+    c.find_element_by_id(&quot;Password&quot;).send_keys(PASS)
+    for btn in c.find_elements_by_tag_name(&quot;input&quot;):
+        if btn.get_attribute(&quot;value&quot;) == &quot;Log in&quot;:
+            btn.click()
+            break
+    time.sleep(1)
+def delete_submissions(d):
+    cw = driver.current_window_handle
+    while True:
+        c = d.find_element_by_id(&quot;container&quot;)
+        try:
+            for sub in c.find_elements_by_class_name(&quot;submission&quot;):
+                try:
+                    comments = sub.find_element_by_class_name(&quot;comments&quot;)
+                    href = comments.get_attribute(&quot;href&quot;)
+                    print(href)
+                    for s in EXCLUDED_SUBS:
+                        if s in href:
+                            print(&quot;Skipping submission %s&quot; % href)
+                            continue
+                    t = sub.find_element_by_tag_name(&quot;time&quot;).get_attribute(&quot;datetime&quot;)
+                    if datetime.now(timezone.utc) - iso8601.parse_date(t) &lt; timedelta(
+                        **TIME_DELTA
+                    ):
+                        print(&quot;Skipping newer submission %s&quot; % href)
+                        continue
+                    d.execute_script(&quot;window.open('about:blank', 'link');&quot;)
+                    d.switch_to.window(&quot;link&quot;)
+                    d.get(href)
+                    time.sleep(1)
+                    ent = d.find_element_by_class_name(&quot;entry&quot;)
+                    ent.find_element_by_link_text(&quot;delete&quot;).click()
+                    ent.find_element_by_link_text(&quot;yes&quot;).click()
+                    # time.sleep(1)
+                    d.close()
+                    d.switch_to.window(cw)
+                except Exception as ex:
+                    print(ex)
+        except Exception as ex:
+            print(ex)
+        try:
+            c = d.find_element_by_id(&quot;container&quot;)
+            nxt = c.find_element_by_link_text(&quot;next ›&quot;)
+            nxt.click()
+        except:
+            break
+def delete_comments(d):
+    cw = driver.current_window_handle
+    while True:
+        c = d.find_element_by_id(&quot;container&quot;)
+        try:
+            for comment in c.find_elements_by_class_name(&quot;comment&quot;):
+                try:
+                    l = comment.find_element_by_link_text(&quot;permalink&quot;)
+                    href = l.get_attribute(&quot;href&quot;)
+                    print(href)
+                    for s in EXCLUDED_SUBS:
+                        if s in href:
+                            print(&quot;Skipping comment %s&quot; % href)
+                            continue
+                    t = comment.find_element_by_tag_name(&quot;time&quot;).get_attribute(
+                        &quot;datetime&quot;
+                    )
+                    if datetime.now(timezone.utc) - iso8601.parse_date(t) &lt; timedelta(
+                        **TIME_DELTA
+                    ):
+                        print(&quot;Skipping newer comment %s&quot; % href)
+                        continue
+                    d.execute_script(&quot;window.open('about:blank', 'link');&quot;)
+                    d.switch_to.window(&quot;link&quot;)
+                    d.get(href)
+                    time.sleep(1)
+                    cmnt_area = None
+                    try:
+                        cmnt_area = d.find_element_by_class_name(&quot;commentarea&quot;)
+                    except:
+                        d.close()
+                        d.switch_to.window(cw)
+                        continue
+                    ent = cmnt_area.find_element_by_class_name(&quot;entry&quot;)
+                    ent.find_element_by_link_text(&quot;...&quot;).click()
+                    ent.find_element_by_link_text(&quot;delete&quot;).click()
+                    time.sleep(1)
+                    ent.find_element_by_link_text(&quot;yes&quot;).click()
+                    time.sleep(1)
+                    d.close()
+                    d.switch_to.window(cw)
+                except Exception as ex:
+                    print(ex)
+                    continue
+        except Exception as ex:
+            print(ex)
+        try:
+            c = d.find_element_by_id(&quot;container&quot;)
+            nxt = c.find_element_by_link_text(&quot;next ›&quot;)
+            nxt.click()
+        except:
+            break
+if __name__ == &quot;__main__&quot;:
+    page = &quot;https://voat.co/account/login&quot;
+    driver_name = &quot;Chrome&quot;
+    driver = getattr(webdriver, driver_name)()
+    try:
+        driver.set_page_load_timeout(10)
+        driver.get(page)
+        login(driver)
+        page = &quot;https://voat.co/u/%s/submissions&quot; % USERNAME
+        driver.get(page)
+        delete_submissions(driver)
+        page = &quot;https://voat.co/u/%s/comments&quot; % USERNAME
+        driver.get(page)
+        delete_comments(driver)
+        time.sleep(3)
+    finally:
+        driver.close()
+</code></pre></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>13 comments</h4>
+        <details class="comment "
+         id="comment-voat_16744596"
+         data-depth="0"
+         data-id="voat_16744596"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/anon_6974cf/">u/anon_6974cf</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-02-12 22:51:22 UTC">12 Feb 2019 22:51</span>
+        </span>
+    </summary>
+    <div class="md"><p>I'm not sure but it might be possible to see deleted comments / posts. It might be better to edit them.</p></div>
+            <details class="comment "
+         id="comment-voat_16744632"
+         data-depth="1"
+         data-id="voat_16744632"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/aGameCalledCountries/">u/aGameCalledCountries</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-02-12 22:53:37 UTC">12 Feb 2019 22:53</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>it might be possible to see deleted comments / posts</p>
+</blockquote>
+<p>No it's not.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_16744814"
+         data-depth="0"
+         data-id="voat_16744814"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/totes_magotes/">u/totes_magotes</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-02-12 23:02:31 UTC">12 Feb 2019 23:02</span>
+        </span>
+    </summary>
+    <div class="md"><p>Now why the hell would you do all that when you can do a javascript setInterval, jquery select and confirm, with a pause long enough not to fire off the activity filter?</p>
+<p>Literally just a few lines of code.</p></div>
+            <details class="comment "
+         id="comment-voat_16744909"
+         data-depth="1"
+         data-id="voat_16744909"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/aGameCalledCountries/">u/aGameCalledCountries</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-02-12 23:05:06 UTC">12 Feb 2019 23:05</span>
+        </span>
+    </summary>
+    <div class="md"><p>Feel free to improve it, but you have to open a new window to delete the submission/comment, fyi.</p></div>
+            <details class="comment "
+         id="comment-voat_16745046"
+         data-depth="2"
+         data-id="voat_16745046"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/totes_magotes/">u/totes_magotes</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-02-12 23:08:55 UTC">12 Feb 2019 23:08</span>
+        </span>
+    </summary>
+    <div class="md"><p><a href="https://api.jquery.com/jquery.get/">https://api.jquery.com/jquery.get/</a></p>
+<p>Just get into a $ object that doesn't load in the dom, .find(&quot;elementID&quot;) and manipulate as needed. </p>
+<p>Same idea as saying </p>
+<pre><code>var myListItem = $(&quot;&lt;li/&gt;&quot;)
+</code></pre>
+<p>and now you have a list item element that you can do all kinds of things to.</p>
+<p>You're still only looking at... less than 30, maybe 40 lines of code. A lot less if you're clever. And firefox dev console has a javascript scratchpad with autocomplete. Don't even need to fire up an IDE.</p></div>
+            <details class="comment "
+         id="comment-voat_16745618"
+         data-depth="3"
+         data-id="voat_16745618"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/aGameCalledCountries/">u/aGameCalledCountries</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-02-12 23:32:11 UTC">12 Feb 2019 23:32</span>
+        </span>
+    </summary>
+    <div class="md"><p>Really I think your approach is crap, and question whether it will actually work.  I can run this script on a cron job every day and not have to think about your copy/paste nonsense.</p></div>
+            <details class="comment "
+         id="comment-voat_16748051"
+         data-depth="4"
+         data-id="voat_16748051"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/applet/">u/applet</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-02-13 01:47:21 UTC">13 Feb 2019 01:47</span>
+        </span>
+    </summary>
+    <div class="md"><p>He's right though, objectively your solution is worse. Using a bulky webdriver to automate clicks and navigation is crap compared to using raw data and requests.</p>
+<p>Login &gt; Scrape history &gt; Get the IDs for the posts you want to delete &gt; Send all the POST requests to delete the comments</p>
+<p>Much faster and uses virtually no resources compared to chromedriver. I used to use selenium when I was lazy, but ended up figuring out that doing everything with raw requests was faster and better overall.</p></div>
+            <details class="comment "
+         id="comment-voat_16750569"
+         data-depth="5"
+         data-id="voat_16750569"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/aGameCalledCountries/">u/aGameCalledCountries</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-02-13 03:52:15 UTC">13 Feb 2019 03:52</span>
+        </span>
+    </summary>
+    <div class="md"><p>Voat uses some anti-fraud stuff and the JavaScript on the page needs to run for the form to be submitted.  Your/his approach won’t work.  You can’t “send all the post requests” because you don’t have the generated tokens just by scraping the html.  That is the reason for using selenium, because PuttItOut only gave api access to about 2 accounts.</p></div>
+            <details class="comment "
+         id="comment-voat_16751718"
+         data-depth="6"
+         data-id="voat_16751718"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/applet/">u/applet</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-02-13 05:01:03 UTC">13 Feb 2019 05:01</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>anti-fraud stuff </p>
+</blockquote>
+<p>VoatRequestVerificationToken it just a hidden field, a very old practice. Just make a request and parse it.</p>
+<blockquote>
+<p>You can’t “send all the post requests” because you don’t have the generated tokens just by scraping the html. That is the reason for using selenium, because PuttItOut only gave api access to about 2 accounts.</p>
+</blockquote>
+<p>Handle everything the exact same way your browser does when your logged in as a user. You don't need API or a slow ass webdriver to hold your hand for you.</p></div>
+</details>
+
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_16752018"
+         data-depth="4"
+         data-id="voat_16752018"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/totes_magotes/">u/totes_magotes</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-02-13 05:17:35 UTC">13 Feb 2019 05:17</span>
+        </span>
+    </summary>
+    <div class="md"><p>But then you have to have support for python and the selenium browser driver and keeping the version lock-step with your browser version and a few other bits of bullshit that your average programmer isn’t going to want to fuck with unless their dev environment is already set up for that. </p>
+<p>Yeah, I know about selenium since I write our company site tests with it. I know how it’s okay but far more complicated than it needs to be. </p>
+<p>While we’re on the topic, why not just write a cyprus.io script? Write your selenium tests and scripts in JavaScript and even run it in browserstack. </p>
+<p>Point of the matter is that you have an irrational love of your script. It’s mediocre at best, too much of a fuckin pain in the ass realistically. A script like I’m talking about though can be made into a bookmarklet. Want a chron job? Shortcut that bitch and run it. Don’t want a browser windows to have to fuck with? Run it in a headless browsers. Point is that selenium isn’t the most effective or efficient way to do it.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_16747795"
+         data-depth="0"
+         data-id="voat_16747795"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/anon_85e993/">u/anon_85e993</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-02-13 01:32:16 UTC">13 Feb 2019 01:32</span>
+        </span>
+    </summary>
+    <div class="md"><p>I think a good script would be delete any comment or post you saved of your’s after two days or so. That way you can pick exactly what you want to delete.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_16751497"
+         data-depth="0"
+         data-id="voat_16751497"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/anon_6974cf/">u/anon_6974cf</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-02-13 04:43:50 UTC">13 Feb 2019 04:43</span>
+        </span>
+    </summary>
+    <div class="md"><p>Would be good to have a script that deletes posts / comments that you save that are your's after two days. That way you can set exactly what posts / comment to delete</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_16764109"
+         data-depth="0"
+         data-id="voat_16764109"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/oligarchsalamander/">u/oligarchsalamander</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-02-13 21:38:05 UTC">13 Feb 2019 21:38</span>
+        </span>
+    </summary>
+    <div class="md"><p>When you delete your voat account it gives you the option to nuke it.</p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

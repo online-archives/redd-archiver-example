@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="In addition to lots of bug fixes and build improvements, here are the major changes in this release: General: Implemented audio capture... - v/programming">
+<meta name="keywords" content="programming, added, window, sdl, fixed, hint, event, audio, set, quot">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1357542.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: SDL 2.0.5 is out">
+<meta property="og:description" content="In addition to lots of bug fixes and build improvements, here are the major changes in this release: General: Implemented audio capture... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1357542.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: SDL 2.0.5 is out">
+<meta name="twitter:description" content="In addition to lots of bug fixes and build improvements, here are the major changes in this release: General: Implemented audio capture... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "SDL 2.0.5 is out",
+  "author": {
+    "@type": "Person",
+    "name": "Vladar"
+  },
+  "datePublished": "2016-10-20T08:10:15Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 0
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "In addition to lots of bug fixes and build improvements, here are the major changes in this release: General: Implemented audio capture support for some platforms Added SDL_DequeueAudio() to retrieve audio when buffer queuing is turned on for audio capture Added events for dragging and dropping text Added events for dragging and dropping multiple items By default the click raising a window will not be delivered to the SDL application. You can set the hint SDL_HINT_MOUSE_FOCUS_CLICKTHROUGH to..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: SDL 2.0.5 is out</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_1357542">
+  <h3 class="title">
+      SDL 2.0.5 is out
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 2">2</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2016-10-20 08:10:15 UTC">20 Oct 2016 08:10</span>
+    by <span ><a class="user-link" href="../../../../user/Vladar/">u/Vladar</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>In addition to lots of bug fixes and build improvements, here are the major changes in this release:</p>
+<p><strong>General:</strong></p>
+<ul>
+<li>
+<p>Implemented audio capture support for some platforms</p>
+</li>
+<li>
+<p>Added SDL_DequeueAudio() to retrieve audio when buffer queuing is turned on for audio capture</p>
+</li>
+<li>
+<p>Added events for dragging and dropping text</p>
+</li>
+<li>
+<p>Added events for dragging and dropping multiple items</p>
+</li>
+<li>
+<p>By default the click raising a window will not be delivered to the SDL application. You can set the hint SDL_HINT_MOUSE_FOCUS_CLICKTHROUGH to &quot;1&quot; to allow that click through to the window.</p>
+</li>
+<li>
+<p>Saving a surface with an alpha channel as a BMP will use a newer BMP format that supports alpha information. You can set the hint SDL_HINT_BMP_SAVE_LEGACY_FORMAT to &quot;1&quot; to use the old format.</p>
+</li>
+<li>
+<p>Added SDL_GetHintBoolean() to get the boolean value of a hint</p>
+</li>
+<li>
+<p>Added SDL_RenderSetIntegerScale() to set whether to smoothly scale or use integral multiples of the viewport size when scaling the rendering output</p>
+</li>
+<li>
+<p>Added SDL_CreateRGBSurfaceWithFormat() and SDL_CreateRGBSurfaceWithFormatFrom() to create an SDL surface with a specific pixel format</p>
+</li>
+<li>
+<p>Added SDL_GetDisplayUsableBounds() which returns the area usable for windows. For example, on Mac OS X, this subtracts the area occupied by the menu bar and dock.</p>
+</li>
+<li>
+<p>Added SDL_GetWindowBordersSize() which returns the size of the window's borders around the client area</p>
+</li>
+<li>
+<p>Added a window event SDL_WINDOWEVENT_HIT_TEST when a window had a hit test that wasn't SDL_HITTEST_NORMAL (e.g. in the title bar or window frame)</p>
+</li>
+<li>
+<p>Added SDL_SetWindowResizable() to change whether a window is resizable</p>
+</li>
+<li>
+<p>Added SDL_SetWindowOpacity() and SDL_GetWindowOpacity() to affect the window transparency</p>
+</li>
+<li>
+<p>Added SDL_SetWindowModalFor() to set a window as modal for another window</p>
+</li>
+<li>
+<p>Added support for AUDIO_U16LSB and AUDIO_U16MSB to SDL_MixAudioFormat()</p>
+</li>
+<li>
+<p>Fixed flipped images when reading back from target textures when using the OpenGL renderer</p>
+</li>
+<li>
+<p>Fixed texture color modulation with SDL_BLENDMODE_NONE when using the OpenGL renderer</p>
+</li>
+<li>
+<p>Fixed bug where the alpha value of colorkeys was ignored when blitting in some cases</p>
+</li>
+</ul>
+<p><strong>Windows:</strong></p>
+<ul>
+<li>
+<p>Added a hint SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING to prevent SDL from raising a debugger exception to name threads. This exception can cause problems with .NET applications when running under a debugger.</p>
+</li>
+<li>
+<p>The hint SDL_HINT_THREAD_STACK_SIZE is now supported on Windows</p>
+</li>
+<li>
+<p>Fixed XBox controller triggers automatically being pulled at startup</p>
+</li>
+<li>
+<p>The first icon from the executable is used as the default window icon at runtime</p>
+</li>
+<li>
+<p>Fixed SDL log messages being printed twice if SDL was built with C library support</p>
+</li>
+<li>
+<p>Reset dead keys when the SDL window loses focus, so dead keys pressed in SDL applications don't affect text input into other applications.</p>
+</li>
+</ul>
+<p><strong>Mac OS X:</strong></p>
+<ul>
+<li>
+<p>Fixed selecting the dummy video driver</p>
+</li>
+<li>
+<p>The caps lock key now generates a pressed event when pressed and a released event when released, instead of a press/release event pair when pressed.</p>
+</li>
+<li>
+<p>Fixed mouse wheel events on Mac OS X 10.12</p>
+</li>
+<li>
+<p>The audio driver has been updated to use AVFoundation for better compatibility with newer versions of Mac OS X</p>
+</li>
+</ul>
+<p><strong>Linux:</strong></p>
+<ul>
+<li>
+<p>Added support for the Fcitx IME</p>
+</li>
+<li>
+<p>Added a window event SDL_WINDOWEVENT_TAKE_FOCUS when a window manager asks the SDL window whether it wants to take focus.</p>
+</li>
+<li>
+<p>Refresh rates are now rounded instead of truncated, e.g. 59.94 Hz is rounded up to 60 Hz instead of 59.</p>
+</li>
+<li>
+<p>Added initial support for touchscreens on Raspberry Pi</p>
+</li>
+</ul>
+<p><strong>OpenBSD:</strong></p>
+<ul>
+<li>SDL_GetBasePath() is now implemented on OpenBSD</li>
+</ul>
+<p><strong>iOS:</strong></p>
+<ul>
+<li>
+<p>Added support for dynamically loaded objects on iOS 8 and newer
+**
+tvOS:**</p>
+</li>
+<li>
+<p>Added support for Apple TV</p>
+</li>
+<li>
+<p>Added a hint SDL_HINT_APPLE_TV_REMOTE_ALLOW_ROTATION to control whether he Apple TV remote's joystick axes will automatically match the rotation of the remote.</p>
+</li>
+</ul>
+<p><strong>Android:</strong></p>
+<ul>
+<li>
+<p>Fixed SDL not resizing window when Android screen resolution changes</p>
+</li>
+<li>
+<p>Corrected the joystick Z axis reporting for the accelerometer</p>
+</li>
+</ul>
+<p><strong>Emscripten</strong> (running in a web browser):</p>
+<ul>
+<li>Many bug fixes and improvements</li>
+</ul>
+<p><a href="https://www.libsdl.org/download-2.0.php">https://www.libsdl.org/download-2.0.php</a></p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>0 comments</h4>
+    <p class="text-muted">No comments archived.</p>
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

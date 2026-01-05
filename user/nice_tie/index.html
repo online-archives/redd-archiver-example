@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="View 8 archived posts by u/nice_tie in v/programming">
+<meta name="keywords" content="reddit, user, posts, archive, nice_tie, programming">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/user/nice_tie/">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="u/nice_tie - 8 Archived Voat Posts in v/programming">
+<meta property="og:description" content="View 8 archived posts by u/nice_tie in v/programming">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/user/nice_tie/">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="u/nice_tie - 8 Archived Voat Posts in v/programming">
+<meta name="twitter:description" content="View 8 archived posts by u/nice_tie in v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../static/site.webmanifest">
+
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../static/css/redd-archiver-universal.css">
+
+
+    <title>u/nice_tie - 8 Archived Voat Posts in v/programming</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="./">u/nice_tie</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html">home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="user-profile-header pt-3">
+  <h2>u/nice_tie</h2>
+  <p class="lead">
+    0 posts ·
+    8 comments ·
+    8 total
+  </p>
+  <p class="text-muted">Active in: v/programming (8)</p>
+</div>
+
+<ul class="pagination pagination-sm mt-3">
+  <li class="page-item first-page disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item skip-back disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item prev-page disabled"><a class="page-link" href="index-0.html" tabindex="-1">&lsaquo;</a></li>
+
+
+      <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+
+  <li class="page-item next-page disabled"><a class="page-link" href="index-1.html" tabindex="-1">&rsaquo;</a></li>
+
+  <li class="page-item skip-forward disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;</a></li>
+
+  <li class="page-item last-page disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;&rsaquo;</a></li>
+</ul>
+
+
+<div class="links">
+
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/935137#4688570">(Brian Will) Object-Oriented Programming is Garbage: 3800 SLOC example</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>You do bring up some valid arguments. I'm definitely not saying that you should always follow OO practices all the time for all purposes. Blindly following ANY ideology all the time is generally a bad idea. </p>
+<p>In your first bullet point, I'd recommend strongly against picking one of the two original objects to handle interactions in most cases. While adding a bridge object can be a little verbose at times, it preserves reusability. You could also extend one of the original objects and add the code for interaction there if it makes sense, which would ensure that you're following SOLID.</p>
+<p>I'm not sure I see the issue with your second bullet point. Object1.object2.object3.method() should work if the method is publicly available. If it's protected, then it adding getters for the functionality you need shouldn't be a huge task and would only need minimal testing, assuming you had already written tests for the internal objects. Am I missing some other use case here?</p>
+<p>If I have code that works, I don't rewrite it just because there's a 'better' design. The only time I'll rewrite working, bug-free code is if I'm creating new functionality that may use old functionality that's not general enough, or if I have to copy and paste it too much, creating a maintainability issue. If there is a need to generalize, abstract, or refactor code, I'll do it. Otherwise, rewriting for the sake of purity and perfection is an exercise in futility. </p>
+<p>Your final point just seems like a development problem--not because of bad programming, but just because the original developer didn't see future use cases and performance issues that may pop up later. This isn't limited to OO. <a href="/user/rwbj">@rwbj</a> makes a good point as well in that you can extend the object and override things that don't make sense for your case.</p></div>
+    <a href="../../v/programming/comments/935137#4688570">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2016-03-22 17:42:22 UTC">22 Mar 2016 17:42</span>
+        <span ><a class="user-link" href="../../user/nice_tie/">u/nice_tie</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/935137#4688379">(Brian Will) Object-Oriented Programming is Garbage: 3800 SLOC example</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>I use vim as a primary development environment both locally and remotely. With exuberant ctags, NerdTree, and YouCompleteMe, you can get the most useful elements of modern IDEs on almost any *nix system. </p></div>
+    <a href="../../v/programming/comments/935137#4688379">
+        <span class="badge badge-success"
+              title="Comment score: 3">
+            3
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2016-03-22 17:23:50 UTC">22 Mar 2016 17:23</span>
+        <span ><a class="user-link" href="../../user/nice_tie/">u/nice_tie</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/935137#4684717">(Brian Will) Object-Oriented Programming is Garbage: 3800 SLOC example</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Every time I see these videos, it's always arguments about the verbose nature of OO code, code that's only used in one place being inefficient, etc. And every time, these projects are dissected as if they were in a complete vacuum. He appears to be going for larger projects now due to previous criticisms that he's tackling over-simplified examples. Despite his obvious coding talents, his analyses show someone who doesn't work on large numbers of similar and/or recurring projects, and someone who doesn't work well on a team. </p>
+<p>Procedural code for large projects can be a nightmare to maintain with a team, it takes longer to onboard new team members, and it is more difficult to document in a comprehensible fashion. There's a reason that enterprise code is more generally OO. In the long run, in large teams, and on large projects, OO code saves time and money. </p></div>
+    <a href="../../v/programming/comments/935137#4684717">
+        <span class="badge badge-success-bright"
+              title="Comment score: 7">
+            7
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2016-03-22 06:43:51 UTC">22 Mar 2016 06:43</span>
+        <span ><a class="user-link" href="../../user/nice_tie/">u/nice_tie</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/743754#3643621">I Want to Start Programming. Where Should I Start?</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Your current laptop should be fine for programming. I'll echo others here in saying that you only need a beastly machine if you're going to do high end graphics or tasks that are very computation heavy. As for developer tools:</p>
+<p>PHPStorm - PHP - Most PHP developers I know use this (if they use an IDE at all) or something similar and have good things to say. PHP is a good starting language as it's not so unforgiving as C++ or Java and allows you to focus more on the foundational knowledge. When you've got a reasonable feel for boolean logic, program control flow, and data structures, add in a strongly typed language like C++ or Java. </p>
+<p>IDLE - Python - I know some people that use this, and they say it's good enough. Most Python developers I know use Vim and Emacs, so take this recommendation with a grain of salt. Python is a clear and easy to use language that can, like PHP, help you get a grasp on basic programming foundations before moving on to more complicated things.</p>
+<p>Eclipse - Java - Eclipse was made for Java. I've used it quite a bit, and as far as IDEs go, it's got a lot of functionality. It's not always easy to use, but it's got everything you should need for learning programming right out of the box. </p>
+<p>Xcode - C++ (and others) - I've only heard about this from second and third hand sources, but it's a fairly standard IDE for Mac users to use when developing C++/Objective C applications. It also comes highly recommended on StackOverflow.</p>
+<p>You're on the right track starting at <a href="http://www.codecademy.com">codecademy</a>. You can also try <a href="http://www.codekata.com">codekata</a> for daily practice once you get into a language. If you're feeling competitive, there is also <a href="http://www.codefights.com">codefights.com</a>. There are also great courses at <a href="http://www.udacity.com">udacity</a>, <a href="http://www.coursera.com">coursera</a>, and <a href="http://www.udemy.com">udemy</a>.</p>
+<p>Once you feel like you have a grasp of programming basics, go for these books:</p>
+<p>Code Complete - Steve McConnell (Coder's bible of best practices)
+Design Patterns: Elements of Reusable Object-Oriented Software - Erich Gamma, John Vlissides, Ralph Johnson, and Richard Helm (Common use cases programmers run across and good solutions for addressing them)
+The Mythical Man-Month - Fred Brooks (About software engineering process more than programming itself, but definitely worth a read)
+The Art of Computer Programming - Donald Knuth (More advanced book about algorithms. Read as soon as you can understand thing. Don't be too afraid of the assembly. :)) </p>
+<p>If any of this missed the mark or just isn't what you're looking for, let me know more about what you know and what you want, and I'd be happy to provide more. </p></div>
+    <a href="../../v/programming/comments/743754#3643621">
+        <span class="badge badge-warning"
+              title="Comment score: 1">
+            1
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-12-24 02:25:46 UTC">24 Dec 2015 02:25</span>
+        <span ><a class="user-link" href="../../user/nice_tie/">u/nice_tie</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/634436#3087349">Do you need an advanced degree to work with &#34;cooler&#34; things like AI and Machine Learning?</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Yes, stats! They're extremely important for machine learning and AI as well. I erroneously omitted states because it's on the easier end of the math difficulty scale and was more obviously useful (kind of like algebra), somewhat contrary to the list provided in my previous comment. Stats generally provide a base that's used as part of more complex calculations like in Kalman/Particle Filtering, error/confidence computation, randomized optimization, and Bayesian learning. I'd also like to add that ML/AI is not just difficult..it's awesome. </p></div>
+    <a href="../../v/programming/comments/634436#3087349">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-11-05 08:25:22 UTC">05 Nov 2015 08:25</span>
+        <span ><a class="user-link" href="../../user/nice_tie/">u/nice_tie</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/634436#3069034">Do you need an advanced degree to work with &#34;cooler&#34; things like AI and Machine Learning?</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Most importantly, how are your math skills? If you want to work in advanced algorithms, be prepared to use that calc 4, advanced set theory, linear algebra, and all the other things for which you weren't sure you'd find a use. </p>
+<p>As for your question, it really depends on what you want to do. If you just want to do basic machine learning, it's fairly easy to pick up <a href="https://www.r-project.org/">R</a> or <a href="http://scikit-learn.org/stable/">Scikit-Learn</a> and start entering <a href="https://www.kaggle.com/">Kaggle</a> competitions. If you want to work on the cutting edge of machine learning and artificial intelligence, you typically need significant contributions to the field, an advanced degree, or (preferably) both. Fortunately, the <a href="http://www.omscs.gatech.edu/">OMSCS program at Georgia Tech</a> is pretty cheap (~$6k - $7k total) and is surprisingly rigorous.</p></div>
+    <a href="../../v/programming/comments/634436#3069034">
+        <span class="badge badge-light"
+              title="Comment score: 2">
+            2
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-11-04 00:44:58 UTC">04 Nov 2015 00:44</span>
+        <span ><a class="user-link" href="../../user/nice_tie/">u/nice_tie</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/568602#2738412">Is having a Documentation Manager a good idea?</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>I have a process that generally works well for a small team (~15 people). I have the programmers do this for API docs when they develop new or modify existing functionality. If they don't add/modify a doc block that can be generated properly, their pull request doesn't make it through code review. User documentation is a separate process that generally involves the UI/UX team, the QA/UA team, and select members of the dev team to compile everything and make a nice, pretty, digestible PDF. </p></div>
+    <a href="../../v/programming/comments/568602#2738412">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-10-07 09:46:22 UTC">07 Oct 2015 09:46</span>
+        <span ><a class="user-link" href="../../user/nice_tie/">u/nice_tie</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/332300#1291270">Where should I migrate my projects to (from Github)?</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Definitely BitBucket. I moved over from GitHub a little over a year ago and I haven't looked back. Atlassian development tools are pretty awesome. It also integrates really well with HipChat, Jira, Bamboo, Confluence, etc., if you're interested in that sort of thing.</p></div>
+    <a href="../../v/programming/comments/332300#1291270">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-07-23 15:36:46 UTC">23 Jul 2015 15:36</span>
+        <span ><a class="user-link" href="../../user/nice_tie/">u/nice_tie</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div></div>
+
+<ul class="pagination pagination-sm mt-3">
+  <li class="page-item first-page disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item skip-back disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item prev-page disabled"><a class="page-link" href="index-0.html" tabindex="-1">&lsaquo;</a></li>
+
+
+      <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+
+  <li class="page-item next-page disabled"><a class="page-link" href="index-1.html" tabindex="-1">&rsaquo;</a></li>
+
+  <li class="page-item skip-forward disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;</a></li>
+
+  <li class="page-item last-page disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;&rsaquo;</a></li>
+</ul>
+
+    </main>
+
+<footer class="container-fluid">
+  <p class="small mb-0">
+    archive has 9,592 posts and 65,719 comments.
+    <a href="https://github.com/19-84/redd-archiver">source code</a>.
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="I&#39;ve been toying around with MFM the last few days, because I find the concept really fascinating. I normally do game programming in... - v/programming">
+<meta name="keywords" content="programming, node, targetcoord, dccore, energy, load, unity, atom, access, create">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1126779.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Hook, Atom, and Storage">
+<meta property="og:description" content="I&#39;ve been toying around with MFM the last few days, because I find the concept really fascinating. I normally do game programming in... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1126779.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Hook, Atom, and Storage">
+<meta name="twitter:description" content="I&#39;ve been toying around with MFM the last few days, because I find the concept really fascinating. I normally do game programming in... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Hook, Atom, and Storage",
+  "author": {
+    "@type": "Person",
+    "name": "psioniq"
+  },
+  "datePublished": "2016-06-22T17:33:22Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 0
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "I've been toying around with MFM the last few days, because I find the concept really fascinating. I normally do game programming in Unity3D, and figured I'd try to write a MFM that could hook into Unity. Sounds simple enough, but there is a downside to using Unity for this. Unity works off of components and gameobjects. To access an instance of a component, you must create a gameobject that has the instance attached to it - also, these can only run on the main thread. This of course is a..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Hook, Atom, and Storage</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_1126779">
+  <h3 class="title">
+      Hook, Atom, and Storage
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 3">3</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2016-06-22 17:33:22 UTC">22 Jun 2016 17:33</span>
+    by <span ><a class="user-link" href="../../../../user/psioniq/">u/psioniq</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>I've been toying around with [MFM](http://www.movablefeastmachine.org/) the last few days, because I find the concept really fascinating.</p>
+<p>I normally do game programming in Unity3D, and figured I'd try to write a MFM that could hook into Unity.</p>
+<p>Sounds simple enough, but there is a downside to using Unity for this. Unity works off of components and gameobjects. To access an instance of a component, you must create a gameobject that has the instance attached to it - also, these can only run on the main thread.</p>
+<p>This of course is a problem for large datasets, and I would never use gameobjects/components for that anyway. But I need a hook. </p>
+<p>Unity is awesome for a lot of things - one of them being that you can create 'prefabs' that look/act in certain ways when you spawn them. I want to use this prefab feature to create templates of my Atoms in the MFM. </p>
+<p>But since the components cannot live in any other thread than the main thread, I have to load the instructions from the prefabs when the application loads.</p>
+<p>Instructions are then loaded into the atom when it is created. An instruction can be as simple as "Move one tile in a random direction", and Atoms can have multiple instructions. The instructions are simply a class that inherits DCInstructions which has a Command action.</p>
+<p>~~~
+public class DCInstruction : MonoBehaviour
+{
+    public List<DCInstructionMemory> Properties;
+    public DCEventHandler Command;</p>
+<p>    public virtual void Load()
+    {
+    }
+}
+~~~
+*You'll notice there is a "Properties" field too, but we'll get back to that.*</p>
+<p>A full instruction might look something like this:
+~~~
+public class DCMover : DCInstruction
+{
+    public override void Load()
+    {
+        base.Load();</p>
+<p>        Command = (s, a) =>
+        {
+            DCCoord targetCoord = DCHelper.GetRandomDirection(a.Node.Coord);</p>
+<p>            if (DCCore.GetNode(targetCoord) == null)
+            {
+                DCCore.MoveNode(a.Node, targetCoord);
+            }
+        };
+    }
+}
+~~~</p>
+<p>This is all well and good. It works, and things do what they need to. But here's the thing.</p>
+<p>If I were to use components only, I could simply access a property in an instruction by doing:
+~~~
+gameObject.GetComponent<DCInstruction>().myFloatProperty = 1.0f;
+~~~
+But as mentioned, that requires that the object actually exists in the Unity gameworld.</p>
+<p>When doing it the way I'm doing, I can't access any properties on the component, because the actual component is not unique - so if I change the component property value on one Atom, it'll reflect onto all the others that are using the same instruction component.</p>
+<p>I've tried using a Dictionary<K,V> to create a form of internal propertylist for the Atoms, but it is incredibly slow when you get a couple thousand atoms going. It's obviously not the right way to do it, as you could end up overriding some property that another instruction uses.</p>
+<p>An instruction that uses Properties:
+~~~
+public class DCImp : DCInstruction
+{
+    public float consumeChance;</p>
+<p>    public override void Load()
+    {
+        base.Load();</p>
+<p>        Command = (s, a) =>
+        {
+            DCNode node = a.Node;
+            DCCoord targetCoord = DCHelper.GetRandomDirection(node.Coord);
+            DCNode targetNode = DCCore.GetNode(targetCoord);</p>
+<p>            float energy = node.GetPropertyValue("energy");</p>
+<p>            if (energy <= 0)
+            {
+                DCCore.RemoveNode(node);
+            }
+            else if (targetNode == null)
+            {
+                if (energy >= 1)
+                {
+                    DCCore.CreateNode(node.Template, targetCoord);
+                    node.AddPropertyValue("energy", -0.5f);
+                }
+                else
+                {
+                    DCCore.MoveNode(node, targetCoord);
+                    node.AddPropertyValue("energy", -0.01f);
+                }
+            }
+            else
+            {
+                if (targetNode.GetInstruction<DCRes>())
+                {
+                    DCCore.RemoveNode(targetNode);
+                    node.AddPropertyValue("energy", 1);
+                }
+            }
+        }
+    }
+}
+~~~</p>
+<p>Currently, Properties is a Dictionary<string,float>, and I'm using TryGetValue when doing a lookup - but it's still slow.</p>
+<p>So, how would you go about storing the properties of an instruction in an Atom, that'll give fast read/write access? Can the dictionary be optimized further, to shorten the lookup time (different key than string), and if so, how would you identify that key when needed?</p>
+<p>Or do I need some sort of DB structure to better handle all this - or would that be just as slow as individual dictionary lookups?</p>
+<p>Thanks in advance :)</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>0 comments</h4>
+    <p class="text-muted">No comments archived.</p>
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

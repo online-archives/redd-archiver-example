@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="How would you set up the structure of a big (in our case we have around 2500 executables and libraries) mixed domain project that is not... - v/programming">
+<meta name="keywords" content="programming, structure, quot, directory, project, tests, build, mixed, domain, unit">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/997216.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: What&#39;s the best way to organize the directory structure of a big mixed domain project? (discussion)">
+<meta property="og:description" content="How would you set up the structure of a big (in our case we have around 2500 executables and libraries) mixed domain project that is not... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/997216.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: What&#39;s the best way to organize the directory structure of a big mixed domain project? (discussion)">
+<meta name="twitter:description" content="How would you set up the structure of a big (in our case we have around 2500 executables and libraries) mixed domain project that is not... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "What's the best way to organize the directory structure of a big mixed domain project? (discussion)",
+  "author": {
+    "@type": "Person",
+    "name": "starTracer"
+  },
+  "datePublished": "2016-04-21T14:28:34Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 4
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "How would you set up the structure of a big (in our case we have around 2500 executables and libraries) mixed domain project that is not based on a particular third party framework. If a standard directory structure is employed, then a powerful buildsystem would make many things easy as pie (e.g. automatic globbing of sources, creation of unit tests et.c.). Some features that we have to support in whatever structure we end up using: \"Modules\", a logical grouping of artifacts that may share the..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: What&#39;s the best way to organize the directory structure of a big mixed domain project? (discussion)</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_997216">
+  <h3 class="title">
+      What&#39;s the best way to organize the directory structure of a big mixed domain project? (discussion)
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 10">10</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2016-04-21 14:28:34 UTC">21 Apr 2016 14:28</span>
+    by <span ><a class="user-link" href="../../../../user/starTracer/">u/starTracer</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>How would you set up the structure of a big (in our case we have around 2500 executables and libraries) mixed domain project that is not based on a particular third party framework.</p>
+<p>If a standard directory structure is employed, then a powerful buildsystem would make many things easy as pie (e.g. automatic globbing of sources, creation of unit tests et.c.).</p>
+<p>Some features that we have to support in whatever structure we end up using:</p>
+<ul>
+<li>&quot;Modules&quot;, a logical grouping of artifacts that may share the same namespace.</li>
+<li>&quot;Packages&quot;, a logical grouping of modules (possibly with its own namespace).</li>
+<li>Multi-language (C, C++, Java, Python, PLC)</li>
+<li>Multiple runtime targets (e.g. Linux, VxWorks, PPC, Intel). Also sometimes the same module share code between targets.</li>
+<li>Code generation (e.g. IDL, Qt-mocs, Py-bindings, custom...)</li>
+<li>Resources (e.g. UI glyphs, sounds)</li>
+<li>Documentation</li>
+<li>Unit tests</li>
+<li>Integration tests (scripts and helper-tools)</li>
+</ul>
+<p>Also,</p>
+<ul>
+<li>Pros/cons of single artifact per source directory (like Maven projects)?</li>
+<li>With a big project like this, not everyone will want to build the whole source tree just to be able to build their module. How would you go about doing this? Build against a pre-installed header+library tree? What are the alternatives?</li>
+</ul></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>8 comments</h4>
+        <details class="comment "
+         id="comment-voat_4994565"
+         data-depth="0"
+         data-id="voat_4994565"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/JohnQCitizen/">u/JohnQCitizen</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-04-21 17:19:29 UTC">21 Apr 2016 17:19</span>
+        </span>
+    </summary>
+    <div class="md"><p>My immediate thought is that you are either making your project way too complex, or you are in way over your head. By the time you start making projects like that, you should have a solid grasp on what works for your team. </p></div>
+            <details class="comment "
+         id="comment-voat_4995793"
+         data-depth="1"
+         data-id="voat_4995793"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/starTracer/">u/starTracer</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-04-21 19:23:16 UTC">21 Apr 2016 19:23</span>
+        </span>
+    </summary>
+    <div class="md"><p>Well, big projects tend to become complex just by the virtue of its size. And we are in the initial stages of the project (software wise), so I'm sounding the field for what have worked well for others.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_5021920"
+         data-depth="0"
+         data-id="voat_5021920"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/BitterBiped/">u/BitterBiped</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-04-24 22:44:49 UTC">24 Apr 2016 22:44</span>
+        </span>
+    </summary>
+    <div class="md"><p>Hi I am going to answer some of your questions, not all because I don't have all the issues you have. </p>
+<p>This is how I structure my multi language projects.  I build my projects on Windows and on Linux.</p>
+<p>Binaries  (all my compiled output ends up here.  Note for cpp I also create a msc/gnu folder to store os specific binaries)</p>
+<pre><code>~/bin/
+~/bin/cpp   (all compiled libraries, shared objects, and executables go here, sometimes in their own sub folders)
+~/bin/csharp  (all compiled dlls go here)
+~/bin/py3   (all eggs ans pyd's go here)
+~/bin/jar    (all jars go here)
+</code></pre>
+<p>Build </p>
+<pre><code>~/build/makefile    (my solution make file goes here, it builds all my languages.  You could put an ant/maven project here... but I rock it old school :P)
+</code></pre>
+<p>Source Code   (all my source code goes here)</p>
+<pre><code>~/code/cpp/&lt;projname&gt;/subdirs..     (I always use the projname here so my include paths match my namespaces)
+~/code/csharp/... various solutions files
+~/code/java/... various java projects/packages
+~/code/python3/&lt;eggname&gt;/  ... here I create a folder for each egg that I want to create
+</code></pre>
+<p>Externals   (most projects have external dependencies, be it other repository's, external library dependencies, or resources) </p>
+<pre><code>~/externs/makefile      (a makefile that links or junctions to external repos or libraries )
+~/externs/_template.config.mk   (a template for the config settings)
+~/externs/config.mk    (config file local to this environments required external dependencies - this file is not checked into the repo)
+~/externs/postgres9   --&gt; /usr/lib/postgres9/include    (this would be a link created by my makefile to point to a dependency)
+</code></pre>
+<p>Generated Code</p>
+<pre><code>~/genes/...     (various code generation files go here, the either generate into my ~/code folders or locally in this folder)
+</code></pre>
+<p>Release/Packages  (any final complete packages built from the the ~/bin folder most build end up here)</p>
+<pre><code>~/releases/&lt;end package&gt;.zip
+~/releases/&lt;end package&gt;.debug.zip
+</code></pre>
+<p>Testing   (finally all my unit testing ends up here)</p>
+<pre><code>~/testing/  ...   (I use the python unittest module to create a common start point that wraps unittests the other languages)
+~/testing/cpp
+~/testing/csharp
+~/testing/java
+~/testing/py
+</code></pre>
+<p>The build steps for my project are:</p>
+<ol>
+<li>Check out repo</li>
+<li>Configure the config.mk (copy _template.config.mk to config.mk and edit) in the externs folder  (only have to do this once)</li>
+<li>gmake the makefile in the externs folder  (only have to do this once)</li>
+<li>gmake the makefile in the build folder</li>
+</ol>
+<p>Finally in regards to your question about building specific modules only.. this is what I do.</p>
+<p>I generate a makefile for every component for each language.  Then then I generate a makefile that build these sub components as groups.</p>
+<p>Basically I have makefiles that build &quot;projects/components&quot; and makefiles that collectively run other makefiles that act like &quot;solutions&quot;.</p>
+<p>For example, if I want to compile all the java code in my project I simply go to my build folder and type:</p>
+<pre><code>~/build&gt; gmake java
+</code></pre>
+<p>You could achieve the same thing with ant files or maven however (which is something I do at my job... because a lot people are afraid of make files for some reason).</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_4994994"
+         data-depth="0"
+         data-id="voat_4994994"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/0x7a69/">u/0x7a69</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-04-21 18:03:44 UTC">21 Apr 2016 18:03</span>
+        </span>
+    </summary>
+    <div class="md"><p>Read up on fhs, then go in your own direction</p></div>
+            <details class="comment "
+         id="comment-voat_4995697"
+         data-depth="1"
+         data-id="voat_4995697"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/starTracer/">u/starTracer</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-04-21 19:14:40 UTC">21 Apr 2016 19:14</span>
+        </span>
+    </summary>
+    <div class="md"><p>What do you mean? Map the FHS structure for each SW-module or..?</p></div>
+            <details class="comment "
+         id="comment-voat_4998748"
+         data-depth="2"
+         data-id="voat_4998748"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/0x7a69/">u/0x7a69</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-04-22 00:18:22 UTC">22 Apr 2016 00:18</span>
+        </span>
+    </summary>
+    <div class="md"><p>Well, you could if you wanted to, but that would be overkill,  instead try the reverse; mapping all the modules a single FHS structure inside of a project folder. </p></div>
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_4996334"
+         data-depth="0"
+         data-id="voat_4996334"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/grlldcheese/">u/grlldcheese</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-04-21 20:12:32 UTC">21 Apr 2016 20:12</span>
+        </span>
+    </summary>
+    <div class="md"><p>What in the world are you building?</p>
+<p>And please keep us updated.</p>
+<p>This is ambitious regardless of your skill level.  Good luck.</p></div>
+            <details class="comment "
+         id="comment-voat_5002005"
+         data-depth="1"
+         data-id="voat_5002005"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/starTracer/">u/starTracer</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-04-22 09:15:58 UTC">22 Apr 2016 09:15</span>
+        </span>
+    </summary>
+    <div class="md"><p>It is scientific instrument control software. Which means <em>a lot</em> of devices like motors, sensors and detectors. So the control software is full stack; from the back-end low level device control to data collection and processing to front-end user interfaces.</p></div>
+</details>
+
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

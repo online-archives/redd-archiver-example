@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Concern: Http and TCP are pretty expensive protocols. I will be bulk inserting my data from a sensor, but that sensor will certainly buffer... - v/programming">
+<meta name="keywords" content="programming, couchdb, protocol, sensor, choosing, write, performance, worries, concern, tcp">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/337069.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Thinking of using couchdb, but it uses HTTP for protocol and that worries me.">
+<meta property="og:description" content="Concern: Http and TCP are pretty expensive protocols. I will be bulk inserting my data from a sensor, but that sensor will certainly buffer... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/337069.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Thinking of using couchdb, but it uses HTTP for protocol and that worries me.">
+<meta name="twitter:description" content="Concern: Http and TCP are pretty expensive protocols. I will be bulk inserting my data from a sensor, but that sensor will certainly buffer... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Thinking of using couchdb, but it uses HTTP for protocol and that worries me.",
+  "author": {
+    "@type": "Person",
+    "name": "404_SLEEP_NOT_FOUND"
+  },
+  "datePublished": "2015-07-24T13:14:15Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 4
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "Concern: Http and TCP are pretty expensive protocols. I will be bulk inserting my data from a sensor, but that sensor will certainly buffer the data into a huge chunk (maybe like 1-50mb) before making an HTTP connection to couchdb. I am thinking of choosing Mongodb/Cassandra over couchdb due to its choice of HTTP. For me, write performance is important (after-all, I'm choosing nosql to just store/warehouse data). It concerns me that they would pick HTTP (ease of use) over a UDP protocol with an..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Thinking of using couchdb, but it uses HTTP for protocol and that worries me.</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_337069">
+  <h3 class="title">
+      Thinking of using couchdb, but it uses HTTP for protocol and that worries me.
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 2">2</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2015-07-24 13:14:15 UTC">24 Jul 2015 13:14</span>
+    by <span ><a class="user-link" href="../../../../user/404_SLEEP_NOT_FOUND/">u/404_SLEEP_NOT_FOUND</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>Concern: Http and TCP are pretty expensive protocols. I will be bulk inserting my data from a sensor, but that sensor will certainly buffer the data into a huge chunk (maybe like 1-50mb) before making an HTTP connection to couchdb. I am thinking of choosing Mongodb/Cassandra over couchdb due to its choice of HTTP. For me, write performance is important (after-all, I'm choosing nosql to just store/warehouse data). It concerns me that they would pick HTTP (ease of use) over a UDP protocol with an async callback.</p>
+<p>Am I being pedantic here? Or is the HTTP overhead going to slowdown my write performance?</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>10 comments</h4>
+        <details class="comment "
+         id="comment-voat_1319495"
+         data-depth="0"
+         data-id="voat_1319495"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Craftkorb/">u/Craftkorb</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-07-24 16:04:55 UTC">24 Jul 2015 16:04</span>
+        </span>
+    </summary>
+    <div class="md"><p>Okay, let's use UDP. How do you make sure that your data ends up in the database? Write a custom protocol for it? Ok, now we have a transmission which we control .. let's call it .. TCP!</p>
+<p>In all seriousness, have you benchmarked it? I don't see a real reason for not using TCP for a database. And what's stopping you from having asynchronous callbacks with TCP?</p></div>
+            <details class="comment "
+         id="comment-voat_1323206"
+         data-depth="1"
+         data-id="voat_1323206"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/404_SLEEP_NOT_FOUND/">u/404_SLEEP_NOT_FOUND</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-07-24 18:48:50 UTC">24 Jul 2015 18:48</span>
+        </span>
+    </summary>
+    <div class="md"><p><a href="http://nosql.mypopescu.com/post/697070985/redis-udp-protocol">http://nosql.mypopescu.com/post/697070985/redis-udp-protocol</a></p>
+<p>My concern (opinion) thus far with couchdb is that it is a hipster database, that choses sleekness and javascript/web all the things over obvious performance choices. That concerns me superficially.</p>
+<p>Edit: In the past, I have written similar software and the benchmarks kind of shocked me. A lot of CPU was eaten up not by parsing/regexes... but socket layer. It turns out, TCP/IP eats up a lot of CPU. So I am now weary of sockets when it comes to large amounts of data processing as quickly as I can. It actually surprises me that so many drivers use sockets, I guess the enterprise architecture and web scaling are the big players.</p>
+<p>I used to have an app that persisted all of its data to a MySQL database but also scraped the web at the same time in different threadpool. All the concurrent TCP/IP connections ate up a lot of CPU.</p></div>
+            <details class="comment "
+         id="comment-voat_1323524"
+         data-depth="2"
+         data-id="voat_1323524"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Craftkorb/">u/Craftkorb</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-07-24 19:02:39 UTC">24 Jul 2015 19:02</span>
+        </span>
+    </summary>
+    <div class="md"><p>I'm not a fan of MongoDB either.</p>
+<p>What troubles me more than their choice of transport protocol is their it seems pretty horrific default security configuration. Just days ago someone searched for MongoDB instances on the Internet at large and found thousands of open instances with no permissions needed, some even for write access.</p>
+<p>I think that HTTP is interesting as option, because I can then query my DB through cURL if needed. Makes for easy scripting, even in bash scripts. Using it as sole protocol, well, not my cup of tea either. The issue I see though is the stateless-ness of HTTP, even if they use keep-alive (No idea!), they shouldn't rely on having that session open forever.</p>
+<p>I do think though that TCP is the right choice for it as reasonable default. If people want to use UDP, with all its pros and cons for this environment, then they may have it as well. You can always have a wrapper tool, which listens on a UDP port and then just pumps stuff it receives into the connected MongoDB instance. If both are on the same host, chances are good that the kernel doesn't do the whole TCP SYN/ACK stuff for a local connection (Though I'd like to know if Linux actually does it).</p>
+<p>I mean come on, MongoDB isn't ACID compliant, so UDP just makes it worse in the realm of data persistance ;)</p></div>
+            <details class="comment "
+         id="comment-voat_1324167"
+         data-depth="3"
+         data-id="voat_1324167"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/404_SLEEP_NOT_FOUND/">u/404_SLEEP_NOT_FOUND</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-07-24 19:31:23 UTC">24 Jul 2015 19:31</span>
+        </span>
+    </summary>
+    <div class="md"><p>Good points on TCP over UDP. I can't really see how to justify writes on UDP overall as a database design. I'm just storing tweets from the unwashed masses so I guess that's why I don't care about losing a few writes.</p>
+<p>What I found odd before on linux was that I had my database on the same host as the app and it still ate up a lot of TCP/IP... but that may have been from the scraping, which was clearly opening connections to many new web servers...</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_1322733"
+         data-depth="0"
+         data-id="voat_1322733"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Doxin/">u/Doxin</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-07-24 18:30:10 UTC">24 Jul 2015 18:30</span>
+        </span>
+    </summary>
+    <div class="md"><p>don't use couchdb. in general don't use document stores. most data is relational, even though you wouldn't realize it at first. as soon as you have user accounts it's relational.</p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

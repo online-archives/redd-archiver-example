@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="So, I&#39;ve built a data logger device communicating via Modbus protocol. Works great, firmware is my field of somewhat expertise. I&#39;ve been... - v/programming">
+<meta name="keywords" content="programming, static, channelmodel, class, contains, classes, like, code, channel, device">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/2600724.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: WPF C#: Static classes, when to use them?">
+<meta property="og:description" content="So, I&#39;ve built a data logger device communicating via Modbus protocol. Works great, firmware is my field of somewhat expertise. I&#39;ve been... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/2600724.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: WPF C#: Static classes, when to use them?">
+<meta name="twitter:description" content="So, I&#39;ve built a data logger device communicating via Modbus protocol. Works great, firmware is my field of somewhat expertise. I&#39;ve been... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "WPF C#: Static classes, when to use them?",
+  "author": {
+    "@type": "Person",
+    "name": "auto_turret"
+  },
+  "datePublished": "2018-06-20T22:03:36Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 4
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "So, I've built a data logger device communicating via Modbus protocol. Works great, firmware is my field of somewhat expertise. I've been crash coursing C# for the past couple weeks, trying to get my head wrapped around object-oriented coding, in order to build myself an app to view the sensor data from my device as a continuous plotting chart. The device can broadcast sensor data from 8 different channels. Only took me a weekend to get a demo up and running, but not utilizing any sort of..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: WPF C#: Static classes, when to use them?</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_2600724">
+  <h3 class="title">
+      WPF C#: Static classes, when to use them?
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2018-06-20 22:03:36 UTC">20 Jun 2018 22:03</span>
+    by <span ><a class="user-link" href="../../../../user/auto_turret/">u/auto_turret</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>So, I've built a data logger device communicating via Modbus protocol. Works great, firmware is my field of somewhat expertise. I've been crash coursing C# for the past couple weeks, trying to get my head wrapped around object-oriented coding, in order to build myself an app to view the sensor data from my device as a continuous plotting chart. The device can broadcast sensor data from 8 different channels.</p>
+<p>Only took me a weekend to get a demo up and running, but not utilizing any sort of OOP-like code, since I don't really know what the fuck I'm doing with OOP yet.. The code looked like a trad C garage-class code piece of crap. </p>
+<p>I've been trying to follow the MVVM model, I have the different functional parts broken up:
+CaptureEngine.cs
+- has everything I need to extract the incoming sensor data. I simply pass it a baud rate and com port, run the connect function, and the engine updates the ChannelModel for 8 channels as the data logger sends it. We trigger an event to notify new data is available, so the ChannelModel is updated on every trigger.</p>
+<p>ChartingEngine.cs
+- Uses the data from ChannelModel to plot a chart</p>
+<p>ChannelModel.cs
+- Contains 8 channel labels (strings) and 8 channel present values (double). Contains an event to let the ChartEngine know new data is available, and to plot it.
+MeasureModel.cs
+- Simply a class with two properties, time and present value. This is the package I send the current channel data to the ChartEngine.</p>
+<p>MainWindow.cs
+- Basically just initializes and starts the CaptureEngine and ChartEngine</p>
+<p>ViewModel.cs
+- Contains properties of visible data, (channel_1_label_vm, channel_2_label_vm... etc). Also contains code for the visual elements such as buttons, textboxes, etc.</p>
+<p>I'm wondering.. is making my ChannelModel a static class, so that all classes can see the channel data it contains, a good move? Because creating a non-static instance doesn't seem to work.. the other classes won't see it.</p>
+<p>Now this all works just fine, but the whole static ChannelModel class seems like I'm misbehaving/not utilizing C# like I should be..</p>
+<p>My question I'm hoping to get some insight into is, in what situations would you use a static class? Is it common for static classes to be used incorrectly/abused?</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>12 comments</h4>
+        <details class="comment "
+         id="comment-voat_13083804"
+         data-depth="0"
+         data-id="voat_13083804"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/grim89/">u/grim89</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-06-20 23:37:23 UTC">20 Jun 2018 23:37</span>
+        </span>
+    </summary>
+    <div class="md"><p>Static classes are generally considered an anti pattern and have few and very specific uses cases (don't remember them of the top of my head).
+In your example you don't need a static class so u shouldn't use it.
+All you need to do is pass the instance of  ChannelModel  to the classes that use it.
+So let say your ViewModel.cs need ChannelModel   you do something liked this.</p>
+<pre><code> public class ViewModel 
+    {
+     ChannelModel  _channelModel ;
+        public ViewModel (ChannelModel  channelModel)
+        {
+            _channelModel = channelModel;
+        }
+     }
+</code></pre>
+<p>You should look into Dependency Injection and Inversion of Control since is pretty much a standard now.</p>
+<p><a href="https://www.codeproject.com/articles/592372/dependency-injection-di-vs-inversion-of-control-io">Dependency Injection (DI) vs. Inversion of Control (IOC)</a></p></div>
+            <details class="comment "
+         id="comment-voat_13084136"
+         data-depth="1"
+         data-id="voat_13084136"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/auto_turret/">u/auto_turret</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2018-06-21 00:25:16 UTC">21 Jun 2018 00:25</span>
+        </span>
+    </summary>
+    <div class="md"><p>Thanks for the reply. I'm drawing out my program for the umpteenth time, it is slowly starting to click I think..</p>
+<p>I believe my trouble is, I keep reverting to thinking like I'm coding a microcontroller which keeps me running into roadblocks. </p>
+<p>Referencing your code: I see what you did there, didn't realize I could pass along the whole instance and it's current state. </p>
+<p>I believe now, if I put an event listener in that ViewModel constructor instead, and stick _channelModel = channelModel in a method that will call, it should listen for a newdata available event and update itself accordingly, so long as I've created a new ViewModel instance in my main program.</p>
+<p>I'll give it a shot. Thanks man, that was super helpful. Going to check out the links you've provided.</p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_13102473"
+         data-depth="1"
+         data-id="voat_13102473"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-06-22 23:50:54 UTC">22 Jun 2018 23:50</span>
+        </span>
+    </summary>
+    <div class="md"><p>IoC tends to turn out into very messy code and hard to reverse engineer. If you did not create the code yourself or were part of it then you are toast.</p>
+<p>In a perfect world where programs are perfect, analysis done right and developers never make mistakes, then IoC is good. But the hard reality is that when you inherit code that you started but others took over and they tell you fix the bugs. </p>
+<p>On top of that IoC, actually explodes the amount of code that you need exponentially to do the exact same job. </p>
+<p>The sad reality is that if jump on this IoC bandwagon, your brain gets trapped that this is the only possible solution and you lose the ability into train your brain into creativity. You become slave of the code, instead of the master.</p></div>
+            <details class="comment "
+         id="comment-voat_13109091"
+         data-depth="2"
+         data-id="voat_13109091"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/auto_turret/">u/auto_turret</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2018-06-23 19:42:54 UTC">23 Jun 2018 19:42</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>On top of that IoC, actually explodes the amount of code that you need exponentially to do the exact same job.</p>
+</blockquote>
+<p>Exactly what I observe. Coming from firmware programming where sometimes your usable ram is measured in BYTES, I kept initially gravitating towards trying to make every bit and byte count. Well, it just don't work that way in Windows app coding.. </p>
+<p>I can see how it could be quite helpful in swapping modules down the road, and my small app so far seems it could be easily followed and understood without excessive commentary.</p></div>
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_13087112"
+         data-depth="0"
+         data-id="voat_13087112"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/2308482093842/">u/2308482093842</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-06-21 10:27:58 UTC">21 Jun 2018 10:27</span>
+        </span>
+    </summary>
+    <div class="md"><p>Static classes can sometimes make sense, but often they are just a quick and dirty hack and they make your code harder to extend in the future.</p>
+<p>Only if there's no way in hell that you could ever use a second instance of something, only then a static class makes sense.</p>
+<p>But 99.9% of the time, you can actually Benefit from allowing more than one instance.</p>
+<p>Often, beginners initially like static classes, because you don't have to pass the objects to all your other objects, which is tedious.</p>
+<p>But there is a middle Ground:</p>
+<pre><code>public class ChannelModel
+{
+    public static ChannelModel Default { get; } = new ChannelModel();
+    ...
+}
+public class ViewModel
+{
+    ChannelModel ChannelModel { get; set; }
+    public ViewModel(ChannelModel ChannelModel = ChannelModel.Default)
+    {
+        this.ChannelModel = ChannelModel;
+    }
+}
+</code></pre>
+<p>Now you have your &quot;static&quot; instance that you don't have to pass around, but you can have multiple instances, since the class is not static.</p></div>
+            <details class="comment "
+         id="comment-voat_13088322"
+         data-depth="1"
+         data-id="voat_13088322"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/auto_turret/">u/auto_turret</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2018-06-21 13:50:29 UTC">21 Jun 2018 13:50</span>
+        </span>
+    </summary>
+    <div class="md"><p>Cool man, I did use something exactly like that to access my Receive() in my CaptureEngine class from my RS232Functions class. Something to the effect of </p>
+<blockquote>
+<p>private RS232Functions _instance = new RS232Functions();
+        public RS232Functions Instance
+        {
+            get
+            {
+                return _instance;
+            }
+        }</p>
+</blockquote>
+<p>and</p>
+<blockquote>
+<p>// Create function call on data received
+            serial.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(CaptureEngine.Instance.Recieve);</p>
+</blockquote>
+<p>to use it.. so far that's been working out for me.</p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_13124099"
+         data-depth="1"
+         data-id="voat_13124099"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/poloport/">u/poloport</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-06-25 17:43:45 UTC">25 Jun 2018 17:43</span>
+        </span>
+    </summary>
+    <div class="md"><p>Thanks dude! I knew how static classes worked, but that work around is really useful!</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_13102583"
+         data-depth="0"
+         data-id="voat_13102583"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-06-23 00:04:56 UTC">23 Jun 2018 00:04</span>
+        </span>
+    </summary>
+    <div class="md"><p>If you start with static classes first then you will end up having code that is not extendable and thread safe. 
+Also you can always nail down a dynamic class as static like a singleton.</p>
+<p>I tend to initialize static classes at my Main() first. This way I have a predictable place where the code gets initialized.</p></div>
+            <details class="comment "
+         id="comment-voat_13105948"
+         data-depth="1"
+         data-id="voat_13105948"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/auto_turret/">u/auto_turret</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2018-06-23 10:02:38 UTC">23 Jun 2018 10:02</span>
+        </span>
+    </summary>
+    <div class="md"><p>I've re-written the darn thing again, but this time using the dependency inversion principle. NOW things make more sense.. high level modules don't depend on lower level modules, but rather abstractions that don't rely on details.</p>
+<p>Works for everything BUT the serialport functions. It appears it must be static or my port won't stay open.</p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_13114107"
+         data-depth="1"
+         data-id="voat_13114107"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/auto_turret/">u/auto_turret</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2018-06-24 14:22:28 UTC">24 Jun 2018 14:22</span>
+        </span>
+    </summary>
+    <div class="md"><p>Scratch the last comment, got rid of the static from SerialPort too. I think I've pretty much got this concept down, now. Been banging my head for a month, then finally came to you guys for advice. Turns out that's exactly what I needed!</p></div>
+            <details class="comment "
+         id="comment-voat_13116700"
+         data-depth="2"
+         data-id="voat_13116700"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-06-24 20:17:25 UTC">24 Jun 2018 20:17</span>
+        </span>
+    </summary>
+    <div class="md"><p>Nice to hear.</p></div>
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_13127068"
+         data-depth="0"
+         data-id="voat_13127068"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/whambamthankyouham/">u/whambamthankyouham</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-06-25 23:34:06 UTC">25 Jun 2018 23:34</span>
+        </span>
+    </summary>
+    <div class="md"><p>Static class -&gt; When you only want one of something.</p>
+<p>If you create a level in a game as a class, you (typically) only want one instance of that level.</p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

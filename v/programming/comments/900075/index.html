@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Basically you just give it a list of websites and hit continue when you are ready to look at the next site. program: using System; using... - v/programming">
+<meta name="keywords" content="programming, firefox, tab, quot, cmd, inputwriter, psi, pre, code, system">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/900075.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: A little script I wrote to find links for voat">
+<meta property="og:description" content="Basically you just give it a list of websites and hit continue when you are ready to look at the next site. program: using System; using... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/900075.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: A little script I wrote to find links for voat">
+<meta name="twitter:description" content="Basically you just give it a list of websites and hit continue when you are ready to look at the next site. program: using System; using... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "A little script I wrote to find links for voat",
+  "author": {
+    "@type": "Person",
+    "name": "dolphonebubleine"
+  },
+  "datePublished": "2016-03-05T04:27:38Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 3
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "Basically you just give it a list of websites and hit continue when you are ready to look at the next site. program: using System; using System.IO; using System.Diagnostics; using System.Threading; namespace Runner { class Program { static void Main(string[] args) { Process cmd; StreamWriter inputWriter; string sitesPath = @\"C:\\Users\\me\\Desktop\\save\\runner.txt\"; string[] sites = File.ReadAllLines(sitesPath); ProcessStartInfo psi = new ProcessStartInfo(\"cmd.exe\"); psi.UseShellExecute = false;..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: A little script I wrote to find links for voat</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_900075">
+  <h3 class="title">
+      A little script I wrote to find links for voat
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 23">23</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2016-03-05 04:27:38 UTC">05 Mar 2016 04:27</span>
+    by <span ><a class="user-link" href="../../../../user/dolphonebubleine/">u/dolphonebubleine</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>Basically you just give it a list of websites and hit continue when you are ready to look at the next site. </p>
+<p>program:</p>
+<pre><code>using System;
+using System.IO;
+using System.Diagnostics;
+using System.Threading;
+namespace Runner
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Process cmd;
+            StreamWriter inputWriter;
+            string sitesPath = @&quot;C:\Users\me\Desktop\save\runner.txt&quot;;
+            string[] sites = File.ReadAllLines(sitesPath);
+            ProcessStartInfo psi = new ProcessStartInfo(&quot;cmd.exe&quot;);
+            psi.UseShellExecute = false;
+            psi.CreateNoWindow = false;
+            psi.RedirectStandardInput = true;
+            cmd = new Process();
+            cmd.StartInfo = psi;
+            cmd.Start();
+            inputWriter = cmd.StandardInput;
+            inputWriter.WriteLine(&quot;cd \&quot;C:\\Program Files (x86)\\Mozilla Firefox\\\&quot;&quot; + &quot;\r\n&quot;);
+            inputWriter.WriteLine(&quot;firefox.exe&quot; + &quot;\r\n&quot;);
+            for (int i = 0; i &lt; sites.Length; i++)
+            {
+                inputWriter.WriteLine(sites[i] + &quot;\r\n&quot;);
+                Thread.Sleep(100); // &lt;----------------------------- set a breakpoint here
+            }
+            Console.ReadLine();
+        }
+    }
+}
+</code></pre>
+<p>site list:</p>
+<pre><code>firefox -new-tab [http://www.venturebeat.com](http://www.venturebeat.com)
+firefox -new-tab [http://www.recode.net](http://www.recode.net)
+firefox -new-tab [https://hacked.com/](https://hacked.com/)
+firefox -new-tab [http://theoatmeal.com/](http://theoatmeal.com/)
+firefox -new-tab [http://nextbigfuture.com/](http://nextbigfuture.com/)
+firefox -new-tab [http://www.hanselman.com/blog/](http://www.hanselman.com/blog/)
+firefox -new-tab [http://techcrunch.com/](http://techcrunch.com/)
+firefox -new-tab [http://www.nationalgeographic.com/](http://www.nationalgeographic.com/)
+firefox -new-tab [http://rt.com/usa/](http://rt.com/usa/)
+firefox -new-tab [https://twitter.com/numenta](https://twitter.com/numenta)
+firefox -new-tab [http://www.treehugger.com](http://www.treehugger.com)
+firefox -new-tab [http://www.winbeta.org/archive](http://www.winbeta.org/archive)
+firefox -new-tab [http://www.sciencealert.com/](http://www.sciencealert.com/)
+firefox -new-tab [http://hackaday.com/blog/](http://hackaday.com/blog/)
+firefox -new-tab [http://www.programmableweb.com/](http://www.programmableweb.com/)
+firefox -new-tab [http://www.endgadget.com/](http://www.endgadget.com/)
+firefox -new-tab [http://www.extremetech.com/category/extreme](http://www.extremetech.com/category/extreme)
+firefox -new-tab [http://www.bloomberg.com/technology](http://www.bloomberg.com/technology)
+firefox -new-tab [http://www.tomshardware.com/articles/](http://www.tomshardware.com/articles/)
+firefox -new-tab [http://www.scientificamerican.com](http://www.scientificamerican.com)
+firefox -new-tab [http://www.popsci.com/](http://www.popsci.com/)
+firefox -new-tab [https://www.google.com/?gws_rd=ssl#q=artificial+intelligence+news&amp;tbs=qdr:d](https://www.google.com/?gws_rd=ssl#q=artificial+intelligence+news&amp;tbs=qdr:d)
+firefox -new-tab [https://www.google.com/?gws_rd=ssl#q=machine+learning+news&amp;tbs=qdr:d](https://www.google.com/?gws_rd=ssl#q=machine+learning+news&amp;tbs=qdr:d)
+</code></pre></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>4 comments</h4>
+        <details class="comment "
+         id="comment-voat_4498259"
+         data-depth="0"
+         data-id="voat_4498259"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 3">
+            3
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/tame/">u/tame</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-05 04:55:36 UTC">05 Mar 2016 04:55</span>
+        </span>
+    </summary>
+    <div class="md"><p>Now filter out already posted links, then rank them according to some heuristic, then post the top few automatically. Yay, voatbot!</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_4500259"
+         data-depth="0"
+         data-id="voat_4500259"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/mschenk/">u/mschenk</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-05 09:54:32 UTC">05 Mar 2016 09:54</span>
+        </span>
+    </summary>
+    <div class="md"><p>Or try <a href="http://storytide.com">http://storytide.com</a>, a little site I wrote that automatically finds fresh, trending content.</p></div>
+            <details class="comment "
+         id="comment-voat_4500531"
+         data-depth="1"
+         data-id="voat_4500531"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/tame/">u/tame</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-05 11:11:49 UTC">05 Mar 2016 11:11</span>
+        </span>
+    </summary>
+    <div class="md"><p>That's pretty cool. Nice work!</p></div>
+</details>
+
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

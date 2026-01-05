@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="The point of a constructor is to allocate memory and initialize something. The tip is make your constructor in such a way that it only... - v/programming">
+<meta name="keywords" content="programming, code, constructor, programing, constructors, allocate, memory, initialize, something, only">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/913650.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Programing tip: Constructors">
+<meta property="og:description" content="The point of a constructor is to allocate memory and initialize something. The tip is make your constructor in such a way that it only... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/913650.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Programing tip: Constructors">
+<meta name="twitter:description" content="The point of a constructor is to allocate memory and initialize something. The tip is make your constructor in such a way that it only... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Programing tip: Constructors",
+  "author": {
+    "@type": "Person",
+    "name": "roznak"
+  },
+  "datePublished": "2016-03-11T20:28:32Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 3
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "The point of a constructor is to allocate memory and initialize something. The tip is make your constructor in such a way that it only contains the absolute necessary code that can't trigger an exception or slow down. Move the code that does make the code slow or can have error in a separate method. This way it tells the user of that class that it is a method and can be slow or create errors."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Programing tip: Constructors</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_913650">
+  <h3 class="title">
+      Programing tip: Constructors
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 10">10</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2016-03-11 20:28:32 UTC">11 Mar 2016 20:28</span>
+    by <span ><a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>The point of a constructor is to allocate memory and initialize something. </p>
+<p>The tip is make your constructor in such a way that it only contains the absolute necessary code that can't trigger an exception or slow down.</p>
+<p>Move the code that does make the code slow or can have error in a separate method. This way it tells the user of that class that it is a method and can be slow or create errors. </p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>9 comments</h4>
+        <details class="comment "
+         id="comment-voat_4571517"
+         data-depth="0"
+         data-id="voat_4571517"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/SwiftLion/">u/SwiftLion</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-11 21:02:51 UTC">11 Mar 2016 21:02</span>
+        </span>
+    </summary>
+    <div class="md"><p>As a corrolary, you should always be aware of the life cycle of the framework you’re using. Using iOS as an example, a “view controller” has some methods that are called exactly once, at least once, or every time a certain event occurs. The subtleties of these timings can be easy to miss and cause strange behavior. </p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_4572547"
+         data-depth="0"
+         data-id="voat_4572547"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/zquad/">u/zquad</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-11 22:29:31 UTC">11 Mar 2016 22:29</span>
+        </span>
+    </summary>
+    <div class="md"><p>Another tip is to call on setters to set class members instead of doing so in the constructor.  Eg. Instead of </p>
+<p>Don't</p>
+<p>constructor(Member member) { this.member; } public setMember(Member member){ this.member = member }</p>
+<p>Do </p>
+<p>constructor(Member member) { this.setMember(member); } public setMember(Member member){ this.member = member }</p>
+<p>Why? Do won't need to rewrite validation logic.  And the latter is consistent with separation of responsibility.</p></div>
+            <details class="comment "
+         id="comment-voat_4572905"
+         data-depth="1"
+         data-id="voat_4572905"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-11 23:04:55 UTC">11 Mar 2016 23:04</span>
+        </span>
+    </summary>
+    <div class="md"><p>Reformatted for clarity. (check out the &lt;&gt; button) to write code.</p>
+<p>Don't</p>
+<pre><code>constructor(Member member) { 
+     this.member; 
+}
+ public setMember(Member member){
+     this.member = member 
+}
+</code></pre>
+<p>Do</p>
+<pre><code>constructor(Member member) { 
+   this.setMember(member); 
+}
+ public setMember(Member member){ 
+   this.member = member 
+}
+</code></pre></div>
+            <details class="comment "
+         id="comment-voat_4573561"
+         data-depth="2"
+         data-id="voat_4573561"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/zquad/">u/zquad</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 00:07:22 UTC">12 Mar 2016 00:07</span>
+        </span>
+    </summary>
+    <div class="md"><p>Thanks</p></div>
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_4573068"
+         data-depth="1"
+         data-id="voat_4573068"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Tecktonik/">u/Tecktonik</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-11 23:21:49 UTC">11 Mar 2016 23:21</span>
+        </span>
+    </summary>
+    <div class="md"><p>Now you have created a public setter method for a property that maybe shouldn't be publicly settable. For a private property, you certainly don't want a public setter, but creating a private setter seems excessive.</p>
+<p>Many post-Java languages use implicit setter methods which avoid the clutter of such boilerplate methods.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_4573190"
+         data-depth="0"
+         data-id="voat_4573190"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Tecktonik/">u/Tecktonik</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-11 23:35:11 UTC">11 Mar 2016 23:35</span>
+        </span>
+    </summary>
+    <div class="md"><p>You have to strike a balance with how much work is done in a constructor. If you move &quot;unnecessary&quot; code out of the constructor, but still require some kind of init() to be called, then you will end up building Factories, and you can never have just one Factory. But if the factory is calling the slow Init() code you moved out of the constructor, all you have done is added complexity for no actual benefit.</p></div>
+            <details class="comment "
+         id="comment-voat_4573705"
+         data-depth="1"
+         data-id="voat_4573705"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 00:21:28 UTC">12 Mar 2016 00:21</span>
+        </span>
+    </summary>
+    <div class="md"><p>But the Init() can also be reused to recycle an object that was already created.  That class might be only used in your factory but that code could maybe also reused outside the factory in future projects.</p>
+<p>Now comes the interesting part, when you go to multi threading usage of that class. You can create the classes fast in one thread and then let the slower Init() execute in parallel threads.It simplifies your code to track what objects initialized successfully and which ones failed.</p>
+<p>In small scale projects, of course Init() might be overkill, but my experience is that code gets recycled and ends up in bigger projects. And the fact that you see Init() in a class is a warning that this class could have a speed penalty when you use it.</p>
+<p>When you design the class with Init() up front first, then later you can always optimize your code by commenting it out and see where the compiler stops. It is harder to find in your code all locations where the classes gets created and add the init(). </p></div>
+            <details class="comment "
+         id="comment-voat_4574751"
+         data-depth="2"
+         data-id="voat_4574751"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Tecktonik/">u/Tecktonik</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 02:01:09 UTC">12 Mar 2016 02:01</span>
+        </span>
+    </summary>
+    <div class="md"><p>This seems kind of like an argument against &quot;You aren't going to need it!&quot; by saying &quot;It will turn out useful later on.&quot; Of course that is how a lot of Factory classes get started in the first place. The underlying intention is to prevent technical debt: give an object a life cycle, first construct, then initialize, so you don't have to pay off the debt of adding the life cycle later on. The downside of this is that changes to init() might screw up the life cycle in an invisible way, so you still have to track down all the places where the class is instantiated to make sure they still work, because if you don't you must be willing to eat the technical debt you were only pretending to avoid in the first place. It is a risk either way.</p>
+<p>If you are repurposing an init() method to recycle an object, you create a sizable risk of introducing inconsistent state, or possibly leaking data from the old state into the new state. You can't safely use init() to turn an old object into a just-like-new object unless your init() method also restores sensitive properties to their default values - something an init() method wouldn't normally be concerned with.</p></div>
+            <details class="comment "
+         id="comment-voat_4575046"
+         data-depth="3"
+         data-id="voat_4575046"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 02:32:59 UTC">12 Mar 2016 02:32</span>
+        </span>
+    </summary>
+    <div class="md"><p>The art of software :-) Many different solutions with many different outcomes.</p>
+<p>But there is more in life than just factories ;-) </p>
+<p>Also if the initial constructor takes 100ms to execute because it has some loading code and you move that 99.9 ms to the Init() then the execution penalty to call Init() is maybe a few microseconds.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

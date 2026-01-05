@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="View 2 archived posts by u/pm_me_or in v/programming">
+<meta name="keywords" content="reddit, user, posts, archive, pm_me_or, programming">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/user/pm_me_or/">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="u/pm_me_or - 2 Archived Voat Posts in v/programming">
+<meta property="og:description" content="View 2 archived posts by u/pm_me_or in v/programming">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/user/pm_me_or/">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="u/pm_me_or - 2 Archived Voat Posts in v/programming">
+<meta name="twitter:description" content="View 2 archived posts by u/pm_me_or in v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../static/site.webmanifest">
+
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../static/css/redd-archiver-universal.css">
+
+
+    <title>u/pm_me_or - 2 Archived Voat Posts in v/programming</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="./">u/pm_me_or</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html">home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="user-profile-header pt-3">
+  <h2>u/pm_me_or</h2>
+  <p class="lead">
+    0 posts ·
+    2 comments ·
+    2 total
+  </p>
+  <p class="text-muted">Active in: v/programming (2)</p>
+</div>
+
+<ul class="pagination pagination-sm mt-3">
+  <li class="page-item first-page disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item skip-back disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item prev-page disabled"><a class="page-link" href="index-0.html" tabindex="-1">&lsaquo;</a></li>
+
+
+      <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+
+  <li class="page-item next-page disabled"><a class="page-link" href="index-1.html" tabindex="-1">&rsaquo;</a></li>
+
+  <li class="page-item skip-forward disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;</a></li>
+
+  <li class="page-item last-page disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;&rsaquo;</a></li>
+</ul>
+
+
+<div class="links">
+
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/327455#1262636">Systematic and scientific approach to analyse source code for understanding</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Strangely, I read &quot;unfamiliar source code&quot; as &quot;hostile source code&quot;. Because it often is. </p>
+<p>You'll sometimes even wonder if the coder has volontarily overcomplicated everything (e.g. sliced a simple flow in multiple callback-ridden subprocesses) just to screw with you.</p>
+<p>But more seriously, I do not know a simple method to read hostile code. I work in a SaaS-architectured IS, so my experience may not be applicable to your current problem, but what I do is :</p>
+<ol>
+<li>Look for external API implementations and isolate them. Those are the limbs of your code. They are here to augment the data processed by reading a database / a file, calling a service / an engine... Sometimes the data they return may alter the flow, but the implementation of these interfaces are really dumb : map from one type to another, call a low-level API... You don't need to dive in them early (except if the code you have to extend is there, but in this case this should be piece of cake).</li>
+<li>Look for business classes. Those are the trunk of your code. They control the workflow, make the decisions and generate functional errors. If business classes are implementation of business interfaces, that may imply some sort of business-level framework, which may simplify your work.</li>
+<li>If there are no interfaces, you may be screwed : you are facing something written like a script, monolithic and virtually non evolutive. Sorry.</li>
+<li>Look for the authors. Who knows, they're maybe still around, and perhaps willing to help</li>
+<li>In general, if you want to be more efficient in this task in the future, keep yourself updated about design patterns and frameworks. There is nothing scarier than having to decypher a pattern you never heard about (looking at you, RoR &quot;artisans&quot;)...</li>
+</ol>
+<p>All in all, welcome to hell.</p></div>
+    <a href="../../v/programming/comments/327455#1262636">
+        <span class="badge badge-success-bright"
+              title="Comment score: 3">
+            3
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-07-22 16:11:01 UTC">22 Jul 2015 16:11</span>
+        <span ><a class="user-link" href="../../user/pm_me_or/">u/pm_me_or</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/227433#762336">[TIL] What is the synonym of &#34;I don&#39;t care&#34; in programming?</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>I'd replace the </p>
+<pre><code>catch (Exception e) {
+</code></pre>
+<p>by a </p>
+<pre><code>catch (Throwable th) {
+</code></pre>
+<p>Because, who cares about errors ?</p></div>
+    <a href="../../v/programming/comments/227433#762336">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-07-10 08:38:36 UTC">10 Jul 2015 08:38</span>
+        <span ><a class="user-link" href="../../user/pm_me_or/">u/pm_me_or</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div></div>
+
+<ul class="pagination pagination-sm mt-3">
+  <li class="page-item first-page disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item skip-back disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item prev-page disabled"><a class="page-link" href="index-0.html" tabindex="-1">&lsaquo;</a></li>
+
+
+      <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+
+  <li class="page-item next-page disabled"><a class="page-link" href="index-1.html" tabindex="-1">&rsaquo;</a></li>
+
+  <li class="page-item skip-forward disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;</a></li>
+
+  <li class="page-item last-page disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;&rsaquo;</a></li>
+</ul>
+
+    </main>
+
+<footer class="container-fluid">
+  <p class="small mb-0">
+    archive has 9,592 posts and 65,719 comments.
+    <a href="https://github.com/19-84/redd-archiver">source code</a>.
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

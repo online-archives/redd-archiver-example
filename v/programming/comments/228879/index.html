@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Hi Folks, I am reading some attributes of an object that has an int32 flag attribute similar to this: public enum attributes { A = 1, B =... - v/programming">
+<meta name="keywords" content="programming, back, enum, flags, pre, code, hurting, brain, folks, reading">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/228879.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Enum Flags are hurting my brain.">
+<meta property="og:description" content="Hi Folks, I am reading some attributes of an object that has an int32 flag attribute similar to this: public enum attributes { A = 1, B =... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/228879.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Enum Flags are hurting my brain.">
+<meta name="twitter:description" content="Hi Folks, I am reading some attributes of an object that has an int32 flag attribute similar to this: public enum attributes { A = 1, B =... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Enum Flags are hurting my brain.",
+  "author": {
+    "@type": "Person",
+    "name": "HelloJarvis"
+  },
+  "datePublished": "2015-07-09T12:43:27Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 2
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "Hi Folks, I am reading some attributes of an object that has an int32 flag attribute similar to this: public enum attributes { A = 1, B = 2, C = 4, D = 8, E = 10, F = 20, G= 40, H = 80, I = 100, J = 200 } When I query the object, I get values like this back : 11 49 33 17 back. For love nor money can I figure out how to determine the UInt32 value I get back from the object to see which Flags are set on it. I've had a look at a few stack overflow discussions and I am just as confused as I was an..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Enum Flags are hurting my brain.</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_228879">
+  <h3 class="title">
+      Enum Flags are hurting my brain.
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2015-07-09 12:43:27 UTC">09 Jul 2015 12:43</span>
+    by <span ><a class="user-link" href="../../../../user/HelloJarvis/">u/HelloJarvis</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>Hi Folks,
+I am reading some attributes of an object that has an int32 flag attribute similar to this:</p>
+<pre><code>    public enum attributes
+    {
+        A = 1,
+        B = 2,
+        C = 4,
+        D = 8,
+        E = 10,
+        F = 20,
+        G= 40,
+        H = 80,
+        I = 100,
+        J = 200
+    }
+</code></pre>
+<p>When I query the object, I get values like this back :</p>
+<p>11</p>
+<p>49</p>
+<p>33</p>
+<p>17</p>
+<p>back.  For love nor money can I figure out how to determine the UInt32 value I get back from the object to see which Flags are set on it.</p>
+<p>I've had a look at a few stack overflow discussions and I am just as confused as I was an hour ago. Any help would be greatly appreciate.</p>
+<p>Thank you in advance.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>3 comments</h4>
+        <details class="comment "
+         id="comment-voat_711787"
+         data-depth="0"
+         data-id="voat_711787"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Monqui/">u/Monqui</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-07-09 15:07:14 UTC">09 Jul 2015 15:07</span>
+        </span>
+    </summary>
+    <div class="md"><p>I might be misreading something here, but shouldn't your integer values be 2^n?</p>
+<p>Normally bitfields have a bunch of yes/no flags- you can tell what flags are set to true by checking to see if the bit assigned to your property is set to 1.</p>
+<p>What I see here are some options that could cause collisions.  If you see &quot;10&quot; coming out, how would you know if that was a combo of A+D, or if it was just E.</p>
+<p>I'd try changing it to this-</p>
+<pre><code>public enum attributes
+    {
+        A = 1,      // 0b0000000001
+        B = 2,      // 0b0000000010
+        C = 4,      // 0b0000000100
+        D = 8,      // 0b0000001000
+        E = 16,    // 0b0000010000
+        F = 32,    // 0b0000100000
+        G= 64,    // 0b0001000000
+        H = 128, // 0b0010000000
+        I = 256,  // 0b0100000000
+        J = 512  // 0b1000000000
+    }
+</code></pre>
+<p>Now, you can use what <a href="/v/trayfly">/v/trayfly</a> mentioned, and rig up a system that will take the value from that enum, do a bitwise and with JUST that value against your object with permissions- so if that bit is set in both, the flag is set.</p>
+<p><em>edit</em> added some clarity to the bit part in the code.</p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

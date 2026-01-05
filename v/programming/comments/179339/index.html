@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Are idle games easy to code? - Discussion in v/programming with 12 comments">
+<meta name="keywords" content="programming, idle, games, easy, code">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/179339.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Are idle games easy to code?">
+<meta property="og:description" content="Are idle games easy to code? - Discussion in v/programming with 12 comments">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/179339.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Are idle games easy to code?">
+<meta name="twitter:description" content="Are idle games easy to code? - Discussion in v/programming with 12 comments">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Are idle games easy to code?",
+  "author": {
+    "@type": "Person",
+    "name": "with-or-without"
+  },
+  "datePublished": "2015-06-29T01:47:40Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 3
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  }
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Are idle games easy to code?</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_179339">
+  <h3 class="title">
+      Are idle games easy to code?
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 6">6</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2015-06-29 01:47:40 UTC">29 Jun 2015 01:47</span>
+    by <span ><a class="user-link" href="../../../../user/with-or-without/">u/with-or-without</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+</div>
+
+<div class="comments">
+  <h4>12 comments</h4>
+        <details class="comment "
+         id="comment-voat_516088"
+         data-depth="0"
+         data-id="voat_516088"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 7">
+            7
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/escape/">u/escape</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-29 06:29:18 UTC">29 Jun 2015 06:29</span>
+        </span>
+    </summary>
+    <div class="md"><p>Yeah. Well, I've only poked around in it a bit. If you know how to write functional JavaScript it's easy. The hard part is balance and coming up with a fun formula. From my limited experience with them, I know you need:</p>
+<ul>
+<li>
+<p><strong>The click function</strong><br />
+This is the first and only available action the player can take, initially (in most cases). Click to collect some kind of resource. Write a function like this:</p>
+<pre><code>var points = 0; // Track total points here
+var bonus = 0; // If you use modifiers for higher points per click, use this
+var theClick = function(n) {
+    if ( n &gt; 1 ) {
+        points = points + ( n * (1 + bonus));
+    } else {
+        points = points + (1 + bonus);
+    }
+}  
+</code></pre>
+<p>Then just apply that function to a button in your interface. The <code>n</code> argument is explained below in the repeated function.</p>
+</li>
+<li>
+<p><strong>Resource(s)</strong><br />
+In my example above, points are your primary resource. You'll earn it from your <code>theClick()</code> function. You can get creative and come up with multiple resources (with multiple functions) to add more depth to your game. This is good if you want to add a rarer resource later in the game.</p>
+</li>
+<li>
+<p><strong>The repeating function</strong><br />
+Next you need to write a function that repeats every X seconds. This is used if you have &quot;clickers&quot; in your game. Any kind of upgrade that does the clicking for you. In the above example, I've included an argument to your function. Use this argument with the number of clickers the player currently has. Example:  
+</p>
+<pre><code> var clickers = 3;
+ setInterval(
+     theClick(clickers), 1000;
+ )  
+</code></pre>
+<p>This will fire your function every 1000ms (1 second). It passes the number of clickers as the argument, which multiplies the effect of the function. In the above example, it will add 3 to your points every 1 second.</p>
+</li>
+<li>
+<p><strong>Upgrades</strong><br />
+Upgrades add depth and interest to your game. This could be something like a percentage bonus to clicks, or doubling the effectiveness of your clickers.</p>
+</li>
+</ul>
+<p>Those are the core building blocks of any idle clicker game. The funnest games have many more layers to them, adding hundreds of upgrades, new resource types, animations, etc. It's a good exercise for someone who is an intermediate at JavaScript coding to build one of these kinds of games.</p>
+<p><em>Edit: Fixed the click function.</em></p></div>
+            <details class="comment "
+         id="comment-voat_516192"
+         data-depth="1"
+         data-id="voat_516192"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/with-or-without/">u/with-or-without</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-06-29 06:39:17 UTC">29 Jun 2015 06:39</span>
+        </span>
+    </summary>
+    <div class="md"><p>Wow, that was great! Thanks for taking the time. Would building a simple idle game be outside the scope of a beginner? </p>
+<p>Also, could I use this comment in my subverse <a href="/v/idlegaming">/v/idlegaming</a> ? I'm trying to construct a definition for idle games and think your post is relevant and insightful!  </p></div>
+            <details class="comment "
+         id="comment-voat_516269"
+         data-depth="2"
+         data-id="voat_516269"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/escape/">u/escape</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-29 06:47:18 UTC">29 Jun 2015 06:47</span>
+        </span>
+    </summary>
+    <div class="md"><p>Oh yeah sure feel free to use it. As far as being outside of the scope of a beginner probably not. If you understand functions, arguments, variables, etc. you should be fine. If you have questions I can try to answer them as well. I'll subscribe to that sub too. I love idle games and I want to build a really engaging one but I'm limited on time for the most part.</p></div>
+            <details class="comment "
+         id="comment-voat_516301"
+         data-depth="3"
+         data-id="voat_516301"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/with-or-without/">u/with-or-without</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-06-29 06:51:14 UTC">29 Jun 2015 06:51</span>
+        </span>
+    </summary>
+    <div class="md"><p>Awesome, thanks! I may just take you up on the offer.</p></div>
+</details>
+
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_516955"
+         data-depth="1"
+         data-id="voat_516955"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/with-or-without/">u/with-or-without</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-06-29 08:24:43 UTC">29 Jun 2015 08:24</span>
+        </span>
+    </summary>
+    <div class="md"><p>Could you do me a favor and post this to the Idle game definition thread in <a href="/v/idlegaming">/v/idlegaming</a>? Id do it myself but im not sure if the layout would be compromised with a simple copy/paste.</p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_548614"
+         data-depth="1"
+         data-id="voat_548614"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Gilgam3sh/">u/Gilgam3sh</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-07-01 13:58:23 UTC">01 Jul 2015 13:58</span>
+        </span>
+    </summary>
+    <div class="md"><p>Thanks, that's pretty interesting. </p>
+<p>I was wondering, how do you handle really big values (like billions of billions) ? Do you cut your value into several int (i.e. var value1 = 999, var value 2 = 0, when value1&gt;999; value2 ++ )?</p></div>
+            <details class="comment "
+         id="comment-voat_552603"
+         data-depth="2"
+         data-id="voat_552603"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/escape/">u/escape</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-07-01 20:55:35 UTC">01 Jul 2015 20:55</span>
+        </span>
+    </summary>
+    <div class="md"><p>I haven't really spent much time dealing with large numbers in my projects. The typical way I've seen is go up to 999 then convert to 1.00K, then 1.00M, 1.00B, 1.00T, 1.00Qa, 1.00Qi, 1.00Sx, 1.00Sp, 1.00O, 1.00N, and so on. That way the most digits you display would be five (999.99K). You can use a simple if statement to determine if the value should be displayed as K, M, etc. The back end value would remain the same. 980520001 would simply display as 980.52M for instance.</p></div>
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_514682"
+         data-depth="0"
+         data-id="voat_514682"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/skeeto/">u/skeeto</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-29 04:17:53 UTC">29 Jun 2015 04:17</span>
+        </span>
+    </summary>
+    <div class="md"><p>What do you mean by &quot;idle games&quot;? Turn based? Casual games?</p></div>
+            <details class="comment "
+         id="comment-voat_516001"
+         data-depth="1"
+         data-id="voat_516001"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 3">
+            3
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/with-or-without/">u/with-or-without</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-06-29 06:19:26 UTC">29 Jun 2015 06:19</span>
+        </span>
+    </summary>
+    <div class="md"><p>idle games are a growing genre of games where, some degree of progress is made without player intervention. A game where you gain 1 dollar per second, with the only requirement be that the game is open, you then use this currency to buy upgrades, which have an effect on how much money you earn per second....</p>
+<p>this is a very simplified example, good idle games (IMO) generally have multiple systems of customization and more then just one currency.</p></div>
+            <details class="comment "
+         id="comment-voat_516012"
+         data-depth="2"
+         data-id="voat_516012"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/with-or-without/">u/with-or-without</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-06-29 06:20:07 UTC">29 Jun 2015 06:20</span>
+        </span>
+    </summary>
+    <div class="md"><p>check out <a href="/v/idlegaming">/v/idlegaming</a></p></div>
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_544964"
+         data-depth="1"
+         data-id="voat_544964"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Odysses/">u/Odysses</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-07-01 04:09:44 UTC">01 Jul 2015 04:09</span>
+        </span>
+    </summary>
+    <div class="md"><p>Kongregrate has a whole section for idle games.</p></div>
+</details>
+
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

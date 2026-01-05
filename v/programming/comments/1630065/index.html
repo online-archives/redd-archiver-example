@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Voat is really being crippled by the death of so many image links. In addition to the demise of sli.mg and the unreliability of other... - v/programming">
+<meta name="keywords" content="programming, image, voat, host, from, down, redirect, automatically, fallback, hosts">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1630065.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: A &#34;final solution&#34; to the image hosting problem">
+<meta property="og:description" content="Voat is really being crippled by the death of so many image links. In addition to the demise of sli.mg and the unreliability of other... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1630065.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: A &#34;final solution&#34; to the image hosting problem">
+<meta name="twitter:description" content="Voat is really being crippled by the death of so many image links. In addition to the demise of sli.mg and the unreliability of other... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "A \"final solution\" to the image hosting problem",
+  "author": {
+    "@type": "Person",
+    "name": "user6675"
+  },
+  "datePublished": "2017-02-08T21:54:27Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 8
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "Voat is really being crippled by the death of so many image links. In addition to the demise of sli.mg and the unreliability of other hosts, it feels like imgur is cracking down and removing all images that were submitted exclusively to voat. The problem is that we just can't trust the next image host that pops up to be the one that'll actually last this time. We've been burned too many times for that. That means that no matter what else we do, some of us have to write scraping bots to make..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: A &#34;final solution&#34; to the image hosting problem</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_1630065">
+  <h3 class="title">
+      A &#34;final solution&#34; to the image hosting problem
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 14">14</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2017-02-08 21:54:27 UTC">08 Feb 2017 21:54</span>
+    by <span ><a class="user-link" href="../../../../user/user6675/">u/user6675</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>Voat is really being crippled by the death of so many image links. In addition to the demise of sli.mg and the unreliability of other hosts, it feels like imgur is cracking down and removing all images that were submitted exclusively to voat.</p>
+<p>The problem is that we just can't trust the next image host that pops up to be the one that'll actually last this time. We've been burned too many times for that. That means that <strong>no matter what else we do, some of us have to write scraping bots to make backups of all images linked on Voat</strong>. But how to redirect the users from the old image URLs to the new ones? I think there are 3 potential solutions:</p>
+<ol>
+<li>
+<p>Make a change to Voat itself to where it automatically redirects an image host that's down to a fallback host (or shares the load between multiple fallback hosts).</p>
+</li>
+<li>
+<p>Create a special redirect plugin for the most popular browsers that will automatically redirect an image host that's been designated down to a fallback host.</p>
+</li>
+<li>
+<p>[Most insane solution] Create a peer to peer network that Voat users will be running that will keep some fraction of all image files on each user's computer, then have a browser extension automatically load the image corresponding to the URL from this p2p network if it's not accessible from the server.</p>
+</li>
+</ol>
+<p>I'm happy to start coding, but I want to hear from other people first. Do you think one of these ideas is best? Do you have your own? What do you think people would be most likely to actually use?</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>10 comments</h4>
+        <details class="comment "
+         id="comment-voat_7962324"
+         data-depth="0"
+         data-id="voat_7962324"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 3">
+            3
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Lord_of_the_rats/">u/Lord_of_the_rats</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2017-02-09 01:49:14 UTC">09 Feb 2017 01:49</span>
+        </span>
+    </summary>
+    <div class="md"><p>im pretty sure that the scraping bot can be a shell script using <code>curl</code>/<code>wget</code>, <code>sed</code>, <code>awk</code> etc</p>
+<p>does any1 want me to try doing dat or did some1 else already finnish it</p></div>
+            <details class="comment "
+         id="comment-voat_7963503"
+         data-depth="1"
+         data-id="voat_7963503"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/user6675/">u/user6675</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2017-02-09 03:09:34 UTC">09 Feb 2017 03:09</span>
+        </span>
+    </summary>
+    <div class="md"><p>If you're a regex wizard, that may be doable. Perhaps consider using <a href="http://docs.python-guide.org/en/latest/scenarios/scrape/">Python</a> instead? It'd probably involve less hair-pulling and be more maintainable by others.</p>
+<p>In either case, please try it. Scraping the popular image hosts like <a href="https://imgoat.com/gallery">Imgoat gallery</a> individually would be one approach, or you can try to scrape Voat directly and back up every image that has at least one upgoat.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_7959619"
+         data-depth="0"
+         data-id="voat_7959619"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Reddit_traitor/">u/Reddit_traitor</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2017-02-08 22:26:08 UTC">08 Feb 2017 22:26</span>
+        </span>
+    </summary>
+    <div class="md"><p>i think the p2p may be the best idea.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_7959627"
+         data-depth="0"
+         data-id="voat_7959627"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/JustFeelsGoodMan/">u/JustFeelsGoodMan</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2017-02-08 22:26:51 UTC">08 Feb 2017 22:26</span>
+        </span>
+    </summary>
+    <div class="md"><p>Use .htaccess files server side to rewrite urls perhaps?  It's what I would do but I'm a nerd like that</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_7982621"
+         data-depth="0"
+         data-id="voat_7982621"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/wesofx/">u/wesofx</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2017-02-10 11:28:27 UTC">10 Feb 2017 11:28</span>
+        </span>
+    </summary>
+    <div class="md"><p>I think #1 is pretty smart. If you have Voat (or just a comment bot) automatically detect an image link and automatically upload the image to a list of alternate image hosts, there's copies on other hosts if one goes down.
+EDIT: with bots, it's not so long term because comments eventuall become outdate if all the hosts at the time the comment was made are down. Otherwise the bot has to update old comments. An offcial voat feature could be much more robust about staying updated.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_8040842"
+         data-depth="0"
+         data-id="voat_8040842"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/mbenbernard/">u/mbenbernard</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2017-02-14 14:41:24 UTC">14 Feb 2017 14:41</span>
+        </span>
+    </summary>
+    <div class="md"><p>The destiny of pretty much any service is to eventually disappear, so yes, it's a dead-end. However, solution #1 would allow us to avoid such problems in the future. It's a great solution, actually!</p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="First, some ostensibly simple code: int[] someData = new int[2]; List&lt;Action&gt; someSetters = new List&lt;Action&gt;(); for (int i = 0; i &lt;... - v/programming">
+<meta name="keywords" content="programming, somedata, code, int, pre, somesetters, list, action, add, index">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/74185.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: The C# &#34;bug&#34; that will catch you.">
+<meta property="og:description" content="First, some ostensibly simple code: int[] someData = new int[2]; List&lt;Action&gt; someSetters = new List&lt;Action&gt;(); for (int i = 0; i &lt;... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/74185.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: The C# &#34;bug&#34; that will catch you.">
+<meta name="twitter:description" content="First, some ostensibly simple code: int[] someData = new int[2]; List&lt;Action&gt; someSetters = new List&lt;Action&gt;(); for (int i = 0; i &lt;... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "The C# \"bug\" that will catch you.",
+  "author": {
+    "@type": "Person",
+    "name": "rwbj"
+  },
+  "datePublished": "2015-04-03T09:36:14Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 4
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "First, some ostensibly simple code: int[] someData = new int[2]; List<Action> someSetters = new List<Action>(); for (int i = 0; i < someData.Length; i++) someSetters.Add(() => { someData[i / 2] = 2; }); for (int i = 0; i < someData.Length; i++) someSetters[i](); After this block of code finishes what are the values in someData? It seems pretty obvious. You create two Actions that should both do the same thing. Namely they should change the 0th index of the someData array to 2 so the array..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: The C# &#34;bug&#34; that will catch you.</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_74185">
+  <h3 class="title">
+      The C# &#34;bug&#34; that will catch you.
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 7">7</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2015-04-03 09:36:14 UTC">03 Apr 2015 09:36</span>
+    by <span ><a class="user-link" href="../../../../user/rwbj/">u/rwbj</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>First, some ostensibly simple code:</p>
+<pre><code>            int[] someData = new int[2];
+            List&lt;Action&gt; someSetters = new List&lt;Action&gt;();
+            for (int i = 0; i &lt; someData.Length; i++)
+                someSetters.Add(() =&gt; { someData[i / 2] = 2; });
+            for (int i = 0; i &lt; someData.Length; i++)
+                someSetters[i]();
+</code></pre>
+<p>After this block of code finishes what are the values in someData? It seems pretty obvious. You create two Actions that should both do the same thing. Namely they should change the 0<em>th</em> index of the someData array to 2 so the array should contain {2,0}. What does it actually contain? {0,2}.</p>
+<hr />
+<p><strong>Why?</strong></p>
+<p>C# has a quirk that can lead to some nasty bugs. The thing is that in C# lambda expressions don't follow the normal scoping rules. You might already be able to see the problem from that sentence alone. Yip, when you write </p>
+<pre><code>someSetters.Add(() =&gt; {someData[i/2] = 2;} 
+</code></pre>
+<p>that lambda is actually grabbing a reference to i, and not the immediate value of i. By the time the loop</p>
+<pre><code>for (int i = 0; i &lt; someData.Length; i++)
+</code></pre>
+<p>finishes the value of i is 2. So your Actions don't actually set the 0<em>th</em> index to 2, they set the 1st index to 2!!</p>
+<hr />
+<p><strong>The Fix</strong></p>
+<p>It's simple to fix. Here's the program functioning as intended:</p>
+<pre><code>        int[] someData = new int[2];
+        List&lt;Action&gt; someSetters = new List&lt;Action&gt;();
+        for (int i = 0; i &lt; someData.Length; i++)
+        {
+            int temp = i;
+            someSetters.Add(() =&gt; { someData[temp / 2] = 2; });
+        }
+        for (int i = 0; i &lt; someData.Length; i++)
+            someSetters[i]();
+</code></pre>
+<p>It may look somewhat ridiculous but the code now functions exactly as you'd normally expect. This is one nasty bug to keep in mind since it creeps up in locations you'd probably never bother to look for and is the only complete <em>&quot;wtf?&quot;</em> decision in the current C# standard.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>12 comments</h4>
+        <details class="comment "
+         id="comment-voat_117687"
+         data-depth="0"
+         data-id="voat_117687"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 3">
+            3
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/taxation_is_slavery/">u/taxation_is_slavery</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-04-03 14:30:42 UTC">03 Apr 2015 14:30</span>
+        </span>
+    </summary>
+    <div class="md"><p>I love C99.  She ain't real pretty, but at least she isn't a cheating whore and does exactly what I tell her to.</p></div>
+            <details class="comment "
+         id="comment-voat_118148"
+         data-depth="1"
+         data-id="voat_118148"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Gamerdog6482/">u/Gamerdog6482</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-04-03 23:35:03 UTC">03 Apr 2015 23:35</span>
+        </span>
+    </summary>
+    <div class="md"><p>C++ and C are just joys to use. C# is like the Javascript of C.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_117720"
+         data-depth="0"
+         data-id="voat_117720"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/PuttItOut/">u/PuttItOut</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-04-03 16:10:49 UTC">03 Apr 2015 16:10</span>
+        </span>
+    </summary>
+    <div class="md"><p>If you had this bug in JavaScript you'd be laughed and mocked out of a job but in C# it's a big issue?</p></div>
+            <details class="comment "
+         id="comment-voat_117974"
+         data-depth="1"
+         data-id="voat_117974"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/rwbj/">u/rwbj</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-04-03 20:40:42 UTC">03 Apr 2015 20:40</span>
+        </span>
+    </summary>
+    <div class="md"><p>Well you're comparing things that are very different. In javascript there's no such thing as block scoping so this behavior is somewhat expected. In C# everything is block scoped. For instance, the following code is actually a compile time error:</p>
+<pre><code>{
+    {
+        int a = 3;
+    }
+    SomeMethod(a);
+}
+</code></pre>
+<p>As is the following:</p>
+<pre><code>{
+    for( int i = 0; i &lt; 10; i++)
+        i++;
+    SomeMethod(i);
+}
+</code></pre></div>
+            <details class="comment "
+         id="comment-voat_117975"
+         data-depth="2"
+         data-id="voat_117975"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/PuttItOut/">u/PuttItOut</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-04-03 20:44:07 UTC">03 Apr 2015 20:44</span>
+        </span>
+    </summary>
+    <div class="md"><p>JavaScript closures and C# lambda scoping are identical (nearly).</p></div>
+            <details class="comment "
+         id="comment-voat_117979"
+         data-depth="3"
+         data-id="voat_117979"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/rwbj/">u/rwbj</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-04-03 20:52:16 UTC">03 Apr 2015 20:52</span>
+        </span>
+    </summary>
+    <div class="md"><p>Exactly, and C# is not Javascript. It's not idiomatic. It provides 0 benefit. It's just a gotcha that should have been fixed long ago.</p></div>
+            <details class="comment "
+         id="comment-voat_117988"
+         data-depth="4"
+         data-id="voat_117988"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/PuttItOut/">u/PuttItOut</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-04-03 21:07:38 UTC">03 Apr 2015 21:07</span>
+        </span>
+    </summary>
+    <div class="md"><p>It's really not a gotcha or something that should be fixed IMO. It's how lambdas work, they are executed in the scope/context of their creation, they have to be. So a lambda's scope variables can always change. </p>
+<p>To me this is not a bug, it's an education/testing thing. Devs should understand how lambda scoping works (what block is in scope when lambda is created) and then this isn't an issue. Lambda scoping is still block scoping at the root though, just which block is the confusing part I suppose.</p></div>
+            <details class="comment "
+         id="comment-voat_118054"
+         data-depth="5"
+         data-id="voat_118054"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/rwbj/">u/rwbj</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-04-03 22:18:52 UTC">03 Apr 2015 22:18</span>
+        </span>
+    </summary>
+    <div class="md"><p>Think about what you're saying. When you're arguing that something is okay because it's a matter of &quot;education/testing&quot; you're essentially engaging in circular logic along the lines of, &quot;This works this way because it works this way.&quot; Many things in C# could have been simply written off as &quot;education/testing&quot; things but they're not. </p>
+<pre><code>string s1 = &quot;dog&quot;;
+string s2 = &quot;dog&quot;;
+bool hmm = s1 == s2;
+</code></pre>
+<p>A very simple concept, but actually very pertinent. Strings need to be implemented as reference types for obvious reasons. However, the intent of that line of code is looking to compare pointers close to 0% of the time. Java stayed true to consistency and that statement would return false. C# took the path of intent and that statement returns true with a opaquely overloaded == operator. </p>
+<p>Languages are tools. They're nothing more than hammers. Of course you do need to spend some time learning aspects of various languages, but the reasons for that learning should be immediately attributable to various benefits. When they're not, it's not a matter of teaching the blacksmith how to work around the tool's faults - it's a matter of improving the tool. The one reason I could see anybody defending this is that any fix would inherently break old code. And I suppose that's a fair point. A mistake that we can learn from when the standard for the next generation of tools is being developed.</p></div>
+            <details class="comment "
+         id="comment-voat_118154"
+         data-depth="6"
+         data-id="voat_118154"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/PuttItOut/">u/PuttItOut</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-04-03 23:41:08 UTC">03 Apr 2015 23:41</span>
+        </span>
+    </summary>
+    <div class="md"><p>It's not a fault, it's bad code. </p>
+<p>Bad code is bad, just like your bad code examples that aren't braced properly.</p>
+<p>I think Microsoft should force you to brace every for, foreach, if, if/else, etc statement because unbraced blocks can present bugs if the developer doesn't have the education to indent properly. Now argue that we don't need that safety in C# using your same logic.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="I will be massively down voted for this tip but it is going to improve your code quality. Newbie developers tend to be overexcited when... - v/programming">
+<meta name="keywords" content="programming, code, exception, throwing, errors, exceptions, error, like, catch, tend">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/913965.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Programming tip: Stay away from throwing exceptions.">
+<meta property="og:description" content="I will be massively down voted for this tip but it is going to improve your code quality. Newbie developers tend to be overexcited when... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/913965.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Programming tip: Stay away from throwing exceptions.">
+<meta name="twitter:description" content="I will be massively down voted for this tip but it is going to improve your code quality. Newbie developers tend to be overexcited when... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Programming tip: Stay away from throwing exceptions.",
+  "author": {
+    "@type": "Person",
+    "name": "roznak"
+  },
+  "datePublished": "2016-03-11T22:57:28Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 16
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "I will be massively down voted for this tip but it is going to improve your code quality. Newbie developers tend to be overexcited when they discover exception handling. It is the lazy way to avoid returning a function result. The thing is, that throwing an exception should be the extreme rare exception indicating an unrecoverable bug and not be done for a recoverable error like a simple situation like a file not found or a printer not ready. The reason is this: Throwing an exception for..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Programming tip: Stay away from throwing exceptions.</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_913965">
+  <h3 class="title">
+      Programming tip: Stay away from throwing exceptions.
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 21">21</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2016-03-11 22:57:28 UTC">11 Mar 2016 22:57</span>
+    by <span ><a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>I will be massively down voted for this tip but it is going to improve your code quality.</p>
+<p>Newbie developers tend to be overexcited when they discover exception handling. It is the lazy way to avoid returning a function result.</p>
+<p>The thing is, that throwing an exception should be the <strong>extreme rare</strong> exception indicating an unrecoverable bug and not be done for a recoverable error like a simple situation like a file not found or a printer not ready.</p>
+<p>The reason is this:</p>
+<ul>
+<li>Throwing an exception for recoverable error like a printer not online, will jump to the location where the the first catch will catch it.  But that is runtime depended. And a moving target to debug. It ads code complexity because you have to catch that exception everywhere </li>
+<li>Throwing an exception can cause instability problems in your code. You tend to end up with partial initialized objects and therefor in an unstable condition. Recovering code becomes messy fast.</li>
+<li>Not all errors are critical. Sometimes it is enough to recreate a missing file and retry. The code that detected the error most likely can also repair it. It is not the job of some complete different part of the code to repair.</li>
+<li>Triggering 100's of exceptions means that you can't use the debugger to find a critical bug in your software. It is annoying as hell when it jumps to debug mode every single time. </li>
+<li>Avoiding throwing exception and rely on function results is very helpful to test you code during development simulating errors you introduce by overriding the return variable.</li>
+</ul>
+<p><strong>Short version:</strong> Don't use exceptions for normal errors but for extreme rare unrecoverable errors.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>34 comments</h4>
+        <details class="comment "
+         id="comment-voat_4574439"
+         data-depth="0"
+         data-id="voat_4574439"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 17">
+            17
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Naziadolfhitler/">u/Naziadolfhitler</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 01:31:50 UTC">12 Mar 2016 01:31</span>
+        </span>
+    </summary>
+    <div class="md"><p>Anyone who has actually done serious programming can tell you that this is absolutely terrible advice. This post reeks of a fundamental misunderstanding of how exceptions are used in actual real-life application.</p></div>
+            <details class="comment "
+         id="comment-voat_4574509"
+         data-depth="1"
+         data-id="voat_4574509"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-danger"
+              title="Comment score: -1">
+            -1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 01:37:21 UTC">12 Mar 2016 01:37</span>
+        </span>
+    </summary>
+    <div class="md"><p>Troll name hahaha.... Nice try.</p></div>
+            <details class="comment "
+         id="comment-voat_4575259"
+         data-depth="2"
+         data-id="voat_4575259"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-danger"
+              title="Comment score: -1">
+            -1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/coldacid/">u/coldacid</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 02:58:37 UTC">12 Mar 2016 02:58</span>
+        </span>
+    </summary>
+    <div class="md"><p>Yeah, because someone with a troll username could never possibly be correct about anything! /s</p></div>
+            <details class="comment "
+         id="comment-voat_4575781"
+         data-depth="3"
+         data-id="voat_4575781"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 03:46:18 UTC">12 Mar 2016 03:46</span>
+        </span>
+    </summary>
+    <div class="md"><p>Using excessive exception causes more problems than it solves. It only works on software that is small scale.</p>
+<p>Of course if you never created big applications then would not know the difference. You would be convinced that the misery you get is normal and failing projects is part of normality.</p></div>
+            <details class="comment "
+         id="comment-voat_4599876"
+         data-depth="4"
+         data-id="voat_4599876"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/coldacid/">u/coldacid</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-14 13:52:18 UTC">14 Mar 2016 13:52</span>
+        </span>
+    </summary>
+    <div class="md"><p>You're an idiot if you truly think this, not to mention shifting the goalposts with &quot;excessive exception [use]&quot;. I've worked on a number of large projects, both as a regular developer and as an architect and it's not that hard to make judicious, proper use of exceptions. You strike me as a noob developer who has been burnt once by badly misusing exceptions and now think they're not but the devil's tools.</p>
+<p>Git gud or stop coding, you scrub.</p></div>
+            <details class="comment "
+         id="comment-voat_4601846"
+         data-depth="5"
+         data-id="voat_4601846"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-14 18:05:53 UTC">14 Mar 2016 18:05</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>I've worked on a number of large projects, both as a regular developer and as an architect and it's not that hard to make judicious, proper use of exceptions.</p>
+</blockquote>
+<p>It is interesting that you left out if your projects were successful and actually useful. </p></div>
+            <details class="comment "
+         id="comment-voat_4602442"
+         data-depth="6"
+         data-id="voat_4602442"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-danger"
+              title="Comment score: -1">
+            -1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/coldacid/">u/coldacid</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-14 19:08:09 UTC">14 Mar 2016 19:08</span>
+        </span>
+    </summary>
+    <div class="md"><p>Considering one of them was a platform that kept thousands of people paid, I'd say at least that one was. And another is too new to tell yet, or at least needs better marketing.</p></div>
+            <details class="comment "
+         id="comment-voat_4602512"
+         data-depth="7"
+         data-id="voat_4602512"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-14 19:13:23 UTC">14 Mar 2016 19:13</span>
+        </span>
+    </summary>
+    <div class="md"><p>So one success and one might be a success. So you worked on 2 projects so far? </p>
+<p>The one platform that kept thousands of people paid, how many regression bugs were reported? How many fixes were not done because you are too scared to touch the code? How many change requests were bounced back because they were not in scope of the analysis from 2 years ago? </p></div>
+            <details class="comment "
+         id="comment-voat_4604405"
+         data-depth="8"
+         data-id="voat_4604405"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/coldacid/">u/coldacid</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-14 21:53:01 UTC">14 Mar 2016 21:53</span>
+        </span>
+    </summary>
+    <div class="md"><p>There were never any regressions caused by exception handling in all the time I worked for that company, and bug fixes were rarely an issue and never anything that anyone in our team was afraid of. And neither there nor at my current employer do we push back CRs; we're professionals, not wusses.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_4572923"
+         data-depth="0"
+         data-id="voat_4572923"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 9">
+            9
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Stavon/">u/Stavon</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-11 23:06:40 UTC">11 Mar 2016 23:06</span>
+        </span>
+    </summary>
+    <div class="md"><p>I wouldn't go that far. But exceptions are for exceptional events, like a full disk or other events you can't prepare for; not for handling user inputs or edge cases. Throwing an exception should be the last measure, the code should deal with handable problems without exceptions.</p></div>
+            <details class="comment "
+         id="comment-voat_4572964"
+         data-depth="1"
+         data-id="voat_4572964"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-11 23:11:52 UTC">11 Mar 2016 23:11</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>Throwing an exception should be the last measure, </p>
+</blockquote>
+<p>That was my intention to say. </p>
+<p>It also depends on the situation:</p>
+<ul>
+<li>If your project depends on a critical WCF service that is not there then throw an exception.</li>
+<li>If your projects depends on a critical WCF service on a G4 network that is shaky as hell, then don't throw an exception but return a normal error code so you can create code to retry. If 10 retries fail then throw the exception. </li>
+</ul></div>
+            <details class="comment "
+         id="comment-voat_4573783"
+         data-depth="2"
+         data-id="voat_4573783"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 4">
+            4
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Lesuorac/">u/Lesuorac</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 00:28:46 UTC">12 Mar 2016 00:28</span>
+        </span>
+    </summary>
+    <div class="md"><p>Wasn't one of the primary reasons to use exceptions to get away from error codes?</p>
+<p>Rather than having to memorize that error code 10 was G4Network down you're supposed to throw G4NetworkException?
+Seems more logical to me to throw an exception than return some random error code, espically if you wanted your function to return a String or something else. Now you have a String going into your method that gets mutated so that your function can return an error code.</p></div>
+            <details class="comment "
+         id="comment-voat_4573967"
+         data-depth="3"
+         data-id="voat_4573967"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 00:47:37 UTC">12 Mar 2016 00:47</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>Wasn't one of the primary reasons to use exceptions to get away from error codes?</p>
+</blockquote>
+<p>Actually no, it was an addition not a replacement. For simple components it works well but once you scale your projects it becomes a nightmare to debug. These projects becomes near impossible to refactor.</p>
+<p>Also an error code return in a normal method does not mean that it must be a string or integer. It could be a complete class with tons of information about the error.</p>
+<pre><code>int error = MyFunction()
+Log.WriteLine(&quot;Code: &quot;+error.Code)
+</code></pre>
+<p>could be </p>
+<pre><code>ErrorCode errorResult = MyFunction()
+Log.WriteLine(&quot;Description:&quot;+errorResult.Description+ &quot;, Code: &quot;+errorResult.Code)
+Log.WriteLine(&quot;Details:&quot;+errorResult.ToString())
+</code></pre>
+<p>Extend it</p>
+<pre><code>do {
+     ErrorCode errorResult = MyFunction()
+     Log.WriteLine(&quot;Description:&quot;+errorResult.Description+ &quot;, Code: &quot;+errorResult.Code)
+     Log.WriteLine(&quot;Details:&quot;+errorResult.ToString())
+     if (!errorResult.IsSuccess) {
+         RecoverSomething()
+    }
+while (errorResult.IsSuccess)
+</code></pre>
+<p>And now comes the interesting parts</p>
+<pre><code>do {
+     ErrorCode errorResult = MyFunction()
+     errorResult.Code = 100; // add this to test your code how it behaves when it has a simulated fail
+     Log.WriteLine(&quot;Description:&quot;+errorResult.Description+ &quot;, Code: &quot;+errorResult.Code)
+     Log.WriteLine(&quot;Details:&quot;+errorResult.ToString())
+     if (!errorResult.IsSuccess) {
+         RecoverSomething()
+    }
+while (errorResult.IsSuccess)
+</code></pre>
+<p>Remove the test error code by adding a comment in front of it</p>
+<pre><code>do {
+     ErrorCode errorResult = MyFunction()
+      // errorResult.Code = 100; // add this to test your code how it behaves when it has a simulated fail
+     Log.WriteLine(&quot;Description:&quot;+errorResult.Description+ &quot;, Code: &quot;+errorResult.Code)
+     Log.WriteLine(&quot;Details:&quot;+errorResult.ToString())
+     if (!errorResult.IsSuccess) {
+         RecoverSomething()
+    }
+while (errorResult.IsSuccess)
+</code></pre>
+<p>As you have noticed I can now building &quot;readable&quot; recovery loops that are easier to follow without obscuring the real functionality.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_4578542"
+         data-depth="0"
+         data-id="voat_4578542"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 6">
+            6
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/oooooo/">u/oooooo</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 10:31:25 UTC">12 Mar 2016 10:31</span>
+        </span>
+    </summary>
+    <div class="md"><p>This is fairly poor and naive advice as should be guessed from the absolutionist tone.</p>
+<blockquote>
+<p>Throwing an exception for recoverable error like a printer not online, will jump to the location where the the first catch will catch it. But that is runtime depended. And a moving target to debug. It ads code complexity because you have to catch that exception everywhere</p>
+</blockquote>
+<p>I'm not sure what you mean here. Where the first catch catches an exception is entirely detectable through static analysis. I can mentally walk through any code I've touched in the past 5+ years and tell you exactly where a thrown exception will be caught. I do this kind of analysis on a near daily basis with a fair bit of ease. I'm not sure what kind of tooling or language you're using where this is the case.</p>
+<blockquote>
+<p>Throwing an exception can cause instability problems in your code. You tend to end up with partial initialized objects and therefor in an 
+unstable condition. Recovering code becomes messy fast.</p>
+</blockquote>
+<p>This only happens if you don't know how to catch and handle exceptions properly. If at the end of exception handling, your code isn't prepared to continue execution in a correct state, then you're doing it wrong. In my experience, recovery code is rarely complex unless you're trying to do too much at once. Generally, the whole affair at that point should be considered a code smell worthy of deeper investigation.</p>
+<blockquote>
+<p>Not all errors are critical. Sometimes it is enough to recreate a missing file and retry. The code that detected the error most likely can also repair it. It is not the job of some complete different part of the code to repair.</p>
+</blockquote>
+<p>Yes. Strawman argument here. If exceptions are your only tool, then every problem looks like a nail. But they aren't. Don't use exceptions for normal control flow. This is a d'uh, and not a reason to not use exceptions ever.</p>
+<blockquote>
+<p>Triggering 100's of exceptions means that you can't use the debugger to find a critical bug in your software. It is annoying as hell when it jumps to debug mode every single time.</p>
+</blockquote>
+<p>Not sure what kind of programming environment you live in, but thanks to the fact that I can fully inspect a caught exception, I can know exactly where the error is without even debugging (hint: logging + stack traces). I'm also not sure what you mean by triggering 100s of exceptions. Generally, one exception is thrown at one location and caught and handled at another (perhaps rarely rethrown for the sake of adding information pertinent to a higher level of abstraction). But it's not like your whole application is going to throw all of its exceptions at once or constantly be in a state of throwing exceptions. This point alone wreaks of exception inexperience.</p>
+<blockquote>
+<p>Avoiding throwing exception and rely on function results is very helpful to test you code during development simulating errors you introduce by overriding the return variable.</p>
+</blockquote>
+<p>Let me try this: &quot;Throwing exceptons is very helpful to test your code during development simulating errors you introduce by manually throwing an exception.&quot; See? This door swings both ways and doesn't at all negate using exceptions.</p></div>
+            <details class="comment "
+         id="comment-voat_4579188"
+         data-depth="1"
+         data-id="voat_4579188"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 13:23:58 UTC">12 Mar 2016 13:23</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>This is fairly poor and naive advice as should be guessed from the absolutionist tone.</p>
+</blockquote>
+<p>They all say that I am wrong, but in the end I am the one that is saving them when their projects fail. :-)</p>
+<blockquote>
+<p>Not sure what kind of programming environment you live in, but thanks to the fact that I can fully inspect a caught exception, I can know exactly where the error is without even debugging (hint: logging + stack traces). </p>
+</blockquote>
+<p>Only if you designed the code yourself and know every part of that code. But you will fail when you get back to that code 2 years later and have to fix issues. </p>
+<p>The 2 epic sentences I always hear are :</p>
+<ul>
+<li>I don't understand my own code anymore that I created last year.</li>
+<li>No, we won't change that because it works and we don't want to break stuff. It is too hard to fix.</li>
+</ul>
+<p>When you avoid using exceptions then you hear this:</p>
+<ul>
+<li>I have not seen this code for a year but yes we can change it with almost no risk.</li>
+</ul></div>
+            <details class="comment "
+         id="comment-voat_4585718"
+         data-depth="2"
+         data-id="voat_4585718"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/oooooo/">u/oooooo</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-13 02:31:41 UTC">13 Mar 2016 02:31</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>Only if you designed the code yourself and know every part of that code. But you will fail when you get back to that code 2 years later and have to fix issues. </p>
+</blockquote>
+<p>Not true at all. I've come along on a number of brownfield projects and could always immediately understand even the bad exception handling. </p>
+<p>I've never avoided exceptions. The projects I've worked on have never avoided exceptions. And very little of my time in even an entire work year is spent on perplexing exception handling. I think you've had some bad experiences and are severely blowing things out of proportion. Maybe you came into a project that had severely poorly designed exception handling? Is it the language you're using? Does your language have bad tool support that prevents you from quickly understanding call hierarchies?</p>
+<blockquote>
+<p>The 2 epic sentences I always hear are :
+I don't understand my own code anymore that I created last year.
+No, we won't change that because it works and we don't want to break stuff. It is too hard to fix.</p>
+</blockquote>
+<p>Taking these and putting them on exception handling is really distorting the issues. In the first case, that's true of many developers and the code they write regardless of whether they use exceptions or return codes. The second case is another red herring. In a work environment, when anything is said to be &quot;too hard to fix&quot;, what that means is it's too costly to fix. In other words, if it costs $15k in developer time, it better produce $15k in profits as either a feature or reducing further maintenance. And again, this does not result from using exceptions or return error codes. I've seen plenty of code that is a nightmare to work on because it's had new implicit requirements thrust upon it for over a decade and has been retrofitted with duct tape and hope to get by. It can be littered with bad programming practices (floating point equality comparison, unsynchronized multi-threaded variable access, etc.), and yet the thing still works. So you don't dare go in and change it just to make it &quot;right&quot; as that may break the way it's working now. &quot;Fixing&quot; one of these things may require you addressing a mountain of a problem. It's a case where you grab that first string, and now you have to unravel the whole sweater. And none of this is made more or less complex by return values or thrown exceptions. Both can be done equally well or equally poor as far as understanding and maintenance is concerned. I implore you to investigate outside of your current context. The whole world is not doom and gloom when it comes to exceptions.</p></div>
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_4574057"
+         data-depth="0"
+         data-id="voat_4574057"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 3">
+            3
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ForgotMyName/">u/ForgotMyName</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 00:57:06 UTC">12 Mar 2016 00:57</span>
+        </span>
+    </summary>
+    <div class="md"><p>Like you said, exceptions are basically a GoTo statement. And as such they typically ruin any kind of optimization / predictive instruction loading. I definitely avoid using them when I can. For the most part I leave them for developer errors. Things that are meant to be fixed by developers/in development. Like ArgumentOutOfBounds. If it's supposed to end up on the UI then it shouldn't be an exception.</p></div>
+            <details class="comment "
+         id="comment-voat_4574108"
+         data-depth="1"
+         data-id="voat_4574108"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 01:02:26 UTC">12 Mar 2016 01:02</span>
+        </span>
+    </summary>
+    <div class="md"><p>You got it :-)</p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_4583236"
+         data-depth="1"
+         data-id="voat_4583236"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/diodine/">u/diodine</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 21:40:26 UTC">12 Mar 2016 21:40</span>
+        </span>
+    </summary>
+    <div class="md"><p>Most C++ compilers simply make a function call for exceptions (MSVC is something like CxxRaiseException) and thus optimization is not sacrificed (since the linker just sees it as a function call).</p>
+<p>C on the other hand is in fact ruined by setjmp exceptions.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_4573382"
+         data-depth="0"
+         data-id="voat_4573382"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Tecktonik/">u/Tecktonik</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-11 23:51:20 UTC">11 Mar 2016 23:51</span>
+        </span>
+    </summary>
+    <div class="md"><p>Does your process generate output and terminate as the functional mechanism? Then you don't really need exceptions, you can exit with an error. Exiting with an error, and that error is an uncaught exception, should be considered rude.</p>
+<p>Does your process provide a service, or open interactive windows for user interaction as the functional mechanism? Then you should use exceptions, and catch those exceptions.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_4575673"
+         data-depth="0"
+         data-id="voat_4575673"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/SwiftLion/">u/SwiftLion</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 03:37:56 UTC">12 Mar 2016 03:37</span>
+        </span>
+    </summary>
+    <div class="md"><p>Good advice, in most languages.  I think something people tend not to understand about exceptions is how they tear open the logic of the application that throws them.  It's often compared to a 'goto' statement, but since 'goto' is omitted in most modern languages and is pretty much useless, it doesn't get the point across.</p>
+<p>tl;dr:  Throwing exceptions allows execution to leave a stack frame without popping or pushing.</p>
+<p>Code is just lots and lots of functions.  Object-oriented languages will fool you, because they have all this nice syntax, but they're actually just making big tables of functions that take 'self' as a hidden argument, where 'self' is a struct that contains all your state (instance variables, etc).</p>
+<p>So, when you call a function, the processor has to push all its state (usually just register contents) onto the stack, pass the function arguments (in registers or on the stack) and then advance the base pointer and hand control over to the new function.  After the jump, the new function does whatever it's going to do, including maybe repeating this process for yet another function, and then each one &quot;unwinds&quot; the stack when it's done to hand control back to the caller.</p>
+<p>Most implementations of exceptions jump out of the stack to wherever the handler is, which means, they have to figure out how not to explode the stack.  That's pretty expensive.  In good implementations, the compiler will optimize try/catch pairs pretty well, but in many implementations, even pretty basic throws cost a lot.</p>
+<p><a href="http://blogs.msdn.com/b/ricom/archive/2003/12/19/44697.aspx">http://blogs.msdn.com/b/ricom/archive/2003/12/19/44697.aspx</a>
+<a href="http://stackoverflow.com/questions/567579/how-expensive-are-exceptions">http://stackoverflow.com/questions/567579/how-expensive-are-exceptions</a>
+<a href="http://stackoverflow.com/questions/891217/how-expensive-are-exceptions-in-c">http://stackoverflow.com/questions/891217/how-expensive-are-exceptions-in-c</a></p></div>
+            <details class="comment "
+         id="comment-voat_4576013"
+         data-depth="1"
+         data-id="voat_4576013"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 04:08:58 UTC">12 Mar 2016 04:08</span>
+        </span>
+    </summary>
+    <div class="md"><p>You are absolutely correct.</p>
+<p>I recall that when Delphi 1 came out, or maybe even back in Borland Pascal 7???? </p>
+<p>I disassembled the code to see what it was doing. I recall that the &quot;try&quot; pushed the address of the &quot;catch&quot; onto the stack. When an exception happened then a jmp to that location was executed and it got into that &quot;catch&quot; code. The &quot;Try&quot; itself has almost no penalty, but the catch itself was a huge penalty in lost cpu cycles.</p>
+<p>But in my experience it is not the CPU lost cycles that is the biggest issue, but these if your code gets big:</p>
+<ul>
+<li>Strange exceptions coming from out of the blue ending up in code that has nothing to do with the original exception.</li>
+<li>Your throw jumps to an unpredictable location that depends on runtime execution.</li>
+<li>Dumping meaningless stack traces for a user to see can makes them run screaming away.</li>
+<li>The stack traces cause by exceptions most of the time does not even give valid support for the IT support so they have to annoy the developer.</li>
+<li>Stack traces caused by exceptions most of the time are useless without trace loggings.</li>
+</ul>
+<p>The idea of WINAPI GetLastError() returning just an integer is too cryptic. </p>
+<p>The idea of an exception class that you inherit from is better, but the throw is what makes it bad. 
+It is better to return the exception class as a function result instead of throwing it.</p></div>
+            <details class="comment "
+         id="comment-voat_4576606"
+         data-depth="2"
+         data-id="voat_4576606"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/SwiftLion/">u/SwiftLion</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 05:13:56 UTC">12 Mar 2016 05:13</span>
+        </span>
+    </summary>
+    <div class="md"><p>That's fair.  And then there's the intellectual load: it's much harder to determine if a function is throwing than if it's returning a value that may be empty.</p></div>
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_4576104"
+         data-depth="0"
+         data-id="voat_4576104"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 04:18:58 UTC">12 Mar 2016 04:18</span>
+        </span>
+    </summary>
+    <div class="md"><p>One more tip.</p>
+<p>If you are confronted with code that does use exceptions a lot realize that that catch statement can be way more simplified.</p>
+<p>You can, create a method like this (I need to go to bed, so a draft version to get the idea)</p>
+<pre><code>private void ProcessException(Exception e){
+    if (e is Exception1) {
+         var ex1= e as Exception1;
+         log.WriteLine(ex1.Message, ex1.SomeProperty1)
+   } if (e is Exception2) {
+         var ex2= e as Exception2;
+         log.WriteLine(ex2.Message, ex2.SomeProperty2)
+   } else  {
+      log.WriteLine(e.Message)
+}
+</code></pre>
+<p>Now you can use it like this:</p>
+<pre><code>public methiod1(){
+  try {
+   // do something
+  } catch (exception e){
+    ProcessException(e);
+  }
+}
+public methiod2(){
+  try {
+   // do something
+  } catch (exception e){
+    ProcessException(e);
+  }
+}
+public methiod3(){
+  try {
+   // do something
+  } catch (exception e){
+    ProcessException(e);
+  }
+}
+</code></pre>
+<p>It reduces the catch part because it is repetitive and exposes the real functional code from obscurity.</p>
+<p>And you can even migrate the ProcessException() to a different class that extends intelligence to report the exception more easily</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_4624967"
+         data-depth="0"
+         data-id="voat_4624967"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ShowMeYourKitties/">u/ShowMeYourKitties</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-16 17:21:42 UTC">16 Mar 2016 17:21</span>
+        </span>
+    </summary>
+    <div class="md"><p>Except throwing/catching exceptions is a convention in python (ask forgiveness, not permission).<br />
+Just take a look at <a href="https://docs.djangoproject.com/en/1.9/ref/exceptions/">Django</a>, there are a few different types of exceptions that allow you to catch that exception, and handle it accordingly. (eg model DoesNotExist, MultipleObjectsReturned)</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_4573873"
+         data-depth="0"
+         data-id="voat_4573873"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Pawn/">u/Pawn</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 00:38:20 UTC">12 Mar 2016 00:38</span>
+        </span>
+    </summary>
+    <div class="md"><p>my instructor a year ago said as much. She didn't like using exceptions and preferred to use data validation, maybe even reg expressions. I forgot now. Though for some things it's required to throw exceptions.</p></div>
+            <details class="comment "
+         id="comment-voat_4574065"
+         data-depth="1"
+         data-id="voat_4574065"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 00:58:09 UTC">12 Mar 2016 00:58</span>
+        </span>
+    </summary>
+    <div class="md"><p>The rule should be that only throw an exception when your code have absolutely no clue how to deal with it. It would basically mean that in your code you have an &quot;exceptional&quot; situation and press the panic button.</p>
+<p>But in production environments you will see tons of abuse by many developers because they are lazy and take the shortcut out. Small scale projects, it can work but as it scales in size in become one giant misery. </p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_4582389"
+         data-depth="0"
+         data-id="voat_4582389"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-danger"
+              title="Comment score: -1">
+            -1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Vailx/">u/Vailx</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-03-12 20:16:42 UTC">12 Mar 2016 20:16</span>
+        </span>
+    </summary>
+    <div class="md"><p>I mostly agree with the short version.  There are times in normal code flow where an exception is a good idea- a lot of it depends on <em>what exceptions are in that specific language</em>.  If the goal is to make the code look a bit cleaner, but you are hammering an exception when you should have used a branch, that is usually poor practice.  
+</p>
+<p>Phrasing the tip as absolute isn't very good, though.  You really need to see what exceptions will do for you and what they will, err, do TO you, and base your decisions on that.</p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

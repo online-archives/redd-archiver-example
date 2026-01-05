@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Obviously, we need to think outside of the box and I was trying to but I was thinking currently the Voat api has a bunch of small requests... - v/programming">
+<meta name="keywords" content="programming, quot, pros, cons, voat, record, obviously, bunch, saved, instead">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1866696.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Pros/Cons of Voat Cost Saving Measure: Compress comment chains into a single db record">
+<meta property="og:description" content="Obviously, we need to think outside of the box and I was trying to but I was thinking currently the Voat api has a bunch of small requests... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1866696.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Pros/Cons of Voat Cost Saving Measure: Compress comment chains into a single db record">
+<meta name="twitter:description" content="Obviously, we need to think outside of the box and I was trying to but I was thinking currently the Voat api has a bunch of small requests... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Pros/Cons of Voat Cost Saving Measure: Compress comment chains into a single db record",
+  "author": {
+    "@type": "Person",
+    "name": "speakoutforamerica"
+  },
+  "datePublished": "2017-05-18T02:33:44Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 4
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "Obviously, we need to think outside of the box and I was trying to but I was thinking currently the Voat api has a bunch of small requests to chain comments how we view them. What if comments were all saved into their parents record. So (cutting out a bunch of junk( instead of Comment table: CommentID PostID ParentCommentID Comment 1 2 NULL \"I am a parent comment\" 2 2 1 \"I am a child comment\" We devised some way (obviously more work involved to not lose out on the functionality of who said..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Pros/Cons of Voat Cost Saving Measure: Compress comment chains into a single db record</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_1866696">
+  <h3 class="title">
+      Pros/Cons of Voat Cost Saving Measure: Compress comment chains into a single db record
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 5">5</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2017-05-18 02:33:44 UTC">18 May 2017 02:33</span>
+    by <span ><a class="user-link" href="../../../../user/speakoutforamerica/">u/speakoutforamerica</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>Obviously, we need to think outside of the box and I was trying to but I was thinking currently the Voat api has a bunch of small requests to chain comments how we view them.</p>
+<p>What if comments were all saved into their parents record. So  (cutting out a bunch of junk( instead of </p>
+<p>Comment table:</p>
+<p>CommentID  PostID ParentCommentID Comment</p>
+<p>1 2 NULL &quot;I am a parent comment&quot;</p>
+<p>2 2 1 &quot;I am a child comment&quot;</p>
+<p>We devised some way (obviously more work involved to not lose out on the functionality of who said what)  that is was saved like so:</p>
+<p>Comment table:</p>
+<p>CommentID  PostID  Comment</p>
+<p>1 2 NULL &quot;I am a parent comment -&gt; I am a child comment&quot;</p>
+<p>This of course potentially removes tons of features like voting up/down comments, reporting individual comments, clicking into a commentators profile but honestly, those are mostly things attract opportunities to censor or dox. I am not saying this is perfect or cool in any way but couldn't this be a way to cut costs drastically instead of just shutting down? Anyways what are some pros/cons of this.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>6 comments</h4>
+        <details class="comment "
+         id="comment-voat_9142761"
+         data-depth="0"
+         data-id="voat_9142761"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/speakoutforamerica/">u/speakoutforamerica</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2017-05-18 02:35:34 UTC">18 May 2017 02:35</span>
+        </span>
+    </summary>
+    <div class="md"><p>Please post pros here.</p></div>
+            <details class="comment "
+         id="comment-voat_9142783"
+         data-depth="1"
+         data-id="voat_9142783"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/speakoutforamerica/">u/speakoutforamerica</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2017-05-18 02:37:54 UTC">18 May 2017 02:37</span>
+        </span>
+    </summary>
+    <div class="md"><ul>
+<li>Less server load to build the comment trees.</li>
+<li>Less DB space used</li>
+<li>Less API calls on voting up/down comments</li>
+</ul></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_9142768"
+         data-depth="0"
+         data-id="voat_9142768"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/speakoutforamerica/">u/speakoutforamerica</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2017-05-18 02:36:06 UTC">18 May 2017 02:36</span>
+        </span>
+    </summary>
+    <div class="md"><p>Please post cons here.</p></div>
+            <details class="comment "
+         id="comment-voat_9142793"
+         data-depth="1"
+         data-id="voat_9142793"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/speakoutforamerica/">u/speakoutforamerica</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2017-05-18 02:39:51 UTC">18 May 2017 02:39</span>
+        </span>
+    </summary>
+    <div class="md"><ul>
+<li>Nested replies get ugly fast, as it would all cascade linearly.</li>
+<li>Can't upvoat/downvoat comments.</li>
+<li>Max comment size on a chain of comments would be stricter since its all in one field.</li>
+<li>Slightly more complicated validation to ensure users are only adding to the end of a comment not editing anything.</li>
+</ul></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_9624156"
+         data-depth="0"
+         data-id="voat_9624156"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/greyhat399321/">u/greyhat399321</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2017-06-24 14:58:47 UTC">24 Jun 2017 14:58</span>
+        </span>
+    </summary>
+    <div class="md"><p>Celko nested sets would be most efficient and maintain the ability to infinitely nest records. The only cost is recalculation on the upsert...</p>
+<p>If I were to do this, I'd have a key for the thread ID the post goes with and then have a left/right val for each thread:</p>
+<p><a href="https://en.wikipedia.org/wiki/Nested_set_model">https://en.wikipedia.org/wiki/Nested_set_model</a></p>
+<p>You should also probably consider whatever model is in place for the voats/karma/comment relationships as that data may be stored discretely to avoid cheating as much as possible since everyone only counts one vote per item.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_9744845"
+         data-depth="0"
+         data-id="voat_9744845"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/WhatWouldOdinDo/">u/WhatWouldOdinDo</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2017-07-06 02:34:40 UTC">06 Jul 2017 02:34</span>
+        </span>
+    </summary>
+    <div class="md"><p>I think it's a really bad idea to consider doing this. You're actually gaining nothing via this method and may actually be introducing significant processing overhead. You would be better off setting up a caching mechanism and using redis or memcachedb to store prerendered html snippets for the most often accessed parent comments, which itself is pretty substantial. I won't delve into those details though.</p>
+<p>I'll deal with your pros one-by-one.</p>
+<blockquote>
+<p>Less server load to build the comment trees.</p>
+</blockquote>
+<p>Unless you're caching, as I've already mentioned, then you'd likely end up with higher load. Not on the DB, mind you, but on the web server from parsing the comment(s) string. Sure, you probably have a plan to make it as well-formed and regular as possible to work around that, but you're still taking processing from one place and putting it where you really can't afford it. Very likely, you could get better improvement by optimizing the query grabbing the comments. And yeah, I do mean one and only one query.</p>
+<blockquote>
+<p>Less DB space used</p>
+</blockquote>
+<p>Are you sure about that? Have you calculated the amount of disk space you'd save per record on this? How about the amount you'll need trying to shoehorn the old features back in when the community calls you a niggerfaggot kike cock muncher for removing features to try and save a few bytes like they're fucking shekels?</p>
+<blockquote>
+<p>Less API calls on voting up/down comments</p>
+</blockquote>
+<p>Yeah, you're removing functionality that the site needs, which the community will not stand for, with only the vague notion that this will actually help. Seriously, I'm pretty sure that bandwidth is more of a problem than saving a little disk space.</p>
+<p>If space is a real concern, maybe we should play with the idea of deleting comment threads that don't meet an upvote threshold after 3 months until you come back with numbers that can be checked. <a href="https://www.connectionstrings.com/sql-server-data-types-reference/">Here are data type sizes in SQL Server to help you get started.</a> If voat is using MySQL or something similar at this point then I'm sure a similar table is also available.</p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="View 24 archived posts by u/Balrogic in v/programming">
+<meta name="keywords" content="reddit, user, posts, archive, Balrogic, programming">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/user/Balrogic/">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="u/Balrogic - 24 Archived Voat Posts in v/programming">
+<meta property="og:description" content="View 24 archived posts by u/Balrogic in v/programming">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/user/Balrogic/">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="u/Balrogic - 24 Archived Voat Posts in v/programming">
+<meta name="twitter:description" content="View 24 archived posts by u/Balrogic in v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../static/site.webmanifest">
+
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../static/css/redd-archiver-universal.css">
+
+
+    <title>u/Balrogic - 24 Archived Voat Posts in v/programming</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="./">u/Balrogic</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html">home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="user-profile-header pt-3">
+  <h2>u/Balrogic</h2>
+  <p class="lead">
+    0 posts ·
+    24 comments ·
+    24 total
+  </p>
+  <p class="text-muted">Active in: v/programming (24)</p>
+</div>
+
+<ul class="pagination pagination-sm mt-3">
+  <li class="page-item first-page disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item skip-back disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item prev-page disabled"><a class="page-link" href="index-0.html" tabindex="-1">&lsaquo;</a></li>
+
+
+      <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+
+  <li class="page-item next-page disabled"><a class="page-link" href="index-1.html" tabindex="-1">&rsaquo;</a></li>
+
+  <li class="page-item skip-forward disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;</a></li>
+
+  <li class="page-item last-page disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;&rsaquo;</a></li>
+</ul>
+
+
+<div class="links">
+
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/460015#2149635">Sometimes a bug is hit only after code was executed 100 000 000 000 000 (100 trillion) times -- Spotify&#39;s underflow bug</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Really? Seems like a straightforward issue from the very first part of the link.</p>
+<pre><code>int index() {
+  int index = this.index.get();
+  if (index &lt; 0) {
+    index -= Integer.MAX_VALUE;
+  }
+  return index;
+}
+</code></pre>
+<p>The part that mutates the index count is an obvious potential problem source when the index goes all to hell. A conditional on index &lt; 0 tells you that you're trying to deal with signed versus unsigned data type. It should be fairly obvious what's going on, provided you've spent a bit of time messing around with binary representations of numbers.</p>
+<p>Edit: Removed a brain fart, still waking up.</p></div>
+    <a href="../../v/programming/comments/460015#2149635">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-30 04:47:08 UTC">30 Aug 2015 04:47</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/458224#2124076">Places to go learn assembly?</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Or you could just, you know, write a quick program to give you the usage stats on your code.</p></div>
+    <a href="../../v/programming/comments/458224#2124076">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-28 23:23:45 UTC">28 Aug 2015 23:23</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/445941#2038811">Dumb Beginner HTML Question</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Typos are the bane of your life when you're writing computer instructions. Nothing to apologize about, just be aware of typos. Train yourself to check for them, re-check, re-check so you can spot and correct errors on the fly.</p></div>
+    <a href="../../v/programming/comments/445941#2038811">
+        <span class="badge badge-success"
+              title="Comment score: 4">
+            4
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-25 05:08:09 UTC">25 Aug 2015 05:08</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/437670#2016189">Mozilla just announced their intent to deprecate so called XUL-based add-ons in favor of what they call the WebExtensions API within the next year or two</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>What's that? Firefox to be forked within the next year or two in a major move to preserve the power and utility of existing features?</p></div>
+    <a href="../../v/programming/comments/437670#2016189">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-24 02:21:39 UTC">24 Aug 2015 02:21</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/438839#1992967">I hope one day I&#39;ll live in a country where I have freedom to write any code I like without fearing.</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Until you start working on strong encryption projects, then they shut you down with threats to disappear your ass. 'Murica!</p></div>
+    <a href="../../v/programming/comments/438839#1992967">
+        <span class="badge badge-success"
+              title="Comment score: 3">
+            3
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-22 21:02:51 UTC">22 Aug 2015 21:02</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/420642#1870892">Developers Who Can Build Things from Scratch</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>That author can go fuck himself, highly recommend he utilize his generalized presumptive slurs in order to do so.</p>
+<p>Edit: To be specific, I'm referencing the &quot;Human Robot&quot; section of his linked slanderfest. He's clearly talking about autistic programmers. None of those slurs have any basis in reality. Autistics have original thoughts, can be creative, et cetera. Not their fault he's a poor communicator that's incapable of explicitly defining what he's looking to do in exact, precise language.</p></div>
+    <a href="../../v/programming/comments/420642#1870892">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-17 16:07:43 UTC">17 Aug 2015 16:07</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/387211#1651756">Locks and concurrency</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Beware of deadlocks.</p></div>
+    <a href="../../v/programming/comments/387211#1651756">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-08 10:31:07 UTC">08 Aug 2015 10:31</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/388951#1651562">Excuses For Lazy Coders</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><blockquote>
+<p>It's a known bug with the programming language.</p>
+</blockquote>
+<p>Well, as long as the programmer doesn't understand how the programming language works or how to use it correctly, I guess that's okay...</p></div>
+    <a href="../../v/programming/comments/388951#1651562">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-08 10:06:29 UTC">08 Aug 2015 10:06</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/386563#1632872">Firefox exploit found in the wild</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Good thing it's not closed source or the exploit could have persisted for years after being reported.</p></div>
+    <a href="../../v/programming/comments/386563#1632872">
+        <span class="badge badge-success"
+              title="Comment score: 4">
+            4
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-07 18:00:53 UTC">07 Aug 2015 18:00</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/372053#1562016">This is why GitLab is better than GitHub.</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Could you possibly get any more pedantic? Good grief, I suggest you grow up.</p></div>
+    <a href="../../v/programming/comments/372053#1562016">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-04 23:03:47 UTC">04 Aug 2015 23:03</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/372053#1561132">This is why GitLab is better than GitHub.</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><blockquote>
+<p>but I don't have a strong tolerance for hipsters.</p>
+</blockquote>
+<p>Don't be silly. Code is code, business is business.</p></div>
+    <a href="../../v/programming/comments/372053#1561132">
+        <span class="badge badge-success"
+              title="Comment score: 3">
+            3
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-04 22:22:18 UTC">04 Aug 2015 22:22</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/371436#1553293">GitHub&#39;s new far-left code of conduct explicitly says &#34;we will not act on reverse racism&#39; or &#39;reverse sexism&#39;&#34;</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Thanks, gave my two cents.</p></div>
+    <a href="../../v/programming/comments/371436#1553293">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-04 14:57:04 UTC">04 Aug 2015 14:57</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/371436#1551068">GitHub&#39;s new far-left code of conduct explicitly says &#34;we will not act on reverse racism&#39; or &#39;reverse sexism&#39;&#34;</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Some are alright, you just have to check between the cracks of ambulance chasers and district attorneys.</p></div>
+    <a href="../../v/programming/comments/371436#1551068">
+        <span class="badge badge-light"
+              title="Comment score: 2">
+            2
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-04 09:51:42 UTC">04 Aug 2015 09:51</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/371436#1551058">GitHub&#39;s new far-left code of conduct explicitly says &#34;we will not act on reverse racism&#39; or &#39;reverse sexism&#39;&#34;</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><blockquote>
+<p>Communicating in a ‘tone’ you don’t find congenial</p>
+</blockquote>
+<p>Oh look, they finally added a rider promising not to discriminate against autistic programmers. I don't really <em>believe</em> them so it really doesn't matter.</p>
+<p>Edit: I read it a little more and take that back. Patterns of inappropriately assuming people are your friends after working with them for a while is banned. Like it's not hard enough when you make a stupid mistake like that without realizing it.</p>
+<blockquote>
+<p>Pattern of inappropriate social contact, such as requesting/assuming inappropriate levels of intimacy with others</p>
+</blockquote></div>
+    <a href="../../v/programming/comments/371436#1551058">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-04 09:50:05 UTC">04 Aug 2015 09:50</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/361510#1500531">Ran out of stuff to program.</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Stop picking up new languages when you don't even know what you're doing in the ones you already tried. Pick one out of the bunch and focus on it for a while. Read a couple books, lurk in blogs and social media posts by senior developers working in that language. You're sabotaging yourself. Computer languages basically do the same thing when it comes right down to it. The basic principles don't change. The only thing that changes are the abstractions.</p>
+<p>Maybe you should worry about improving your skills instead of finishing projects. You can't just hop from language to language hoping it will somehow come to you easy on that next try. It's going to be tough. It's going to make you feel stupid. You're going to get stuck, the problem will seem completely hopeless. Then you analyze your approach, refactor a bit, look at it from a few more angles and somehow you manage to make it work. It feels great, you jump around for joy and get back to it only to figure out there's a serious flaw in your implementation. So now you have to figure that out, eventually fixing that too. It gets easier when you get used to working past roadblocks, you get better at it.</p></div>
+    <a href="../../v/programming/comments/361510#1500531">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-01 15:58:50 UTC">01 Aug 2015 15:58</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/356149#1446575">Github disables repository for using the word &#34;retard.&#34;</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>It's also the standard justification for unequal enforcement and blatant injustice.</p></div>
+    <a href="../../v/programming/comments/356149#1446575">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-07-30 02:40:18 UTC">30 Jul 2015 02:40</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/356149#1446550">Github disables repository for using the word &#34;retard.&#34;</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>As someone with an extraordinarily persecuted disability that's getting into programming... The SJW proposals are more of a threat to me than blatantly hostile anarchy.</p></div>
+    <a href="../../v/programming/comments/356149#1446550">
+        <span class="badge badge-success-bright"
+              title="Comment score: 5">
+            5
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-07-30 02:39:12 UTC">30 Jul 2015 02:39</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/331403#1310378">Why the Open Code of Conduct Isnt for Me</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><blockquote>
+<p>Are we really supposed to care if someone gets <strong>offended</strong> on the <strong>internet</strong>?</p>
+</blockquote>
+<p>Yes. If people are failing to get offended on the internet then it's clearly not working as intended. We need to figure out the source of the problem and submit a pull ticket.</p></div>
+    <a href="../../v/programming/comments/331403#1310378">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-07-24 04:38:30 UTC">24 Jul 2015 04:38</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/325903#1274280">Github is adopting a code of conduct</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Politics. It's a political measure taken to combat a real problem in an out of context fashion. Codification and enforcement creates a mechanism that empowers a few at the expense of the many. It starts off innocently enough, but now there's a social sidelines in those projects with a road that leads to political power. Power hungry types will start introducing social antics in order to buddy up to those initially in power as part of a protracted campaign to convince everyone that they can be trusted with that power. They will establish their power base one part at a time, first utilizing a seemingly democratic process with community opinion used to inform small changes designed toward establishment of their private kingdom. Once critical mass is reached, a clique will begin to form and they will no longer require an approach similar to community representation. Changes will become more rapid and more drastic all at once. Enforcement will be arbitrary and selective with zero consideration as to whether or not someone is actually disruptive. It's a common pattern on the internet. There's no reason we should believe that website will be immune to typical internet politics.</p>
+<p>I'm very strongly opposed to that kind of community standards approach in spite of the extraordinary oppression I've faced in my own life. I was born autistic, albeit with my higher brain functions fully intact. I was bullied and attacked throughout my childhood by fellow kids and adults alike. I was punished out of hand by school faculty for things I didn't even do. It went so far as to imbue me with PTSD to the point I developed an extreme case of agoraphobia.</p>
+<p>According to the promise of those codes of conduct and inclusion, those communities ought to be a safe place for me to flourish. According to my own real world experience, it's nothing but a sham. The nice words are used to ablate any evidence based claims that they are socially oppressing those they're supposedly upholding. All I have to do to start a cycle of marginalization is to mention my issues and request reasonable accommodation if a problem exists. It will be used against me, nothing will be done except to attempt conforming <em>me</em> to the expectations of others in spite of pathological differences in my neurology that renders such an outcome impossible. When that fails, I will start getting targeted for reprisal. I have no interest in playing that game any more.</p>
+<p>In practice, the best communities to operate in are the ones that just don't give a crap who or what someone happens to be. Worst case, someone starts running their mouth about me or those like me and I tell them precisely what I think of that. In extreme detail with strong logical arguments that infer their general stupidity. They wind up publicly humiliated and shut up about it. I don't bring up drama or dirty laundry, focus on the business at hand and stick to purely technical matters in any productive endeavor I participate in.</p></div>
+    <a href="../../v/programming/comments/325903#1274280">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-07-22 23:00:38 UTC">22 Jul 2015 23:00</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/325903#1254422">Github is adopting a code of conduct</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Only a matter of time before that gets weaponized. You don't need that much blah-blah-blah to tell people to keep to business and don't stray beyond purely technical matters related to a project.</p></div>
+    <a href="../../v/programming/comments/325903#1254422">
+        <span class="badge badge-success-bright"
+              title="Comment score: 20">
+            20
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-07-22 06:56:13 UTC">22 Jul 2015 06:56</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/318725#1241899">Computer Programming to be renamed Googling Stackoverflow</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Can confirm, felt exactly that way fixing a water damaged portion of flooring in my home last week.</p></div>
+    <a href="../../v/programming/comments/318725#1241899">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-07-21 23:02:03 UTC">21 Jul 2015 23:02</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/318725#1241099">Computer Programming to be renamed Googling Stackoverflow</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Sure, then when the author finishes writing their book they send it to their editor to get all the broken stuff fixed by someone that does learn it to great depth.</p>
+<p>Edit: A little more accurately, to get all the broken parts notated with shorthand for the various kinds of problems and sent back for the author to fix as instructed.</p></div>
+    <a href="../../v/programming/comments/318725#1241099">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-07-21 22:38:17 UTC">21 Jul 2015 22:38</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/318725#1240674">Computer Programming to be renamed Googling Stackoverflow</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>More than half the time I've bothered to look when researching a question that hasn't quite clicked for me, the best answer has been objectively, provably wrong. There hasn't been a single case of Stackoverflow where I got a better or even equivalent answer to just cracking open one of my language reference manuals. Every useful answer I came across was either a much later correction to the accepted answer or buried much further down.</p></div>
+    <a href="../../v/programming/comments/318725#1240674">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-07-21 22:24:58 UTC">21 Jul 2015 22:24</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div>
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/296497#1116132">No Code of Conduct: A Code of Conduct for Adults in Open Source Software</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>That's when you start waving your red card at people and asking if anyone likes what they see. Now, reading that red card... Do they get thrown out for not being inclusive if they hand that offensive, mean card to an autistic person that was merely guilty of being autistic in a social situation? Because the people handing out those red cards are definitely problem persons.</p></div>
+    <a href="../../v/programming/comments/296497#1116132">
+        <span class="badge badge-light"
+              title="Comment score: 2">
+            2
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-07-18 02:29:59 UTC">18 Jul 2015 02:29</span>
+        <span ><a class="user-link" href="../../user/Balrogic/">u/Balrogic</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div></div>
+
+<ul class="pagination pagination-sm mt-3">
+  <li class="page-item first-page disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item skip-back disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item prev-page disabled"><a class="page-link" href="index-0.html" tabindex="-1">&lsaquo;</a></li>
+
+
+      <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+
+  <li class="page-item next-page disabled"><a class="page-link" href="index-1.html" tabindex="-1">&rsaquo;</a></li>
+
+  <li class="page-item skip-forward disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;</a></li>
+
+  <li class="page-item last-page disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;&rsaquo;</a></li>
+</ul>
+
+    </main>
+
+<footer class="container-fluid">
+  <p class="small mb-0">
+    archive has 9,592 posts and 65,719 comments.
+    <a href="https://github.com/19-84/redd-archiver">source code</a>.
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

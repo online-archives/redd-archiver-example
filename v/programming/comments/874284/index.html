@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="if i have a bunch of highly regularized data, that is always accessed sequentially, do you think its possible to write a custom compression... - v/programming">
+<meta name="keywords" content="programming, huffman, records, generate, fields, changed, custom, compression, bunch, deltas">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/874284.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Custom compression for huge data sets">
+<meta property="og:description" content="if i have a bunch of highly regularized data, that is always accessed sequentially, do you think its possible to write a custom compression... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/874284.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Custom compression for huge data sets">
+<meta name="twitter:description" content="if i have a bunch of highly regularized data, that is always accessed sequentially, do you think its possible to write a custom compression... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Custom compression for huge data sets",
+  "author": {
+    "@type": "Person",
+    "name": "fvhy"
+  },
+  "datePublished": "2016-02-21T09:32:04Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 4
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "if i have a bunch of highly regularized data, that is always accessed sequentially, do you think its possible to write a custom compression algorithm that has same ratio as bzip2, but is much faster on reading? data is equal length records, each containing bunch of ints and doubles, but usually there is only small deltas between nearby records. bzip2 works great, but when analyzing the data, speed bottleneck is decompression. I'm thinking of implementing something like: generate frequency..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Custom compression for huge data sets</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_874284">
+  <h3 class="title">
+      Custom compression for huge data sets
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 9">9</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2016-02-21 09:32:04 UTC">21 Feb 2016 09:32</span>
+    by <span ><a class="user-link" href="../../../../user/fvhy/">u/fvhy</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>if i have a bunch of highly regularized data, that is always accessed sequentially, do you think its possible to write a custom compression algorithm that has same ratio as bzip2, but is much faster on reading?</p>
+<p>data is equal length records, each containing bunch of ints and doubles, but usually there is only small deltas between nearby records.</p>
+<p>bzip2 works great, but when analyzing the data, speed bottleneck is decompression. </p>
+<p>I'm thinking of implementing something like: generate frequency counts on all deltas between fields of subsequent records, then pre-create static huffman tables for every field delta. Also generate bitmask of which fields changed, once again generate a static huffman table for that.  Then encode data as: baseline record, number of compressed records, and for each compressed record, huffman encoded mask of fields changed, and then huffman encoded delta for each changed field</p>
+<p>Does this sound like its workable? is there a good/fast C++ library for huffman encoding, or do i roll my own?</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>6 comments</h4>
+        <details class="comment "
+         id="comment-voat_4355867"
+         data-depth="0"
+         data-id="voat_4355867"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 4">
+            4
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/0x7a69/">u/0x7a69</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-02-21 22:31:38 UTC">21 Feb 2016 22:31</span>
+        </span>
+    </summary>
+    <div class="md"><p>You want exactly lz4 compression.</p></div>
+            <details class="comment "
+         id="comment-voat_4360496"
+         data-depth="1"
+         data-id="voat_4360496"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/1HepCat/">u/1HepCat</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-02-22 07:10:24 UTC">22 Feb 2016 07:10</span>
+        </span>
+    </summary>
+    <div class="md"><p>Agreed. LZ4 is the reigning champ when one needs high IO/throughput (though other algorithms achieve higher compression ratios). Snappy is another codec to consider--it's almost as fast but sometimes available/compatible where LZ4 isn't.</p>
+<p>Another general-purpose tool to look into would be the Apache Parquet format. It makes use of run-length encoding, bit packing and record shredding to promote a very concise representation of encoded data prior to compressing it. It does look like there's a C++ library (<a href="https://github.com/apache/parquet-cpp">https://github.com/apache/parquet-cpp</a>), although I don't know how robust it is compared to the Java implementation. Here's an interesting article about it: <a href="https://blog.twitter.com/2013/dremel-made-simple-with-parquet">https://blog.twitter.com/2013/dremel-made-simple-with-parquet</a></p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_4361436"
+         data-depth="1"
+         data-id="voat_4361436"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/FSB/">u/FSB</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-02-22 10:45:39 UTC">22 Feb 2016 10:45</span>
+        </span>
+    </summary>
+    <div class="md"><p>Probably LZ4HC  which is a lot slower when compressing than regular lz4 (still beats gzip usually) but the decompression is even faster than regular lz4! (It is just a better compressor for the lz4 format, so the decompression code is exactly the same)</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_4355297"
+         data-depth="0"
+         data-id="voat_4355297"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/OlympicWalrus/">u/OlympicWalrus</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-02-21 21:33:11 UTC">21 Feb 2016 21:33</span>
+        </span>
+    </summary>
+    <div class="md"><p>Your idea makes sense, and you should be able to create a faster and more compressed format since you are taking advantage of knowing exactly what the data looks like.  
+</p>
+<p>It would be a fun pet project.  In a production system you would be better served by parallelizing the problem instead of creating a one-off compression format. </p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_4360664"
+         data-depth="0"
+         data-id="voat_4360664"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Craxic/">u/Craxic</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-02-22 07:33:52 UTC">22 Feb 2016 07:33</span>
+        </span>
+    </summary>
+    <div class="md"><p>LZ4 definitely sounds like what you want, but FWIW, checkout Brotli.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_4365644"
+         data-depth="0"
+         data-id="voat_4365644"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/dchem/">u/dchem</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-02-22 20:31:03 UTC">22 Feb 2016 20:31</span>
+        </span>
+    </summary>
+    <div class="md"><p>Is the data something that can be put into a table?</p>
+<p>If so, have you looked into columnar database called <a href="https://sdm.lbl.gov/fastbit/">fastbit</a>?</p>
+<p>It uses bitmap indexing and word-aligned hybrid compression to have a good space-performance trade-off.</p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

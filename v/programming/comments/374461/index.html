@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="I need a help here. At first, I think designing a currency exchange rate is simple and not complicated. I was wrong. Now I need helps to... - v/programming">
+<meta name="keywords" content="programming, usd, gbp, eur, currency, exchange, table, varchar, conversion, records">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/374461.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: How do you designed your currency exchange rate table?">
+<meta property="og:description" content="I need a help here. At first, I think designing a currency exchange rate is simple and not complicated. I was wrong. Now I need helps to... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/374461.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: How do you designed your currency exchange rate table?">
+<meta name="twitter:description" content="I need a help here. At first, I think designing a currency exchange rate is simple and not complicated. I was wrong. Now I need helps to... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "How do you designed your currency exchange rate table?",
+  "author": {
+    "@type": "Person",
+    "name": "leixiaotie"
+  },
+  "datePublished": "2015-08-04T11:19:05Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 1
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "I need a help here. At first, I think designing a currency exchange rate is simple and not complicated. I was wrong. Now I need helps to design the currency exchange table. This is the current design: field_name data_type description exchange_date datetime rate_type varchar consist of commercial rate, central bank rate, tax rate from_currency varchar to_currency varchar buy_rate decimal(32,6) sell_rate decimal(32,6) note varchar to hold rate references So far I have found several problems:..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: How do you designed your currency exchange rate table?</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_374461">
+  <h3 class="title">
+      How do you designed your currency exchange rate table?
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2015-08-04 11:19:05 UTC">04 Aug 2015 11:19</span>
+    by <span ><a class="user-link" href="../../../../user/leixiaotie/">u/leixiaotie</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>I need a help here. At first, I think designing a currency exchange rate is simple and not complicated. I was wrong. Now I need helps to design the currency exchange table. </p>
+<p>This is the current design:</p>
+<table>
+<thead>
+<tr>
+	<th>field_name</th>
+	<th>data_type</th>
+	<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>exchange_date</td>
+	<td>datetime</td>
+	<td></td>
+</tr>
+<tr>
+	<td>rate_type</td>
+	<td>varchar</td>
+	<td>consist of commercial rate, central bank rate, tax rate</td>
+</tr>
+<tr>
+	<td>from_currency</td>
+	<td>varchar</td>
+	<td></td>
+</tr>
+<tr>
+	<td>to_currency</td>
+	<td>varchar</td>
+	<td></td>
+</tr>
+<tr>
+	<td>buy_rate</td>
+	<td>decimal(32,6)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sell_rate</td>
+	<td>decimal(32,6)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>note</td>
+	<td>varchar</td>
+	<td>to hold rate references</td>
+</tr>
+</tbody>
+</table>
+<h2>So far I have found several problems:</h2>
+<h3>Exchange rate have different types</h3>
+<p>Such as commercial, central bank and tax rate. Currently those three are being handled by rate_type.</p>
+<h3>Cross currency conversion</h3>
+<p>Say that we have three currencies, GBP, EUR and USD. Now how do you store those conversions: 1) GBP to USD, 2) USD to GBP, 3) EUR to USD, 4) USD to EUR, 5) GBP to EUR, 6) EUR to GBP. Do you handle with 6 rate records which perfectly map the records, or 3 rate records and use multiplication / divison for calculation, or even 2 rate with one of them acts as middleman (ex: GBP to EUR become GBP to USD then USD to EUR) ?</p>
+<h3>High nominal currency conversion</h3>
+<p>One of the case here happens with IDR - USD conversion, using the google's exchange rate from web. I test using 1 IDR to USD, the rate is 0.000074. Meanwhile 100k IDR to USD is 7.414050. It lose precision due to different in nominal. How do you solve this issue?</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>4 comments</h4>
+        <details class="comment "
+         id="comment-voat_1556359"
+         data-depth="0"
+         data-id="voat_1556359"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Craftkorb/">u/Craftkorb</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-08-04 18:12:22 UTC">04 Aug 2015 18:12</span>
+        </span>
+    </summary>
+    <div class="md"><p>OP, why didn't you post this to <a href="/v/learnprogramming">/v/LearnProgramming</a> or any other subverse?</p></div>
+            <details class="comment "
+         id="comment-voat_1566221"
+         data-depth="1"
+         data-id="voat_1566221"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/leixiaotie/">u/leixiaotie</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-08-05 02:58:50 UTC">05 Aug 2015 02:58</span>
+        </span>
+    </summary>
+    <div class="md"><p>What's the different here with [HELP] flair and <a href="/v/learnprogramming">/v/LearnProgramming</a>? I won't mind to x-post there</p></div>
+            <details class="comment "
+         id="comment-voat_1576062"
+         data-depth="2"
+         data-id="voat_1576062"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Craftkorb/">u/Craftkorb</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-08-05 16:36:10 UTC">05 Aug 2015 16:36</span>
+        </span>
+    </summary>
+    <div class="md"><p>In general, &quot;HELP&quot; is for any submission where the OP is seeking for help, no matter the skill level. The lines are quite blurry to be honest when it comes to exactly saying if a question belongs in here, or if it better belongs to some other subverse, like <a href="/v/learnprogramming">/v/LearnProgramming</a> (For beginner questions), or in this case, some database oriented subverse (Which I don't know). There wasn't really a lot of discussion on this topic yet though.</p>
+<p>In general, as moderator I'd like to have a better tool or whatever to direct questions into a subverse where it really belongs, and doesn't get mixed into the tech news and drama submissions of <a href="/v/programming">/v/programming</a>. Until then, if no one has a better idea, questions are allowed to stay here, with me making no promise that this will stay this way on the long run.</p>
+<p>TL;DR: Right now these submissions are okay, but this may change if someone has a better idea how to handle this.</p></div>
+            <details class="comment "
+         id="comment-voat_1576168"
+         data-depth="3"
+         data-id="voat_1576168"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/leixiaotie/">u/leixiaotie</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-08-05 16:41:26 UTC">05 Aug 2015 16:41</span>
+        </span>
+    </summary>
+    <div class="md"><p>Easy, it's not like this question is being responded anyway.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

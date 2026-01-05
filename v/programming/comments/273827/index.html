@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Hey all, I&#39;m having trouble figuring out how to write this regex. I am supposed to find all occurences of the word &#39;is&#39; and replace them... - v/programming">
+<meta name="keywords" content="programming, regex, test, write, output, please, hey, trouble, figuring, supposed">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/273827.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Regex Help Please">
+<meta property="og:description" content="Hey all, I&#39;m having trouble figuring out how to write this regex. I am supposed to find all occurences of the word &#39;is&#39; and replace them... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/273827.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Regex Help Please">
+<meta name="twitter:description" content="Hey all, I&#39;m having trouble figuring out how to write this regex. I am supposed to find all occurences of the word &#39;is&#39; and replace them... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Regex Help Please",
+  "author": {
+    "@type": "Person",
+    "name": "skaiinyght"
+  },
+  "datePublished": "2015-07-14T17:00:41Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 1
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "Hey all, I'm having trouble figuring out how to write this regex. I am supposed to find all occurences of the word 'is' and replace them with is not. There may not be any letters to the side of 'is' but there can be spaces and special characters. What I currently have is [^A-Za-z]?[Ii][Ss][^A-Za-z] sample input: is test is-is This is right expected output: is not test is not-is not This is not right actual output: is not test is not is not This no is not How would I write this regex?"
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Regex Help Please</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_273827">
+  <h3 class="title">
+      Regex Help Please
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2015-07-14 17:00:41 UTC">14 Jul 2015 17:00</span>
+    by <span ><a class="user-link" href="../../../../user/skaiinyght/">u/skaiinyght</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>Hey all, I'm having trouble figuring out how to write this regex.</p>
+<p>I am supposed to find all occurences of the word 'is' and replace them with is not. There may not be any letters to the side of 'is' but there can be spaces and special characters.</p>
+<p>What I currently have is [^A-Za-z]?[Ii][Ss][^A-Za-z]</p>
+<p><strong>sample input:</strong></p>
+<p>is test</p>
+<p>is-is</p>
+<p>This is right</p>
+<p><strong>expected output:</strong></p>
+<p>is not test</p>
+<p>is not-is not</p>
+<p>This is not right</p>
+<p><strong>actual output:</strong></p>
+<p>is not test</p>
+<p>is not is not</p>
+<p>This no is not</p>
+<p>How would I write this regex?</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>1 comment</h4>
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="I just had this come up. This was &#39;fun&#39; to track down. public async Task&lt;SomeType&gt; GetSomethingAsync() { await Task.Delay(10); // just to... - v/programming">
+<meta name="keywords" content="programming, null, getsomethingasync, warning, code, task, bug, async, await, return">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1299707.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: A C++ style bug in C# or I can&#39;t believe this is not a warning">
+<meta property="og:description" content="I just had this come up. This was &#39;fun&#39; to track down. public async Task&lt;SomeType&gt; GetSomethingAsync() { await Task.Delay(10); // just to... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1299707.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: A C++ style bug in C# or I can&#39;t believe this is not a warning">
+<meta name="twitter:description" content="I just had this come up. This was &#39;fun&#39; to track down. public async Task&lt;SomeType&gt; GetSomethingAsync() { await Task.Delay(10); // just to... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "A C++ style bug in C# or I can't believe this is not a warning",
+  "author": {
+    "@type": "Person",
+    "name": "rwbj"
+  },
+  "datePublished": "2016-09-21T09:22:00Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 1
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "I just had this come up. This was 'fun' to track down. public async Task<SomeType> GetSomethingAsync() { await Task.Delay(10); // just to get rid of the async method does not await anything warning for anybody testing this return null; } public void SomeOtherFunction() { if (GetSomethingAsync() == null) DoSomethingIfNotFound(); else DoSomethingElse(); } No warning about an asynchronous call not being awaited awaited, unreachable code / redundant tests, or anything. It happily compiles and..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: A C++ style bug in C# or I can&#39;t believe this is not a warning</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_1299707">
+  <h3 class="title">
+      A C++ style bug in C# or I can&#39;t believe this is not a warning
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2016-09-21 09:22:00 UTC">21 Sep 2016 09:22</span>
+    by <span ><a class="user-link" href="../../../../user/rwbj/">u/rwbj</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>I just had this come up. This was 'fun' to track down.</p>
+<pre><code>    public async Task&lt;SomeType&gt; GetSomethingAsync()
+    {
+        await Task.Delay(10); // just to get rid of the async method does not await anything warning for anybody testing this
+        return null;
+    }
+    public void SomeOtherFunction()
+    {
+        if (GetSomethingAsync() == null)
+            DoSomethingIfNotFound();
+        else
+            DoSomethingElse();
+    }
+</code></pre>
+<p>No warning about an asynchronous call not being awaited awaited, unreachable code / redundant tests, or anything. It happily compiles and executes without warning or error. Reminds me a lot of an <em>if( a = b )</em> bug in C++ if not even nastier. If you don't see the bug, the return type of GetSomethingAsync is a task, not a SomeType. But both can be compared to null. So this test will <strong>never</strong> get a null since GetSomethingAsync() willl always return a non-null Task who's <strong>Result</strong> may or may not be null, but always would be in this sample code. Consequently DoSomethingElse() is executed 100% of the time even though you'd expect DoSomethingIfNotFound to be executed 100% of the time. The fix is simply to convert SomeOtherFunction to an async method and await GetSomethingAsync() or change the test to GetSomethingAnsync().Result == null. </p>
+<p>Now I'm paranoid I might have missed this elsewhere...</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>3 comments</h4>
+        <details class="comment "
+         id="comment-voat_6405156"
+         data-depth="0"
+         data-id="voat_6405156"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/RewriteFullwise/">u/RewriteFullwise</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-09-25 04:31:13 UTC">25 Sep 2016 04:31</span>
+        </span>
+    </summary>
+    <div class="md"><p>Buy Resharper by Jet Brains, you'll thank me later. It actually gives a warning that you did not await the call to GetSomethingAsync(). As far as comparison to null, I'm not sure if it'll warn for that. It'll give you all sorts of other warnings and hints showing all the flaws in your code that you never knew you had. Nobody should be developing C# without it.</p></div>
+            <details class="comment "
+         id="comment-voat_6405293"
+         data-depth="1"
+         data-id="voat_6405293"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/rwbj/">u/rwbj</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-09-25 05:00:17 UTC">25 Sep 2016 05:00</span>
+        </span>
+    </summary>
+    <div class="md"><p>Yeah I was also looking into that before just for precise refactoring of namespaces, which visual studio inexplicably does not support. Only problem is I just abhor the software as a service model. </p></div>
+            <details class="comment "
+         id="comment-voat_6405378"
+         data-depth="2"
+         data-id="voat_6405378"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/RewriteFullwise/">u/RewriteFullwise</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-09-25 05:23:50 UTC">25 Sep 2016 05:23</span>
+        </span>
+    </summary>
+    <div class="md"><p>It does so much more than that too. It is, hands down, the best code beautifier/formatter in existence. After getting used to developing with it, I'm hooked. Whenever I switch to a machine without it, I'm like WTF is going on here? Oh yeah, R# isn't installed on this machine.</p>
+<p>Yeah, the subscription model sucks. I just checked their page and it's $300 for the first year. I guess it depends if you're just coding for kicks or if this is your business. If it's the latter, I'd recommend sucking it up and buying it for at least one year. If you're just learning/tinkering with C# then it's hard to justify that much money.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

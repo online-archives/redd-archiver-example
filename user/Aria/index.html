@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="View archived post by u/Aria in v/programming">
+<meta name="keywords" content="reddit, user, posts, archive, Aria, programming">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/user/Aria/">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="u/Aria - Archived Voat Post in v/programming">
+<meta property="og:description" content="View archived post by u/Aria in v/programming">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/user/Aria/">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="u/Aria - Archived Voat Post in v/programming">
+<meta name="twitter:description" content="View archived post by u/Aria in v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../static/site.webmanifest">
+
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../static/css/redd-archiver-universal.css">
+
+
+    <title>u/Aria - Archived Voat Post in v/programming</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="./">u/Aria</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html">home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="user-profile-header pt-3">
+  <h2>u/Aria</h2>
+  <p class="lead">
+    0 posts ·
+    1 comment ·
+    1 total
+  </p>
+  <p class="text-muted">Active in: v/programming (1)</p>
+</div>
+
+<ul class="pagination pagination-sm mt-3">
+  <li class="page-item first-page disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item skip-back disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item prev-page disabled"><a class="page-link" href="index-0.html" tabindex="-1">&lsaquo;</a></li>
+
+
+      <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+
+  <li class="page-item next-page disabled"><a class="page-link" href="index-1.html" tabindex="-1">&rsaquo;</a></li>
+
+  <li class="page-item skip-forward disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;</a></li>
+
+  <li class="page-item last-page disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;&rsaquo;</a></li>
+</ul>
+
+
+<div class="links">
+
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/410984#1835905">For 40 years, computer scientists looked for a solution that doesnt exist</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>I get an annoying popup I can't click out of when I visit that page, so for anyone else who might be having that problem, the full article text is below.</p>
+<p>For 40 years, computer scientists have tried in vain to find a faster way to do an important calculation known as “edit distance.” Thanks to groundbreaking work from two researchers at MIT, they now know the reason they’ve continually failed is because a faster method is actually impossible to create.</p>
+<p>“Edit distance” is a straightforward and satisfyingly tangible idea. Imagine you have two sequences of numbers and want to know how many steps it takes to transform one into the other. In this transformation you can add a digit, remove a digit, or substitute one digit for another. For example, you have the data strings “1234” and “2345.” To turn the first into the second takes two steps — remove the 1, add a 5.</p>
+<p>The number of steps required to make this transformation is the edit distance. It’s a cool concept and also a useful one. Biologists use edit distance all the time when comparing genomes of different organisms. A genome is essentially a long string of data — the sequence of A, G, T, and C that make up our DNA. By calculating the edit distance between the genomes of two organisms, biologists can estimate how far back in evolutionary time the organisms diverged from each other.</p>
+<p>Edit distance is useful, but also very time-consuming to calculate. The current method for measuring it is known as the Wagner-Fischer algorithm. It was developed 40 years ago and works essentially by placing data on a grid. One string of data goes along the top row, the other goes down the left-hand column, and the algorithm fills in the grid diagonally, counting changes as it goes.</p>
+<p>The Wagner-Fischer algorithm is a computationally-intensive method that operates in what computer scientists call “quadratic time.” In plain terms, this means that when the length of the data strings goes up a little, the number of steps needed to compare them goes up a lot. For example, if you have two sequences, each with 10 digits, it takes 100 operations (10-squared) to compute the edit distance. But if you have two sequences, each with 100 digits, it takes you 10,000 operations to compare them (100-squared). The number of digits went up a little (just 90). The number of operations went up a lot (9,900).
+View Story
+The race to preserve disappearing data</p>
+<p>From the film industry to science, archivists are struggling to preserve the bits and bytes of our lives.</p>
+<pre><code>Like Airbnb, but for algorithms?
+</code></pre>
+<p>The fact that edit distance is only computable in quadratic time has big implications for genomics. The human genome contains about 3 billion base pairs. To compute the edit distance between two human genomes takes 3 billion-squared operations (to appreciate how big that is, write a 9 followed by 18 zeroes). That’s a number of operations, explains Piotr Indyk of MIT, that is “computationally infeasible.” Which is to say that our best computers chugging away for a really long time still won’t generate an answer.</p>
+<p>Because it’s computationally infeasible to compute the edit distance between two human genomes, biologists have to rely on approximations. They’d love a faster method, but Indyk and his coauthor, MIT graduate student Arturs Backurs, recently demonstrated a faster method is impossible to create. And by impossible they don’t mean “very hard” or “our technology has to improve first.” They mean something like, “by the laws of the mathematics, it can’t be done.”</p>
+<p>Indyk and Backurs presented their work at the annual Symposium on the Theory of Computing conference in Portland, Ore., in June. The details of how they demonstrated this impossibility are hard to describe, but their approach is easy enough to apprehend. In computer science, the most famous open question is the P equal to NP problem. It’s a mega-sized issue. Whoever proves it first would receive millions of dollars in prize money and be all over the international news. Most if not nearly all computer scientists believe the P equal to NP problem is false. Indyk and Backurs developed a clever strategy by which they showed that in order for there to be a faster way of calculating edit distance, a stronger variant of the P equal to NP problem must be true. And since most everyone is convinced that this variant of the P equal to NP problem is false, it follows there’s almost certainly no way to really improve on the Wagner-Fischer algorithm.</p>
+<p>Indyk and Backurs’ result has been greeted with something like relief among computer scientists, who can now stop beating their heads against a wall in search of a faster method that doesn’t exist.</p>
+<p>“I remember wondering as a student, 15 years ago, whether you could substantially beat the quadratic-time algorithm for [edit distance]. Thanks to Backurs and Indyk, we now know for the first time that you can’t,” says Scott Aaronson, a computer scientist at MIT.</p>
+<p>For Indyk, too, his recent work acts as a permission slip to move onto other questions. Like hundreds of other computer scientists, he has spent years searching fruitlessly for a faster way to compute edit distance. Now, he says, “I will stop trying to solve the problem.”</p></div>
+    <a href="../../v/programming/comments/410984#1835905">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2015-08-15 21:33:30 UTC">15 Aug 2015 21:33</span>
+        <span ><a class="user-link" href="../../user/Aria/">u/Aria</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div></div>
+
+<ul class="pagination pagination-sm mt-3">
+  <li class="page-item first-page disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item skip-back disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item prev-page disabled"><a class="page-link" href="index-0.html" tabindex="-1">&lsaquo;</a></li>
+
+
+      <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+
+  <li class="page-item next-page disabled"><a class="page-link" href="index-1.html" tabindex="-1">&rsaquo;</a></li>
+
+  <li class="page-item skip-forward disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;</a></li>
+
+  <li class="page-item last-page disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;&rsaquo;</a></li>
+</ul>
+
+    </main>
+
+<footer class="container-fluid">
+  <p class="small mb-0">
+    archive has 9,592 posts and 65,719 comments.
+    <a href="https://github.com/19-84/redd-archiver">source code</a>.
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

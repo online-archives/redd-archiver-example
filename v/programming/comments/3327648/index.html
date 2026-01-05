@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Goal: Catch only letters found in char array regardless of upper/lower case, only perform operations if char is not a letter. Problem: Does... - v/programming">
+<meta name="keywords" content="programming, regex, pre, code, str, rgx, quot, char, operations, only">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/3327648.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: I suck at regex... Can someone please explain why only example C is working here?">
+<meta property="og:description" content="Goal: Catch only letters found in char array regardless of upper/lower case, only perform operations if char is not a letter. Problem: Does... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/3327648.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: I suck at regex... Can someone please explain why only example C is working here?">
+<meta name="twitter:description" content="Goal: Catch only letters found in char array regardless of upper/lower case, only perform operations if char is not a letter. Problem: Does... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "I suck at regex... Can someone please explain why only example C is working here?",
+  "author": {
+    "@type": "Person",
+    "name": "argosciv"
+  },
+  "datePublished": "2019-07-11T09:01:24Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 6
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "Goal: Catch only letters found in char array regardless of upper/lower case, only perform operations if char is not a letter. Problem: Does not catch uppercase except in example C. Example A: foreach ( char x in chararray ) { string str = x.ToString(); Regex rgx = new Regex( @\"^(?-i)[a-zA-Z]$\", RegexOptions.IgnoreCase ); if ( !rgx.IsMatch( str ) ) { //operations here } } Example B: foreach ( char x in chararray ) { string str = x.ToString(); Regex rgx = new Regex( @\"^[a-zA-Z]$\",..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: I suck at regex... Can someone please explain why only example C is working here?</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_3327648">
+  <h3 class="title">
+      I suck at regex... Can someone please explain why only example C is working here?
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2019-07-11 09:01:24 UTC">11 Jul 2019 09:01</span>
+    by <span ><a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>Goal: Catch only letters found in char array regardless of upper/lower case, only perform operations if char is not a letter.</p>
+<p>Problem: Does not catch uppercase except in example C.</p>
+<p><strong>Example A:</strong></p>
+<pre><code>foreach ( char x in chararray )
+{
+    string str = x.ToString();
+    Regex rgx = new Regex( @&quot;^(?-i)[a-zA-Z]$&quot;, RegexOptions.IgnoreCase );
+    if ( !rgx.IsMatch( str ) )
+    {
+        //operations here
+    }
+}
+</code></pre>
+<p><strong>Example B:</strong></p>
+<pre><code>foreach ( char x in chararray )
+{
+    string str = x.ToString();
+    Regex rgx = new Regex( @&quot;^[a-zA-Z]$&quot;, RegexOptions.IgnoreCase );
+    if ( !rgx.IsMatch( str.ToLower() ) )
+    {
+        //operations here
+    }
+}
+</code></pre>
+<p><strong>Example C:</strong></p>
+<pre><code>foreach ( char x in chararray )
+{
+    string str = x.ToString().ToLower();
+    Regex rgx = new Regex( @&quot;^[a-zA-Z]$&quot; );
+    if ( !rgx.IsMatch( str ) )
+    {
+        //operations here
+    }
+}
+</code></pre></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>17 comments</h4>
+        <details class="comment "
+         id="comment-voat_19675802"
+         data-depth="0"
+         data-id="voat_19675802"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/neogag/">u/neogag</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-07-11 09:04:20 UTC">11 Jul 2019 09:04</span>
+        </span>
+    </summary>
+    <div class="md"><p>I don't have time to look into this now, but know that there is a <code>/i</code> regex flag that means case-insensitive, which might be what you want.</p></div>
+            <details class="comment "
+         id="comment-voat_19675861"
+         data-depth="1"
+         data-id="voat_19675861"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-07-11 09:08:28 UTC">11 Jul 2019 09:08</span>
+        </span>
+    </summary>
+    <div class="md"><p>Tried <code>(?-i)</code> in example A. Is <code>/i</code> proper syntax?</p></div>
+            <details class="comment "
+         id="comment-voat_19675996"
+         data-depth="2"
+         data-id="voat_19675996"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/lemon11/">u/lemon11</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-07-11 09:28:34 UTC">11 Jul 2019 09:28</span>
+        </span>
+    </summary>
+    <div class="md"><p>I don't know C#, but if its engine is PCRE, the <a href="https://www.pcre.org/current/doc/html/pcre2pattern.html#SEC13">syntax for flags inside the pattern</a> should be like <code>(?i)pattern</code> or <code>(?i:pattern)</code>.</p></div>
+            <details class="comment "
+         id="comment-voat_19676024"
+         data-depth="3"
+         data-id="voat_19676024"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-07-11 09:36:57 UTC">11 Jul 2019 09:36</span>
+        </span>
+    </summary>
+    <div class="md"><p>I've tried a few <code>(?i)</code>/<code>(?-i)</code> variations, except the second one from your comment. Just tried that in a few variations, no dice.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_19675925"
+         data-depth="0"
+         data-id="voat_19675925"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/folgeyharry/">u/folgeyharry</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-07-11 09:14:28 UTC">11 Jul 2019 09:14</span>
+        </span>
+    </summary>
+    <div class="md"><p>put a * after [a-zA-Z], otherwise you're only going to match 1 character strings</p></div>
+            <details class="comment "
+         id="comment-voat_19675929"
+         data-depth="1"
+         data-id="voat_19675929"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-07-11 09:15:31 UTC">11 Jul 2019 09:15</span>
+        </span>
+    </summary>
+    <div class="md"><p>They are indeed only 1 character strings. Original string was converted to a CharArray, to then be iterated through.</p></div>
+            <details class="comment "
+         id="comment-voat_19676057"
+         data-depth="2"
+         data-id="voat_19676057"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/folgeyharry/">u/folgeyharry</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-07-11 09:43:20 UTC">11 Jul 2019 09:43</span>
+        </span>
+    </summary>
+    <div class="md"><p>I tried all 3 using mono on linux and they all worked fine. Also, why use regex at all? You can just compare x to 'a', etc. I included a 4th example in the pastebin showing the complete program.</p>
+<p><a href="https://pastebin.com/k1HQR5hu">https://pastebin.com/k1HQR5hu</a></p></div>
+            <details class="comment "
+         id="comment-voat_19676077"
+         data-depth="3"
+         data-id="voat_19676077"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-07-11 09:48:36 UTC">11 Jul 2019 09:48</span>
+        </span>
+    </summary>
+    <div class="md"><p>Interesting approach there in your 4th example, hadn't considered that.</p>
+<p>I'll see if I get acceptable results using your code in a minute. Thanks for taking the time.</p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_19676163"
+         data-depth="3"
+         data-id="voat_19676163"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-07-11 10:04:07 UTC">11 Jul 2019 10:04</span>
+        </span>
+    </summary>
+    <div class="md"><p>Okay, what in the actual fuck is this black magick...</p>
+<p>It's true, all of the examples in your code work.</p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_19676199"
+         data-depth="3"
+         data-id="voat_19676199"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-07-11 10:06:20 UTC">11 Jul 2019 10:06</span>
+        </span>
+    </summary>
+    <div class="md"><p>Interesting approach there in your 4th example, hadn't considered that.</p>
+<p>I'll see if I get acceptable results using your code in a minute. Thanks for taking the time.</p>
+<h1 id="md-section"></h1>
+<p>Okay, what in the actual fuck is this black magick...</p>
+<p>It's true, all of the examples in your code work.</p>
+<h1 id="md-section-1"></h1>
+<p>Oh god fucking damnit, I just figured out where I was actually going wrong and it has nothing at all to do with the regex. Fuck my fucking life.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_19678254"
+         data-depth="0"
+         data-id="voat_19678254"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/psimonster/">u/psimonster</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-07-11 13:34:15 UTC">11 Jul 2019 13:34</span>
+        </span>
+    </summary>
+    <div class="md"><p>Instead of running a match inside a loop create a new string by regex replacing letters with nothing, then run the operation on each character in the new string.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_19690874"
+         data-depth="0"
+         data-id="voat_19690874"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/HoneyTrap1488/">u/HoneyTrap1488</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-07-12 01:18:27 UTC">12 Jul 2019 01:18</span>
+        </span>
+    </summary>
+    <div class="md"><p>Using regex for a simple pattern you know at compile-time is a lousy way to do it. Checking if a <code>char</code> is an ASCII letter can be done in 3 instructions in C: <a href="https://godbolt.org/z/HMvLLC">https://godbolt.org/z/HMvLLC</a> . Using regex would be hundreds.</p></div>
+            <details class="comment "
+         id="comment-voat_20356306"
+         data-depth="1"
+         data-id="voat_20356306"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ELS_BrigadeWarning/">u/ELS_BrigadeWarning</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-08-28 14:23:04 UTC">28 Aug 2019 14:23</span>
+        </span>
+    </summary>
+    <div class="md"><p>and even that has the convenience function of isalpha() in C and its rough equivalent Char.IsLetter() in C#.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_20099430"
+         data-depth="0"
+         data-id="voat_20099430"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/berne/">u/berne</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-08-09 18:52:39 UTC">09 Aug 2019 18:52</span>
+        </span>
+    </summary>
+    <div class="md"><p>So? What where you actually trying to do, and how did you solve it? :-)</p></div>
+            <details class="comment "
+         id="comment-voat_20102783"
+         data-depth="1"
+         data-id="voat_20102783"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-08-09 23:11:22 UTC">09 Aug 2019 23:11</span>
+        </span>
+    </summary>
+    <div class="md"><p>Was trying to split a user-inputted string into its characters and run ops on each character (if said character is a letter).</p>
+<p>Turns out the regex was perfectly fine, I just had a logical error further down which at first appeared like a regex problem. Fixing the logical error showed that the regex was working perfectly fine.</p>
+<p>The error being that I wasn't converting uppercase letters to lowercase letters when checking them against a dictionary which only has lowercase letters in it. This made me think that the regex was skipping over uppercase letters, but it wasn't, I just wasn't using them correctly (hence also why Example C 'worked' due to lowercasing the character at that particular point -- albeit that I didn't want to do so there).</p></div>
+            <details class="comment "
+         id="comment-voat_20108460"
+         data-depth="2"
+         data-id="voat_20108460"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/berne/">u/berne</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-08-10 10:21:27 UTC">10 Aug 2019 10:21</span>
+        </span>
+    </summary>
+    <div class="md"><p>Okay. I was just curious - because it looked so overly elaborate just for detecting letters. I figured you had a reason besides the utilitarian to use regexes and that the input char array was beyond your control or for &quot;performance considerations&quot;.</p>
+<p>There is an IsLetter(...) method in the Char class that can detect if a character is a Unicode 'letter' but that includes non-english letters. The simplest (a fastest) way to detect if a char is an english letter would be simply &quot;if ((c &gt;= 'a' &amp;&amp; c &lt;= 'z') || (c &gt;= 'A' &amp;&amp; c &lt;= 'Z')) ...&quot;. This will not have any of the overhead that string conversions and regexes have and will also use the processor's cache and speculative execution efficiently - if that is ever a consideration.</p>
+<p>Using regexes can be very efficient but mostly for complex syntaxes or longer 'strings'. Rolling your 'own' parser in such a case is likely a waste of time.</p>
+<p>Good luck!</p></div>
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_20356275"
+         data-depth="0"
+         data-id="voat_20356275"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ELS_BrigadeWarning/">u/ELS_BrigadeWarning</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-08-28 14:20:41 UTC">28 Aug 2019 14:20</span>
+        </span>
+    </summary>
+    <div class="md"><p>Don't use Regex for that shit, use <a href="https://www.geeksforgeeks.org/c-sharp-char-isletter-method/">Char.IsLetter()</a></p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

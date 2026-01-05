@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Gitblit is a pure Java based git solution. It falls under one of the forge softwares like Apache Allura that combines ticketing system with... - v/programming">
+<meta name="keywords" content="programming, jenkins, code, gitblit, git, build, setup, set, plugin, repo">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/372494.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: [git &amp; jenkins] How to setup Gitblit and integrate it with Jenkins CI to build your projects as you push them to repo">
+<meta property="og:description" content="Gitblit is a pure Java based git solution. It falls under one of the forge softwares like Apache Allura that combines ticketing system with... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/372494.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: [git &amp; jenkins] How to setup Gitblit and integrate it with Jenkins CI to build your projects as you push them to repo">
+<meta name="twitter:description" content="Gitblit is a pure Java based git solution. It falls under one of the forge softwares like Apache Allura that combines ticketing system with... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "[git & jenkins] How to setup Gitblit and integrate it with Jenkins CI to build your projects as you push them to repo",
+  "author": {
+    "@type": "Person",
+    "name": "dchem"
+  },
+  "datePublished": "2015-08-03T21:57:06Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 1
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "Gitblit is a pure Java based git solution. It falls under one of the forge softwares like Apache Allura that combines ticketing system with web ui for git. I went through a process of setting it up and I thought I can help new users avoid the pain points. Usage scenario You want to self-host git repos You want to setup a Jenkins server to take git repo pushes and run build tests on those branches. You have a domain name and you can set the A Record for it. Gitblit Easy setup Integrates well..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: [git &amp; jenkins] How to setup Gitblit and integrate it with Jenkins CI to build your projects as you push them to repo</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_372494">
+  <h3 class="title">
+      [git &amp; jenkins] How to setup Gitblit and integrate it with Jenkins CI to build your projects as you push them to repo
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 11">11</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2015-08-03 21:57:06 UTC">03 Aug 2015 21:57</span>
+    by <span ><a class="user-link" href="../../../../user/dchem/">u/dchem</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>Gitblit is a pure Java based git solution. It falls under one of the forge softwares like Apache Allura that combines ticketing system with web ui for git. I went through a process of setting it up and I thought I can help new users avoid the pain points.</p>
+<h3>Usage scenario</h3>
+<ul>
+<li>You want to self-host git repos</li>
+<li>You want to setup a Jenkins server to take git repo pushes and run build tests on those branches.</li>
+<li>You have a domain name and you can set the A Record for it.</li>
+</ul>
+<h3>Gitblit</h3>
+<ul>
+<li>Easy setup</li>
+<li>Integrates well with Jenkins</li>
+<li>Lightweight - compared to Allura or Gitlab</li>
+<li>Lacks self registration functionality for users</li>
+</ul>
+<h3>Jenkins CI</h3>
+<ul>
+<li>Easy setup</li>
+<li>Robust plugin community</li>
+<li>It's what Circle CI, Travis CI uses for their base stack.</li>
+</ul>
+<h3>Steps:</h3>
+<ol>
+<li>Download Gitblit from <a href="http://gitblit.com/">http://gitblit.com/</a>   For most people you'll want the Gitblit GO.</li>
+<li>Follow the installation instructions on the site</li>
+<li>Configure the <code>gitblit.properties</code> file in <code>/data</code> directory. Be sure to fill in <code>web.canonicalUrl</code> - it needs to be set for Jenkins integration to work properly.</li>
+<li>Download and install Jenkins from <a href="http://jenkins-ci.org/">http://jenkins-ci.org/</a></li>
+<li>Setup Jenkins as described in <a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins">https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins</a></li>
+<li>If you installed it as a daemon, launch it ( <code>/etc/init.d/jenkins start</code> )</li>
+<li>Go to the url for jenkins. go to Manage Jenkins -&gt; Configure Global Settings -&gt; Enable Security</li>
+<li>Turn on 'Allow Users to Signup'</li>
+<li>Register and then turn 'Allow Users to Signup' off.</li>
+</ol>
+<p>At this point you have both Gitblit and Jenkins set up. But they aren't interacting yet. We want to make it so when we push the commits to gitblit, Jenkins builds it.</p>
+<ol>
+<li>Go to the settings in a repo already in your gitblit site. Go to the 'receive' section of the repo setting and add <code>jenkins</code> to the 'selected' column in the 'post-receive scripts' sub-section.</li>
+<li>Go to the <code>/data/groovy</code> directory of Gitblit in your server, edit the jenkins.groovy file. Under <code>jenkinsUrl</code> input your jenkins url.</li>
+<li>Restart gitblit.</li>
+<li>Login to Jenkins web ui. Go to 'Manage Plugins.' Click on 'Available' and type in <code>Git Plugin</code> into the search box. Install that.</li>
+<li>Restart Jenkins.</li>
+<li>Also in the plugins are the build environment support plugins. Add those. Specifically for NodeJS, you juse have to be aware that NodeJS plugin's Auto Installation does not show NodeJS dropdown. You have to install by inputting the url of where tar.gz exists. Input the subdirectory that would exist if you unpack it.</li>
+<li>Go to Manage Jenkins -&gt; Configure System. Add the proper build environment pre-sets. This is specific to what you want to do. So I leave this out.</li>
+<li>Finally, add your build. 'New Item' -&gt; 'Freestyle'</li>
+<li>Select git from 'Source Code Management' section. Put the url and other settings. I usually have two build projects made for each git project. One for &lt;projectName&gt;-Release, and one for &lt;projectName&gt;-All. I set it up so the branch setting in Jenkins is blank for &lt;projectName&gt;-All project. That way all feature and dev branches are built and tested.</li>
+<li>Next, select 'Poll SCM' and leave it blank. Gitblit's Jenkins groovy plugin will call the Jenkins' hook for building on-demand this way. A way to verify is to try <code>curl &lt;jenkinsUrl&gt;/git/notifyCommit?url=&lt;gitblitUrl&gt;/r/&lt;repoName&gt;</code> or you can also just put that in the browser as well.</li>
+<li>If you want links to those cool 'build status' image as well, install <code>embeddable-build-status</code> plugin for Jenkins. After that, link it in your website or markdown docs.</li>
+</ol>
+<p>Congratulations, you now have Gitblit and Jenkins CI set up to take the git commit pushes and build them!</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>1 comment</h4>
+        <details class="comment "
+         id="comment-voat_1551770"
+         data-depth="0"
+         data-id="voat_1551770"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/dchem/">u/dchem</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-08-04 12:08:36 UTC">04 Aug 2015 12:08</span>
+        </span>
+    </summary>
+    <div class="md"><p>Plus, the dev for Gitblit sounds like he knows what he's doing.
+<a href="http://episodes.gitminutes.com/2014/05/gitminutes-29-james-moger-on-gitblit.html">GitMinute interview with GitBlit dev, James Moger</a></p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

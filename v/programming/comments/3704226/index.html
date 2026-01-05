@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Got the results I mostly wanted on IIS, but I fucking suck at manual url rewriting (Apache). Trying to get site.com/index.php?action=anya... - v/programming">
+<meta name="keywords" content="programming, anyaction, anyview, apache, rewriting, goats, htaccess, mostly, iis, fucking">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/3704226.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Any goats got a moment to help me out with Apache (.htaccess) url rewriting?">
+<meta property="og:description" content="Got the results I mostly wanted on IIS, but I fucking suck at manual url rewriting (Apache). Trying to get site.com/index.php?action=anya... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/3704226.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Any goats got a moment to help me out with Apache (.htaccess) url rewriting?">
+<meta name="twitter:description" content="Got the results I mostly wanted on IIS, but I fucking suck at manual url rewriting (Apache). Trying to get site.com/index.php?action=anya... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Any goats got a moment to help me out with Apache (.htaccess) url rewriting?",
+  "author": {
+    "@type": "Person",
+    "name": "argosciv"
+  },
+  "datePublished": "2020-03-14T04:29:18Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 5
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "Got the results I mostly wanted on IIS, but I fucking suck at manual url rewriting (Apache). Trying to get site.com/index.php?action=anyaction&view=anyview to rewrite to site.com/anyaction/anyview helpful example with explanation would be much appreciated. Note that anyaction and anyview can and should be literally be any value (the rest of the code handles whether or not the request is valid and serviceable). TIA."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Any goats got a moment to help me out with Apache (.htaccess) url rewriting?</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_3704226">
+  <h3 class="title">
+      Any goats got a moment to help me out with Apache (.htaccess) url rewriting?
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2020-03-14 04:29:18 UTC">14 Mar 2020 04:29</span>
+    by <span ><a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>Got the results I mostly wanted on IIS, but I fucking suck at manual url rewriting (Apache).</p>
+<p>Trying to get</p>
+<p><strong><em>site.com/index.php?action=anyaction&amp;view=anyview</em></strong></p>
+<p>to rewrite to</p>
+<p><strong><em>site.com/anyaction/anyview</em></strong></p>
+<p>helpful example with explanation would be much appreciated.</p>
+<p>Note that <em>anyaction</em> and <em>anyview</em> can and should be literally be any value (the rest of the code handles whether or not the request is valid and serviceable).</p>
+<p>TIA.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>29 comments</h4>
+        <details class="comment "
+         id="comment-voat_22885777"
+         data-depth="0"
+         data-id="voat_22885777"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/PuttitoutIsGone/">u/PuttitoutIsGone</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 04:41:41 UTC">14 Mar 2020 04:41</span>
+        </span>
+    </summary>
+    <div class="md"><p>No link. Fuck off.</p></div>
+            <details class="comment "
+         id="comment-voat_22885917"
+         data-depth="1"
+         data-id="voat_22885917"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/BillyLuath/">u/BillyLuath</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 04:57:17 UTC">14 Mar 2020 04:57</span>
+        </span>
+    </summary>
+    <div class="md"><p>No link needed, he's asking about rewrite rules.</p></div>
+            <details class="comment "
+         id="comment-voat_22885948"
+         data-depth="2"
+         data-id="voat_22885948"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/PuttitoutIsGone/">u/PuttitoutIsGone</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 04:59:48 UTC">14 Mar 2020 04:59</span>
+        </span>
+    </summary>
+    <div class="md"><p>He's a firm believer that if a post doesn't contain a link, it should be deleted.</p></div>
+            <details class="comment "
+         id="comment-voat_22885999"
+         data-depth="3"
+         data-id="voat_22885999"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/BillyLuath/">u/BillyLuath</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 05:03:58 UTC">14 Mar 2020 05:03</span>
+        </span>
+    </summary>
+    <div class="md"><p>Oh, Argo, what ever happened to him?</p></div>
+            <details class="comment "
+         id="comment-voat_22894645"
+         data-depth="4"
+         data-id="voat_22894645"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 20:31:46 UTC">14 Mar 2020 20:31</span>
+        </span>
+    </summary>
+    <div class="md"><p>You really gonna buy PiG's spin here?</p>
+<p>This subverse has no rule requirements for a link to be present in submissions.</p>
+<p>Subverse rules:</p>
+<blockquote>
+<ol>
+<li>Be nice!</li>
+<li>This subvoat is about programming in general: Submissions must be directly programming related.</li>
+<li>Click-bait, blogspam, memes, job openings, ads and drama submissions will be removed.</li>
+<li>Everything must be accessible through the submission for everyone globally.</li>
+</ol>
+</blockquote>
+<p>And wouldn't you know it, PiG and &quot;Cransch&quot; broke rule 1.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_22885992"
+         data-depth="1"
+         data-id="voat_22885992"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Cransch/">u/Cransch</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 05:03:38 UTC">14 Mar 2020 05:03</span>
+        </span>
+    </summary>
+    <div class="md"><p>Would you expect anything else from a hypocrite jew faggot?</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_22885956"
+         data-depth="0"
+         data-id="voat_22885956"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/BillyLuath/">u/BillyLuath</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 05:00:28 UTC">14 Mar 2020 05:00</span>
+        </span>
+    </summary>
+    <div class="md"><p>Forget using .htaccess, create a config.php file, require it once on every request and do your $_GET magic there.</p>
+<p>Your talking about aliasing.</p></div>
+            <details class="comment "
+         id="comment-voat_22886009"
+         data-depth="1"
+         data-id="voat_22886009"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 05:05:11 UTC">14 Mar 2020 05:05</span>
+        </span>
+    </summary>
+    <div class="md"><p>So you're suggesting:</p>
+<ul>
+<li>explode the url by &quot;/&quot;</li>
+<li>dump the first entry (domain) and second entry (index.php)</li>
+<li>populate $_GET based on the order of the rest of the results and their corresponding parameter name</li>
+</ul>
+<p>?</p></div>
+            <details class="comment "
+         id="comment-voat_22886080"
+         data-depth="2"
+         data-id="voat_22886080"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/BillyLuath/">u/BillyLuath</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 05:11:59 UTC">14 Mar 2020 05:11</span>
+        </span>
+    </summary>
+    <div class="md"><p>No, you've just replaced the query variables without disrupting the query order.</p>
+<p>If the order stays the same, then it doesn't matter what the variable is.</p>
+<p>This is an Alias. You're just translating the query.</p></div>
+            <details class="comment "
+         id="comment-voat_22886111"
+         data-depth="3"
+         data-id="voat_22886111"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 05:15:30 UTC">14 Mar 2020 05:15</span>
+        </span>
+    </summary>
+    <div class="md"><p>One or both of us isn't understanding the other...</p>
+<p>See the edited stipulations in the main post while I get back to you with some screenshots from my IIS deployment.</p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_22886504"
+         data-depth="3"
+         data-id="voat_22886504"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 05:58:28 UTC">14 Mar 2020 05:58</span>
+        </span>
+    </summary>
+    <div class="md"><p><strong>Screenshots demonstrating reverse compatible url rewriting via IIS:</strong></p>
+<ul>
+<li>index.php (with no action paramater) defaults to home page: <a href="https://files.catbox.moe/jqzwyo.png">https://files.catbox.moe/jqzwyo.png</a></li>
+<li>index.php?action=home will rewrite to /home: <a href="https://files.catbox.moe/c9sjx6.png">https://files.catbox.moe/c9sjx6.png</a></li>
+<li>/home and /admin/home will translate as <a href="https://files.catbox.moe/twqfh7.png">index.php?action=home</a> and <a href="https://files.catbox.moe/pl7apl.png">index.php?action=admin&amp;view=home</a> respectively.</li>
+</ul>
+<p>I'm hoping to achieve the same result on Apache (preferably with .htaccess, unless a better approach can be explained).</p></div>
+            <details class="comment "
+         id="comment-voat_22890908"
+         data-depth="4"
+         data-id="voat_22890908"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/BillyLuath/">u/BillyLuath</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 16:01:56 UTC">14 Mar 2020 16:01</span>
+        </span>
+    </summary>
+    <div class="md"><p>Yeah, in a different programming language I worked in (not naming it) this is easy as pie, but in PHP, not so much.</p>
+<p>I can see why you are focusing on doing rewrites in the .htaccess file instead of just creating a redirect engine that parses all URLs and builds the friendly URL.</p>
+<p>Here's an interesting article that explains exactly what you are looking for:</p>
+<p><a href="http://corz.org/server/tricks/htaccess2.php">http://corz.org/server/tricks/htaccess2.php</a></p></div>
+            <details class="comment "
+         id="comment-voat_22890985"
+         data-depth="5"
+         data-id="voat_22890985"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 16:06:30 UTC">14 Mar 2020 16:06</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>Here's an interesting article that explains exactly what you are looking for:</p>
+<p><a href="http://corz.org/server/tricks/htaccess2.php">http://corz.org/server/tricks/htaccess2.php</a></p>
+</blockquote>
+<p>Fucking beautiful, exactly what I needed.</p>
+<blockquote>
+<p>Yeah, in a different programming language I worked in (not naming it) this is easy as pie, but in PHP, not so much.</p>
+</blockquote>
+<p>Yep, after I get the hang of this site deployment (as a template), I'm going to try to reproduce it in .NET and maybe others.</p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_22892059"
+         data-depth="5"
+         data-id="voat_22892059"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 17:23:36 UTC">14 Mar 2020 17:23</span>
+        </span>
+    </summary>
+    <div class="md"><p>Dude, you're a freakin' legend...</p>
+<p>Now all I have to do is figure out reverse compatibility via .htaccess OR do some $_GET magic to turn a classic url into a pretty url and redirect using header(&quot;Location: ~&quot;).</p></div>
+            <details class="comment "
+         id="comment-voat_22892795"
+         data-depth="6"
+         data-id="voat_22892795"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/BillyLuath/">u/BillyLuath</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 18:17:35 UTC">14 Mar 2020 18:17</span>
+        </span>
+    </summary>
+    <div class="md"><p>Have you tried:  parse_url</p>
+<p><a href="https://www.php.net/manual/en/function.parse-url.php">https://www.php.net/manual/en/function.parse-url.php</a></p></div>
+            <details class="comment "
+         id="comment-voat_22893261"
+         data-depth="7"
+         data-id="voat_22893261"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 18:49:04 UTC">14 Mar 2020 18:49</span>
+        </span>
+    </summary>
+    <div class="md"><p>I'm sure I've messed around with that in the past. Doing the reverse compat through php isn't going to be difficult, I'm just fucking around with .htaccess for now to get a feel for which rules work, don't work, and work best for me with the least amount of mess.</p>
+<p>Reverse compat can wait :)</p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_22905924"
+         data-depth="7"
+         data-id="voat_22905924"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2020-03-15 15:54:59 UTC">15 Mar 2020 15:54</span>
+        </span>
+    </summary>
+    <div class="md"><p>Update:</p>
+<p>Worked out how to prettify urls via php :)</p></div>
+            <details class="comment "
+         id="comment-voat_22906033"
+         data-depth="8"
+         data-id="voat_22906033"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/BillyLuath/">u/BillyLuath</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-15 16:02:07 UTC">15 Mar 2020 16:02</span>
+        </span>
+    </summary>
+    <div class="md"><p>Cool beans, glad you got it working.</p></div>
+            <details class="comment "
+         id="comment-voat_22906136"
+         data-depth="9"
+         data-id="voat_22906136"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2020-03-15 16:08:40 UTC">15 Mar 2020 16:08</span>
+        </span>
+    </summary>
+    <div class="md"><p>Thanks again for the link to that htaccess guide. Still got a lot of learning there so I can reduce mess, but I think <a href="https://voat.co/u/cantaloupe6">@cantaloupe6</a>'s <a href="https://voat.co/v/programming/3704226/22900289/">comment</a> might help with that (gotta learn what RewriteBase is for).</p>
+<p>I was able to, on the php side, make <em>site.com</em> also redirect to <em>site.com/home</em>. I figure this is also possible via htaccess but now I'm hooked on .NET Core xD</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_22905917"
+         data-depth="5"
+         data-id="voat_22905917"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2020-03-15 15:54:28 UTC">15 Mar 2020 15:54</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>Yeah, in a different programming language I worked in (not naming it) this is easy as pie, but in PHP, not so much.</p>
+</blockquote>
+<p>O_O</p>
+<p>php can suck a sick</p>
+<p>.NET Core is fucking amazing when using Visual Studio.</p>
+<p><a href="https://voat.co/u/PuttItOut">@PuttItOut</a></p></div>
+            <details class="comment "
+         id="comment-voat_22906108"
+         data-depth="6"
+         data-id="voat_22906108"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/BillyLuath/">u/BillyLuath</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-15 16:07:00 UTC">15 Mar 2020 16:07</span>
+        </span>
+    </summary>
+    <div class="md"><p>I don't have a lot of experience with IIS deployments so never got into .NET, except to fix problems for someone that had a legacy app.</p>
+<p>I actually prefer JSP or Ruby (not RAILS!) over PHP,  and one supposedly obsolete language that rocks them all for rapid deployment.</p></div>
+            <details class="comment "
+         id="comment-voat_22906173"
+         data-depth="7"
+         data-id="voat_22906173"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2020-03-15 16:11:38 UTC">15 Mar 2020 16:11</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>I don't have a lot of experience with IIS deployments so never got into .NET, except to fix problems for someone that had a legacy app.</p>
+</blockquote>
+<p>According to documentation, the best approach is to use a kestrel &quot;reverse proxy&quot; deployment (request &lt;-&gt; IIS / Apache / Nginx &lt;-&gt; Kestrel &lt;-&gt; .NET).</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_22886567"
+         data-depth="1"
+         data-id="voat_22886567"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/SpottyMatt/">u/SpottyMatt</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 06:06:43 UTC">14 Mar 2020 06:06</span>
+        </span>
+    </summary>
+    <div class="md"><p>He wants the URL rewrite for search engine optimization, probably. So the pretty site.com/anyaction/anyview URLs can be indexed and the contextual information in the URL retained.</p></div>
+            <details class="comment "
+         id="comment-voat_22890668"
+         data-depth="2"
+         data-id="voat_22890668"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/BillyLuath/">u/BillyLuath</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 15:48:51 UTC">14 Mar 2020 15:48</span>
+        </span>
+    </summary>
+    <div class="md"><p>I thought it was more for security, by hiding the structure of the application. Search engines have been able to index query strings for over 10 years now.</p></div>
+            <details class="comment "
+         id="comment-voat_22894607"
+         data-depth="3"
+         data-id="voat_22894607"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/argosciv/">u/argosciv</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 20:27:37 UTC">14 Mar 2020 20:27</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>I thought it was more for security, by hiding the structure of the application.</p>
+</blockquote>
+<p>It's a bit of both really. Not so much worried about search engines, more user-friendliness, plus a bit of obfuscation (not that it would be <em>too</em> difficult to figure out what the underlying query is).</p>
+<p><a href="https://voat.co/u/SpottyMatt">@SpottyMatt</a></p></div>
+            <details class="comment "
+         id="comment-voat_23208169"
+         data-depth="4"
+         data-id="voat_23208169"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Symptomatic/">u/Symptomatic</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-04-02 23:01:23 UTC">02 Apr 2020 23:01</span>
+        </span>
+    </summary>
+    <div class="md"><p>I concur also there is a simple concept of implementing functionality on the lowest part of the stack as feasible. In this case you could do it with a firewall or more simply and quickly in the web server. Putting into an interpreted [even though cached] construct is an extra layer imho.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_22885986"
+         data-depth="0"
+         data-id="voat_22885986"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/thebearfromstartrack/">u/thebearfromstartrack</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-14 05:02:55 UTC">14 Mar 2020 05:02</span>
+        </span>
+    </summary>
+    <div class="md"><p>What is the grammar for search and substitute like unix/vi has? for example 1,$s/<em>poop</em>/cake/gp  (substitute every occurance of any word with poop in it with &quot;cake&quot; and show results.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_22900289"
+         data-depth="0"
+         data-id="voat_22900289"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/cantaloupe6/">u/cantaloupe6</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-15 03:33:37 UTC">15 Mar 2020 03:33</span>
+        </span>
+    </summary>
+    <div class="md"><p>Something like this:</p>
+<p>&lt;IfModule mod_rewrite.c&gt;</p>
+<p>RewriteEngine On</p>
+<p>RewriteBase /</p>
+<p>RewriteCond %{REQUEST_FILENAME} !-f</p>
+<p>RewriteCond %{REQUEST_FILENAME} !-d</p>
+<p>RewriteRule ^news/(.*) /news?item=$1 [R=301,L]</p>
+<p>&lt;/IfModule&gt;</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_22974667"
+         data-depth="0"
+         data-id="voat_22974667"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/obvious-throwaway-/">u/obvious-throwaway-</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2020-03-19 20:48:41 UTC">19 Mar 2020 20:48</span>
+        </span>
+    </summary>
+    <div class="md"><p>If you are just starting your website, you might consider going a completely different direction. It's been awhile, so I'm a little rusty on terms and the exact workings of it, so hopefully someone here can correct me on wrong terminology and workings without being a complete dick, but here goes,</p>
+<p>JSON is great direction to go with websites. If you are unfamiliar with it, you could consider using <a href="https://api.jquery.com/jQuery.getJSON/">jQuery</a> to implement it. Hopefully this doesn't turn into a conversation of jQuery and it's bloat, but if you hate it for some reason, just use Javascript.</p>
+<p>How it works is that you only have one URL, &quot;https://mywebsite.com/&quot; and every page of your website is accessed through that. It makes for a faster and less bloated website as you never have to change your Headers or meta tags, although you can.</p>
+<p>How it works is that you only load the internal parts of the webpage instead of reloading the entire webpage every single time something changes. This is exactly how messaging works on Voat. When you post a comment, it doesn't reload the entire page, just adds the comment, this is JSON.</p>
+<p>If you design properly from the start and can keep it all straight in your head, you can easily create an entire website based around JSON. Bookmarking can still be done, you can use hashtags (anchor links) to allow for carrying variables between pages if you want a page to be bookmarkable or sharable as a link. So, &quot;https://mysite.com/#user1113-page3-section5&quot;. Just pick a format and use the explode function or whatever you like to break apart the hashtag data.</p>
+<p>It's a really neat way to build a clean, fast and slim website. It also allows you complete control of how users interact with your website in code without the necessity of using an outside toolset like .htaccess or config.php</p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

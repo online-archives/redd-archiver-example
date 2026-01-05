@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Below is a script to delete all of your submissions and comments on voat. Change the USERNAME and PASS in the script and run. To install... - v/programming">
+<meta name="keywords" content="programming, quot, driver, click, href, ent, voat, username, code, sleep">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/2876991.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Selenium script to delete all submissions and comments on voat.co">
+<meta property="og:description" content="Below is a script to delete all of your submissions and comments on voat. Change the USERNAME and PASS in the script and run. To install... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/2876991.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Selenium script to delete all submissions and comments on voat.co">
+<meta name="twitter:description" content="Below is a script to delete all of your submissions and comments on voat. Change the USERNAME and PASS in the script and run. To install... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Selenium script to delete all submissions and comments on voat.co",
+  "author": {
+    "@type": "Person",
+    "name": "aGameCalledCountries"
+  },
+  "datePublished": "2018-11-27T20:01:11Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 2
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "Below is a script to delete all of your submissions and comments on voat. Change the USERNAME and PASS in the script and run. To install selenium on mac, pip install selenium and brew cask install chromedriver. #!/usr/bin/env python3 \"\"\" Module for deleting all submissions and comments on voat.co \"\"\" #import sys import time from selenium import webdriver USERNAME = \"\" PASS = \"\" def login(d): body = d.find_element_by_tag_name(\"body\") body.click() c1 = d.find_element_by_id(\"container\") c =..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Selenium script to delete all submissions and comments on voat.co</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_2876991">
+  <h3 class="title">
+      Selenium script to delete all submissions and comments on voat.co
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2018-11-27 20:01:11 UTC">27 Nov 2018 20:01</span>
+    by <span ><a class="user-link" href="../../../../user/aGameCalledCountries/">u/aGameCalledCountries</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>Below is a script to delete all of your submissions and comments on voat.  Change the USERNAME and PASS in the script and run.</p>
+<p>To install selenium on mac, <code>pip install selenium</code> and <code>brew cask install chromedriver</code>.</p>
+<pre><code>#!/usr/bin/env python3
+&quot;&quot;&quot;
+Module for deleting all submissions and comments on voat.co
+&quot;&quot;&quot;
+#import sys
+import time
+from selenium import webdriver
+USERNAME = &quot;&quot;
+PASS = &quot;&quot;
+def login(d):
+    body = d.find_element_by_tag_name(&quot;body&quot;)
+    body.click()
+    c1 = d.find_element_by_id(&quot;container&quot;)
+    c = c1.find_element_by_id(&quot;loginForm&quot;)
+    for l in c.find_elements_by_tag_name(&quot;label&quot;):
+        try:
+            l.click()
+        except:
+            pass
+    c.find_element_by_id(&quot;UserName&quot;).send_keys(USERNAME)
+    c.find_element_by_id(&quot;Password&quot;).send_keys(PASS)
+    for btn in c.find_elements_by_tag_name(&quot;input&quot;):
+        if btn.get_attribute(&quot;value&quot;) == &quot;Log in&quot;:
+            btn.click()
+            break
+    time.sleep(1)
+def delete_submissions(d):
+    cw = driver.current_window_handle
+    while True:
+        c = d.find_element_by_id(&quot;container&quot;)
+        for comments in c.find_elements_by_class_name(&quot;comments&quot;):
+            href = comments.get_attribute(&quot;href&quot;)
+            print(href)
+            d.execute_script(&quot;window.open('about:blank', 'link');&quot;)
+            d.switch_to.window(&quot;link&quot;)
+            d.get(href)
+            time.sleep(1)
+            ent = d.find_element_by_class_name(&quot;entry&quot;)
+            ent.find_element_by_link_text(&quot;delete&quot;).click()
+            ent.find_element_by_link_text(&quot;yes&quot;).click()
+            time.sleep(1)
+            d.close()
+            d.switch_to.window(cw)
+        try:
+            c = d.find_element_by_id(&quot;container&quot;)
+            nxt = c.find_element_by_link_text(&quot;next ›&quot;)
+            nxt.click()
+        except:
+            break
+def delete_comments(d):
+    cw = driver.current_window_handle
+    while True:
+        c = d.find_element_by_id(&quot;container&quot;)
+        for comments in c.find_elements_by_link_text(&quot;permalink&quot;):
+            href = comments.get_attribute(&quot;href&quot;)
+            print(href)
+            d.execute_script(&quot;window.open('about:blank', 'link');&quot;)
+            d.switch_to.window(&quot;link&quot;)
+            d.get(href)
+            time.sleep(1)
+            cmnt_area = d.find_element_by_class_name(&quot;commentarea&quot;)
+            ent = cmnt_area.find_element_by_class_name(&quot;entry&quot;)
+            ent.find_element_by_link_text(&quot;...&quot;).click()
+            ent.find_element_by_link_text(&quot;delete&quot;).click()
+            ent.find_element_by_link_text(&quot;yes&quot;).click()
+            time.sleep(1)
+            d.close()
+            d.switch_to.window(cw)
+        try:
+            c = d.find_element_by_id(&quot;container&quot;)
+            nxt = c.find_element_by_link_text(&quot;next ›&quot;)
+            nxt.click()
+        except:
+            break
+if __name__ == &quot;__main__&quot;:
+    # driver = sys.argv[1].strip().capitalize()
+    # page = sys.argv[2].strip()
+    page = &quot;https://voat.co/account/login&quot;
+    driver_name = &quot;Chrome&quot;
+    driver = getattr(webdriver, driver_name)()
+    try:
+        driver.set_page_load_timeout(10)
+        driver.get(page)
+        login(driver)
+        page = &quot;https://voat.co/u/%s/submissions&quot; % USERNAME
+        driver.get(page)
+        delete_submissions(driver)
+        page = &quot;https://voat.co/u/%s/comments&quot; % USERNAME
+        driver.get(page)
+        delete_comments(driver)
+        time.sleep(3)
+    finally:
+        driver.close()
+</code></pre></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>3 comments</h4>
+        <details class="comment "
+         id="comment-voat_15261290"
+         data-depth="0"
+         data-id="voat_15261290"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/thantik/">u/thantik</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-11-27 21:09:04 UTC">27 Nov 2018 21:09</span>
+        </span>
+    </summary>
+    <div class="md"><p>Thanks.  With deleting your account being broken if you're banned from a sub (did this ever get fixed?) this is a nice alternative.</p></div>
+            <details class="comment "
+         id="comment-voat_15418403"
+         data-depth="1"
+         data-id="voat_15418403"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/NeoGoat/">u/NeoGoat</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-12-06 05:22:34 UTC">06 Dec 2018 05:22</span>
+        </span>
+    </summary>
+    <div class="md"><p>My thoughts exactly.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_15771827"
+         data-depth="0"
+         data-id="voat_15771827"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/SearchVoatBot/">u/SearchVoatBot</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-12-26 19:29:55 UTC">26 Dec 2018 19:29</span>
+        </span>
+    </summary>
+    <div class="md"><p>This submission was linked from <a href="https://voat.co/v/AskVoat/2935213/15771816/10">this v/AskVoat comment</a> by <a href="https://voat.co/u/talmoridor-x">@talmoridor-x</a>.</p>
+<p><sup>Posted automatically (#15876) by the <a href="https://searchvoat.co">SearchVoat.co</a> Cross-Link Bot. You can suppress these notifications by appending a forward-slash(/) to your Voat link. More information <a href="https://voat.co/v/SearchVoat/2723025">here</a>.</sup></p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

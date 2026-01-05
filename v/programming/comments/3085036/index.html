@@ -1,0 +1,921 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="With the next release of my devs&#39; software, we&#39;re moving from TLSv1 to 1.2. I installed the software in the test environment, and much to... - v/programming">
+<meta name="keywords" content="programming, java, build, oracle, version, release, sucks, devs, software, from">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/3085036.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Oracle Java sucks.">
+<meta property="og:description" content="With the next release of my devs&#39; software, we&#39;re moving from TLSv1 to 1.2. I installed the software in the test environment, and much to... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/3085036.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Oracle Java sucks.">
+<meta name="twitter:description" content="With the next release of my devs&#39; software, we&#39;re moving from TLSv1 to 1.2. I installed the software in the test environment, and much to... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Oracle Java sucks.",
+  "author": {
+    "@type": "Person",
+    "name": "ThisIsMyRealName"
+  },
+  "datePublished": "2019-03-09T20:18:58Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 8
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "With the next release of my devs' software, we're moving from TLSv1 to 1.2. I installed the software in the test environment, and much to my shock the client servers were unable to communicate with the application server with 1.2 enabled. This is a Java application, created by Java developers, intended to run in Oracle's VM, so hiccups are par for the course. I retraced all of my upgrade steps, ensuring all of the configuration options were correct, all of the files were where they needed to be..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Oracle Java sucks.</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_3085036">
+  <h3 class="title">
+      Oracle Java sucks.
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2019-03-09 20:18:58 UTC">09 Mar 2019 20:18</span>
+    by <span ><a class="user-link" href="../../../../user/ThisIsMyRealName/">u/ThisIsMyRealName</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>With the next release of my devs' software, we're moving from TLSv1 to 1.2. I installed the software in the test environment, and much to my shock the client servers were unable to communicate with the application server with 1.2 enabled. This is a Java application, created by Java developers, intended to run in Oracle's VM, so hiccups are par for the course.</p>
+<p>I retraced all of my upgrade steps, ensuring all of the configuration options were correct, all of the files were where they needed to be with all of the correct permissions. I checked my Java version, and yes it was the current version. Hold up. I'm running the latest version, but it's over 20 builds behind the recommended build of the JRE.</p>
+<p>The Oracle Java website distributes one build per version rev. I did not realize that. My devs coded for a newer build, which is only available to download from Oracle's Support site. Surely a build number, not even a minor release number, wouldn't solve what is most likely a problem I caused during the upgrade.</p>
+<p>Yeah, you know already. TLSv1.2 is bugged in early builds of the latest Java 8 JRE. After upgrading to build 32 as was recommended, the servers started talking to each other. SAME VERSION NUMBER, but a build released about a month after initial release fixed the bug.</p>
+<p>Oracle <s>Java</s> sucks.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>31 comments</h4>
+        <details class="comment "
+         id="comment-voat_17249883"
+         data-depth="0"
+         data-id="voat_17249883"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/TheBuddha/">u/TheBuddha</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 20:26:35 UTC">09 Mar 2019 20:26</span>
+        </span>
+    </summary>
+    <div class="md"><p>One Raging Asshole Called Larry Ellison.</p></div>
+            <details class="comment "
+         id="comment-voat_17257760"
+         data-depth="1"
+         data-id="voat_17257760"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThisIsMyRealName/">u/ThisIsMyRealName</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-03-10 04:55:41 UTC">10 Mar 2019 04:55</span>
+        </span>
+    </summary>
+    <div class="md"><p>Larry Ellison is not an asshole. I don't think he has the capacity to be an asshole if he tried. He just craves money. Anything for more money. Money is winning.</p></div>
+            <details class="comment "
+         id="comment-voat_17353511"
+         data-depth="2"
+         data-id="voat_17353511"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/libman/">u/libman</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-15 00:06:52 UTC">15 Mar 2019 00:06</span>
+        </span>
+    </summary>
+    <div class="md"><p>The Silicon Valley is far from a free market.  It had tons of <a href="https://www.youtube.com/watch?v=ZTC_RxWN_xo">government R&amp;D money</a> poured into it since WW2, and it's still heavily in bed with Fed domestic spying agencies - especially Oracle.  Its use by so many large corporations and universities is all about group-think and historical momentum, not actual quality.</p></div>
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_17249894"
+         data-depth="0"
+         data-id="voat_17249894"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/yellowthread/">u/yellowthread</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 20:27:18 UTC">09 Mar 2019 20:27</span>
+        </span>
+    </summary>
+    <div class="md"><p>Whoever came up with not assigning a minor release number is getting a big bonus for &quot;bug-free code&quot;!</p>
+<p>This has to be some new project management thing, Microsoft does it too.  What the fuck is a 1709?  1834?  Year/week of build I guess, but why even have all these different builds maintained in parallel?</p></div>
+            <details class="comment "
+         id="comment-voat_17249948"
+         data-depth="1"
+         data-id="voat_17249948"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/AnthraxAlex/">u/AnthraxAlex</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 20:31:12 UTC">09 Mar 2019 20:31</span>
+        </span>
+    </summary>
+    <div class="md"><p>I swear to god microsoft release numbers are a fucking trainwreck. To make it worse release numbers are shared across OS versions so there is all sorts of confusion about what release and version of product people are talking about whatever bug was fixed in. THis is pajeet level  bullshit devised by pajeet engineers since thats the only people those companies hire now.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_17250678"
+         data-depth="0"
+         data-id="voat_17250678"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/thebearfromstartrack/">u/thebearfromstartrack</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 21:17:35 UTC">09 Mar 2019 21:17</span>
+        </span>
+    </summary>
+    <div class="md"><p>Oracle THANKS to East Indian infiltration has become a diabolical nightmare of NON elegant confusion. East Indian philosophy NO DOUBT. Just take the RMAN utility! Or any of the other major development features over the past decade. Non elegant, non obvious, overly complex and confusing options NEVER adequately explained. Hell just patching the damn database is a nightmare, as some patches might screw you up if your didn't need them.</p></div>
+            <details class="comment "
+         id="comment-voat_17250836"
+         data-depth="1"
+         data-id="voat_17250836"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThisIsMyRealName/">u/ThisIsMyRealName</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 21:31:26 UTC">09 Mar 2019 21:31</span>
+        </span>
+    </summary>
+    <div class="md"><p>Honestly, the nicest thing I could possibly say about Oracle is that they have an okay database. I have to admin three of them, and for the most part they just work. I don't like working with them, but they do work.</p></div>
+            <details class="comment "
+         id="comment-voat_17251146"
+         data-depth="2"
+         data-id="voat_17251146"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/thebearfromstartrack/">u/thebearfromstartrack</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 21:59:43 UTC">09 Mar 2019 21:59</span>
+        </span>
+    </summary>
+    <div class="md"><p>What version and what features? Failover? ASM?</p></div>
+            <details class="comment "
+         id="comment-voat_17251552"
+         data-depth="3"
+         data-id="voat_17251552"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThisIsMyRealName/">u/ThisIsMyRealName</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 22:18:33 UTC">09 Mar 2019 22:18</span>
+        </span>
+    </summary>
+    <div class="md"><p>I've been an admin with 10-12 versions. I had to do the 11 to 12 upgrade personally with one of the (two) systems I was working on that used Oracle DB. That wasn't particularly easy, because the upgrade utility failed out in the middle of it with little explanation of why. The DB seemed to be okay though. Everything started up just fine, and the data was there.</p>
+<p>The only real problem I've had was when we setup Transparent Data Encryption in 12, just after the upgrade. For some unexplained and unknown reason, we couldn't use the same wallet for both server to server communication and for encrypting the data at rest. The only way I could make it work was to have two wallets with two different certificates, one for encrypting data in transit, and the other for encrypting the data at rest.</p></div>
+            <details class="comment "
+         id="comment-voat_17251654"
+         data-depth="4"
+         data-id="voat_17251654"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/thebearfromstartrack/">u/thebearfromstartrack</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 22:28:26 UTC">09 Mar 2019 22:28</span>
+        </span>
+    </summary>
+    <div class="md"><p>Exactly. Stuff like that is NEVER adequately explained. Were you paying for Oracle support? Have access to the support website and stuff? Ever try patching? Or are you casual about that? I had to do TONS of research to find and apply the PROPER patch(es) ONLY. Due to risks (boss).</p></div>
+            <details class="comment "
+         id="comment-voat_17251687"
+         data-depth="5"
+         data-id="voat_17251687"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThisIsMyRealName/">u/ThisIsMyRealName</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 22:32:15 UTC">09 Mar 2019 22:32</span>
+        </span>
+    </summary>
+    <div class="md"><p>I don't give any money to Oracle. That's for the managers to decide and figure out. But yes, I do get patches from the support site. Only problem I've ever had applying a patch was due to my own negligence in reading the README, which stated I needed a newer version of Opatch. CPUs go pretty smoothly for me.</p></div>
+            <details class="comment "
+         id="comment-voat_17251706"
+         data-depth="6"
+         data-id="voat_17251706"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/thebearfromstartrack/">u/thebearfromstartrack</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 22:33:51 UTC">09 Mar 2019 22:33</span>
+        </span>
+    </summary>
+    <div class="md"><p>PLUS it's become HELLA expensive. Not to mention Sar bannes oxelly (sp?) and HIPPA pretty much REQUIRE you to have Oracle features now.</p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_17251730"
+         data-depth="6"
+         data-id="voat_17251730"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/thebearfromstartrack/">u/thebearfromstartrack</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 22:35:35 UTC">09 Mar 2019 22:35</span>
+        </span>
+    </summary>
+    <div class="md"><p>BTW do you use audit trails at all where you are? Also how many East Indian immigrants do you employ v white citizens?</p></div>
+            <details class="comment "
+         id="comment-voat_17251767"
+         data-depth="7"
+         data-id="voat_17251767"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThisIsMyRealName/">u/ThisIsMyRealName</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 22:39:29 UTC">09 Mar 2019 22:39</span>
+        </span>
+    </summary>
+    <div class="md"><p>I configured the DB to audit according to DISA STIG, and audit records go to syslog so we have everything in one easily manageable place, easily offloaded to a logging server.</p>
+<p>I'm the DBA and system administrator, and I'm white. What do you do? You ask a lot of questions. What is your experience?</p></div>
+            <details class="comment "
+         id="comment-voat_17251953"
+         data-depth="8"
+         data-id="voat_17251953"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/thebearfromstartrack/">u/thebearfromstartrack</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 22:57:34 UTC">09 Mar 2019 22:57</span>
+        </span>
+    </summary>
+    <div class="md"><p>What about the rest of your staff?</p>
+<p>I'm a contractor (did 13 years at hospital). I'm primarily a developer but go roped in Oracle DBA (under a HEINOUS witch who later left in disgrace) the last 3 years of that. I have 3 patents (parallel programming), went to grad school on full scholarship. Now everywhere I go the place is CRAMMED with East Indian Immigrants. Oracle (California headquarters) included.</p></div>
+            <details class="comment "
+         id="comment-voat_17252203"
+         data-depth="9"
+         data-id="voat_17252203"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThisIsMyRealName/">u/ThisIsMyRealName</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 23:07:26 UTC">09 Mar 2019 23:07</span>
+        </span>
+    </summary>
+    <div class="md"><p>I'm <em>the</em> DBA and <em>the</em> admin. <em>I'm</em> the staff. My managers aren't pajeets either.</p>
+<p>I'm also a contractor, but I work with the DoD. All opinions are my own and do not reflect those of the DoD or related organizations.</p>
+<p>Rest easy at night knowing that our military (mostly) does not rely on software created by opportunists here by H-1B and unicorn farts.</p></div>
+            <details class="comment "
+         id="comment-voat_17252289"
+         data-depth="10"
+         data-id="voat_17252289"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/thebearfromstartrack/">u/thebearfromstartrack</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 23:13:21 UTC">09 Mar 2019 23:13</span>
+        </span>
+    </summary>
+    <div class="md"><p>Hmm. DoD. Perhaps I should look into that. So you're a small shop? How many users of your DB's? Size?</p>
+<p>I had about 20 dbs (under MY wing) in a 4 person department. Size of 1-2TB per. I handled pharmacy and various outpatient stuff as well as employee/personnel related DBS. I replaced 2 people devoured by our heinous witch boss, until I too couldn't stand it anymore.</p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_17252773"
+         data-depth="10"
+         data-id="voat_17252773"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/cantaloupe6/">u/cantaloupe6</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 23:51:53 UTC">09 Mar 2019 23:51</span>
+        </span>
+    </summary>
+    <div class="md"><p>Sometimes it makes one wonder.</p>
+<p>China use a very Sun Tsu style of spying - atttacking vacuities - places undefended. It should have been obvious; what were they thinking?</p>
+<p>&quot;China obtained the information through a complex information gathering matrix that included direct spying and the use of &quot;front companies&quot; in the United States as well as &quot;a network of individuals and organizations that engage in a vast array of contacts with scientists, business people and academics,&quot; the report say</p>
+<p><a href="http://www.cnn.com/US/9905/25/cox.report.02/">http://www.cnn.com/US/9905/25/cox.report.02/</a></p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_17250982"
+         data-depth="0"
+         data-id="voat_17250982"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/inner-city-youf/">u/inner-city-youf</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 21:46:29 UTC">09 Mar 2019 21:46</span>
+        </span>
+    </summary>
+    <div class="md"><p>What, did you just start developing? These kinds of things aren't specific to Oracle nor are they rare - this shit happens all the time. That's what makes good developers good - knowing how to efficiently troubleshoot. If Oracle recommended a build and you didn't use that to begin with, that's totally on you.</p></div>
+            <details class="comment "
+         id="comment-voat_17251587"
+         data-depth="1"
+         data-id="voat_17251587"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThisIsMyRealName/">u/ThisIsMyRealName</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 22:22:19 UTC">09 Mar 2019 22:22</span>
+        </span>
+    </summary>
+    <div class="md"><p>I don't get paid to develop. I admin the shit developers make.</p></div>
+            <details class="comment "
+         id="comment-voat_17252383"
+         data-depth="2"
+         data-id="voat_17252383"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/inner-city-youf/">u/inner-city-youf</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 23:20:52 UTC">09 Mar 2019 23:20</span>
+        </span>
+    </summary>
+    <div class="md"><p>Ah right. Those that can - do. Those that can't - administrate.</p></div>
+            <details class="comment "
+         id="comment-voat_17252734"
+         data-depth="3"
+         data-id="voat_17252734"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThisIsMyRealName/">u/ThisIsMyRealName</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 23:49:17 UTC">09 Mar 2019 23:49</span>
+        </span>
+    </summary>
+    <div class="md"><p>Without us admins, who will restart your code when it inevitably dies?</p></div>
+            <details class="comment "
+         id="comment-voat_17253060"
+         data-depth="4"
+         data-id="voat_17253060"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-10 00:06:05 UTC">10 Mar 2019 00:06</span>
+        </span>
+    </summary>
+    <div class="md"><p>You need to get better developers.</p></div>
+            <details class="comment "
+         id="comment-voat_17253405"
+         data-depth="5"
+         data-id="voat_17253405"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThisIsMyRealName/">u/ThisIsMyRealName</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-03-10 00:26:02 UTC">10 Mar 2019 00:26</span>
+        </span>
+    </summary>
+    <div class="md"><p>Yeah, probably. Where can I find this mythical beast?</p></div>
+            <details class="comment "
+         id="comment-voat_17254611"
+         data-depth="6"
+         data-id="voat_17254611"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-10 01:37:24 UTC">10 Mar 2019 01:37</span>
+        </span>
+    </summary>
+    <div class="md"><p>Me and some people in my team can be hired when our current mission completes. We fix broken projects we inherit that have been broken for many years. No restart of our services are required for years.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_17252573"
+         data-depth="2"
+         data-id="voat_17252573"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/cantaloupe6/">u/cantaloupe6</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 23:36:47 UTC">09 Mar 2019 23:36</span>
+        </span>
+    </summary>
+    <div class="md"><p>The closer one gets to the code the lower the faith in technology working, lol.</p></div>
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_17251100"
+         data-depth="0"
+         data-id="voat_17251100"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/parnellsUprising/">u/parnellsUprising</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 21:55:31 UTC">09 Mar 2019 21:55</span>
+        </span>
+    </summary>
+    <div class="md"><p>Look at the licensing, you should be using open jdk</p></div>
+            <details class="comment "
+         id="comment-voat_17251440"
+         data-depth="1"
+         data-id="voat_17251440"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThisIsMyRealName/">u/ThisIsMyRealName</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 22:09:52 UTC">09 Mar 2019 22:09</span>
+        </span>
+    </summary>
+    <div class="md"><p>I know. I've explained this to my managers. It's their decision, not mine.</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_17251145"
+         data-depth="0"
+         data-id="voat_17251145"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/albeit/">u/albeit</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-09 21:59:39 UTC">09 Mar 2019 21:59</span>
+        </span>
+    </summary>
+    <div class="md"><p>Their executives' <a href="https://archive.fo/JHSck">attitude towards security</a> makes me worry. It wouldn't surprise me if there are more bugs (security flaws) in their TLS implementation. But don't look too closely at Oracle's products, just trust Oracle, or else maybe they will sue you.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_17255880"
+         data-depth="0"
+         data-id="voat_17255880"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/UndeadTed/">u/UndeadTed</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-10 02:55:20 UTC">10 Mar 2019 02:55</span>
+        </span>
+    </summary>
+    <div class="md"><p>Yeah they changed their default TLS version, without the command line switch to set the version you want it won't work</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_17353280"
+         data-depth="0"
+         data-id="voat_17353280"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/libman/">u/libman</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2019-03-15 00:01:11 UTC">15 Mar 2019 00:01</span>
+        </span>
+    </summary>
+    <div class="md"><p>Everything from Oracle sucks.  And all Java sucks.</p>
+<ul>
+<li>
+<p>Use <a href="https://en.wikipedia.org/wiki/PostgreSQL"><strong>PostgreSQL</strong></a>.  Most Russian businesses switched from Oracle / SQL Server to PostgreSQL when they were hit by the sanctions, and it's quickly catching up with the most important features.  There are lots of <a href="https://pgxn.org">extensions</a>, and proprietary support if needed.  Given the cost of Oracle licenses, you can save money by hiring developers to write any features you're missing in PostgreSQL, for the benefit of all humankind!</p>
+</li>
+<li>
+<p>Use a <a href="http://copyfree.org">copyfree</a> statically-typed programming language like <a href="https://nim-lang.org"><strong>Nim</strong></a>, <a href="https://dlang.org"><strong>D</strong></a>, <a href="https://www.haskell.org">Haskell</a>, <s>Rust</s>, <s>Go</s>, etc. (Strikeouts are for languages from left-wing organizations / corporations that lobby for bigger government.)  Some aforementioned languages easily beat Java performance benchmarks, including for <a href="https://thenewstack.io/which-programming-languages-use-the-least-electricity/">low-powered devices</a> and <a href="https://www.techempower.com/benchmarks/">Web scale APIs</a>.  Or use a scripting language like Ruby, Python, Tcl, etc - if you must.</p>
+</li>
+<li>
+<p>You don't need a heavy Java IDE.  <a href="https://code.visualstudio.com/Download"><strong>VS Code</strong></a> is the most feature-rich editor for the languages mentioned above (ex <a href="https://areweideyet.com">Rust</a>, <a href="https://wiki.dlang.org/Editors">D</a>, <a href="https://github.com/nim-lang/Nim/wiki/Editor-Support">Nim</a>), and it has a pretty low learning curve.   Better still is learning vim or <a href="https://kakoune.org/why-kakoune/why-kakoune.html">kakoune</a>.</p>
+</li>
+</ul></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

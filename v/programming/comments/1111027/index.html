@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="the code in question I have created a program that is loaded onto a microcontroller, it&#39;s so old it&#39;s not in their inventory any more, it... - v/programming">
+<meta name="keywords" content="programming, code, created, program, array, gist, github, acidmath, coins, input">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1111027.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: [Why does my code work] I have created a parser in C and if I do not allocate and immediately free an array it breaks.">
+<meta property="og:description" content="the code in question I have created a program that is loaded onto a microcontroller, it&#39;s so old it&#39;s not in their inventory any more, it... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/1111027.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: [Why does my code work] I have created a parser in C and if I do not allocate and immediately free an array it breaks.">
+<meta name="twitter:description" content="the code in question I have created a program that is loaded onto a microcontroller, it&#39;s so old it&#39;s not in their inventory any more, it... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "[Why does my code work] I have created a parser in C and if I do not allocate and immediately free an array it breaks.",
+  "author": {
+    "@type": "Person",
+    "name": "vorsamp"
+  },
+  "datePublished": "2016-06-16T01:16:53Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 9
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "the code in question I have created a program that is loaded onto a microcontroller, it's so old it's not in their inventory any more, it takes in a string from my C# program, parses it, and tells my machine to spit out coins. A sample input in ASCII would be 48 31 49 31 49 48 31 30 -> 0 US 1 US 10 US RS -> turn on motor 0 until 10 coins exit -> gimme 10 pennies. Assume the input is always valid, here is my C# interface. Everything works great until I ask for more than 9 of a coin, when the..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: [Why does my code work] I have created a parser in C and if I do not allocate and immediately free an array it breaks.</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_1111027">
+  <h3 class="title">
+      [Why does my code work] I have created a parser in C and if I do not allocate and immediately free an array it breaks.
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 9">9</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2016-06-16 01:16:53 UTC">16 Jun 2016 01:16</span>
+    by <span ><a class="user-link" href="../../../../user/vorsamp/">u/vorsamp</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>[the code in question](https://gist.github.com/acidmath/b2c653757017793500c9dfaa4c252c94)</p>
+<p>I have created a program that is loaded onto a microcontroller, [it's so old it's not in their inventory any more](https://www.parallax.com/catalog/microcontrollers), it takes in a string from my C# program, parses it, and tells my machine to spit out coins. A sample input in ASCII would be 48 31 49 31 49 48 31 30 -> 0 US 1 US 10 US RS -> turn on motor 0 until 10 coins exit -> gimme 10 pennies. Assume the input is always valid, [here is my C# interface](https://gist.github.com/acidmath/4d0dee2462984ba78b5a85747e517a5f).</p>
+<p>Everything works great until I ask for more than 9 of a coin, when the amount requested has more than one digit. I have tried for 3 days to get rid of this problem to no avail, until today. I created a char pointer, printed out some diagnostics through the serial port, freed the char pointer when I was done with it and lo and behold, it fucking works. I was able to narrow it down to the program allocating and freeing an array is enough to get it to work for any amount requested. However, I know this is bad. I know I have bad code and it needs to be fixed but I do not know where to start. </p>
+<p>I am not a very good C programmer. If you see some code you don't like, even if it has nothing to do with the problem I have posed, tell me I'm an idiot, and if you're feeling up to it, tell me why so I can fix it.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>29 comments</h4>
+        <details class="comment "
+         id="comment-voat_5524173"
+         data-depth="0"
+         data-id="voat_5524173"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 8">
+            8
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/tame/">u/tame</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:08:04 UTC">16 Jun 2016 02:08</span>
+        </span>
+    </summary>
+    <div class="md"><p>The first thing to look for when you get this kind of &quot;I change some random other thing and it starts/stops working&quot; behaviour is some kind of memory corruption. Check the limits on all your loops, double check memory allocation/deallocation (if you're using it, which on a microcontroller you probably don't want to), make sure every pointer is initialized properly. Chances are, your allocating and freeing the array changes the layout of the rest of your data in memory in just the right way so that whatever bad memory access is happening now happens to some less important memory.</p>
+<p>Onto the code... You probably want to change allocCharBuffer() so that it allocates and initializes (numberOfChars+1) bytes, not (numberOfChars) bytes, to make room for the terminating NUL character at the end of the string. My guess is your code is crashing when you call atoi() on an unterminated string.</p>
+<p>When you allocate your string, this causes your next allocCharBuffer() to land in some other chunk of memory which, chances are, is already initialized with zeroes, which is why it works in this case (for a while).</p></div>
+            <details class="comment "
+         id="comment-voat_5524238"
+         data-depth="1"
+         data-id="voat_5524238"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/johnP/">u/johnP</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:14:03 UTC">16 Jun 2016 02:14</span>
+        </span>
+    </summary>
+    <div class="md"><p>Of course he's got some kind of memory corruption.</p></div>
+            <details class="comment "
+         id="comment-voat_5524289"
+         data-depth="2"
+         data-id="voat_5524289"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/vorsamp/">u/vorsamp</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:19:01 UTC">16 Jun 2016 02:19</span>
+        </span>
+    </summary>
+    <div class="md"><p>This comment is useless, but as per my post, thank you for telling me I am an idiot.</p></div>
+            <details class="comment "
+         id="comment-voat_5524348"
+         data-depth="3"
+         data-id="voat_5524348"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/johnP/">u/johnP</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:27:35 UTC">16 Jun 2016 02:27</span>
+        </span>
+    </summary>
+    <div class="md"><p>Nope.  Sorry about that gentlemen, totally didn't see the 'if' there.  My fault.
+I would still do a check to make sure your allocation routine isn't getting called with a zero.</p></div>
+            <details class="comment "
+         id="comment-voat_5524418"
+         data-depth="4"
+         data-id="voat_5524418"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/vorsamp/">u/vorsamp</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:36:29 UTC">16 Jun 2016 02:36</span>
+        </span>
+    </summary>
+    <div class="md"><p>This comment is useful, thank you for telling me I am an idiot.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_5524262"
+         data-depth="1"
+         data-id="voat_5524262"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/vorsamp/">u/vorsamp</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:16:04 UTC">16 Jun 2016 02:16</span>
+        </span>
+    </summary>
+    <div class="md"><p>Thank you so much for your reply.</p>
+<blockquote>
+<p>change allocCharBuffer() so that it allocates (numberOfChars+1) bytes</p>
+</blockquote>
+<p>I have read about allocating strings, which in C is a character array, and allowing for \0 to take up the end, this did not help me, but I will double check that tomorrow.</p>
+<blockquote>
+<p>check memory allocation/deallocation (if you're using it, which on a microcontroller you probably don't want to)</p>
+</blockquote>
+<p>I was considering a refactor that would use arrays instead of pointers, this piece of your comment seems to affirm that. Can I get a little more information about this suggestion?</p></div>
+            <details class="comment "
+         id="comment-voat_5524990"
+         data-depth="2"
+         data-id="voat_5524990"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/tame/">u/tame</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 03:47:17 UTC">16 Jun 2016 03:47</span>
+        </span>
+    </summary>
+    <div class="md"><p>Sure. :) First up, I'm a bit of a dinosaur in terms of embedded systems and so what I'm saying applies to old, tiny micros. Even on a modern 'small' chip like an AVR or similar you can probably get away with treating it like a little desktop computer. That said...</p>
+<p>Generally in embedded software development, static memory allocation is favoured over dynamic allocation. Embedded systems often have very limited processing power and memory, and are expected to run reliably for long periods of time. They're also sometimes hard to debug due to the difficulty of getting reliable debug information out of them.</p>
+<p>Static allocation is simpler, eliminates memory leaks and a whole bunch of other potential pointer issues, and generally is a better option in embedded development.</p>
+<p>In this case you could do something like this (whoops, I was just going to write some pseudocode... :P )</p>
+<pre><code>// Parses an integer, terminated by a US character, from 'str' starting at the
+// given position. Updates the position if found, otherwise returns false.
+bool parseInt(char *str, int&amp; pos, int&amp; val) {
+    int end = pos;
+    // Find the first non-numeric character
+    while ('0' &lt;= str[end] &amp;&amp; str[end] &lt;= '9')
+        end++;
+    // If the next char isn't an US, then fail
+    if (str[end] != US)
+        return false;
+    // Parse the value
+    str[end] = 0;
+    val = atoi(str+pos);
+    str[end] = US; // NOTE: Don't need this if we don't use the string again
+    pos = end+1;
+    return true;
+}
+bool parseDispenseRequest(char *input, int&amp; position, int&amp; currency, int&amp; amount) {
+    int curpos = 0;
+    return parseInt(input, curpos, position)
+        &amp;&amp; parseInt(input, curpos, currency)
+        &amp;&amp; parseInt(input, curpos, amount)
+        &amp;&amp; (input[curpos] == RS);
+}
+</code></pre>
+<p><a href="http://pastebin.com/yNGknJpn">Source with test cases.</a></p></div>
+            <details class="comment "
+         id="comment-voat_5525097"
+         data-depth="3"
+         data-id="voat_5525097"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/vorsamp/">u/vorsamp</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 03:58:03 UTC">16 Jun 2016 03:58</span>
+        </span>
+    </summary>
+    <div class="md"><p>This is very valuable and I will be sure to return and update you on how I've implemented parts of your solution. </p>
+<p>Juuuuuuuust for fun, I don't have any type definitions in my C so there is no such thing as bool.</p></div>
+</details>
+
+            <details class="comment "
+         id="comment-voat_5529689"
+         data-depth="3"
+         data-id="voat_5529689"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/vorsamp/">u/vorsamp</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 16:43:54 UTC">16 Jun 2016 16:43</span>
+        </span>
+    </summary>
+    <div class="md"><p>So I have made everything a static array and it works brilliantly. I have also rewritten atoi, without changing how my parser behaves, it still tracks start and length of the values between unit seperators. I am sure the following code is trivial, but I just wanted to share how I am parsing my integers.</p>
+<pre><code>/* reads integer in the range inputArray[start, end) */
+int inputRangeToInteger(int start, int end){
+  int value = 0;
+  for(int i=start; i&lt;end; i++){
+    value = value + (inputArray[i]-48)*pow(10, end-i-1); 
+  } 
+  return value; 
+} 
+</code></pre></div>
+            <details class="comment "
+         id="comment-voat_5534605"
+         data-depth="4"
+         data-id="voat_5534605"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/tame/">u/tame</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-17 00:03:33 UTC">17 Jun 2016 00:03</span>
+        </span>
+    </summary>
+    <div class="md"><p>Awesome, good work!</p>
+<p>The new 'atoi' looks good for what you want, the only thing I'd suggest is avoiding the call to pow() since it's generally slow and you can easily live without it. Also it might be more readable to write 48 as '0', it does exactly the same thing but the next person to read the code might not know that 48 = ASCII '0' off the top of their head:</p>
+<pre><code>value = 10 * value + (inputArray[i] - '0');
+</code></pre>
+<p>:)</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_5523944"
+         data-depth="0"
+         data-id="voat_5523944"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/johnP/">u/johnP</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 01:45:19 UTC">16 Jun 2016 01:45</span>
+        </span>
+    </summary>
+    <div class="md"><p>It looks like inputBufferLength is starting out at zero.  And then allocCharBuffer(inputBufferLength) gets called which calls malloc with a length of zero.  I guess malloc returns the pointer anyway.  Yep I just tested it and it does on my system too.</p>
+<p>Here's some junk about it:  <a href="https://bytes.com/topic/c/answers/578467-what-malloc-0-should-returns">https://bytes.com/topic/c/answers/578467-what-malloc-0-should-returns</a></p></div>
+            <details class="comment "
+         id="comment-voat_5523980"
+         data-depth="1"
+         data-id="voat_5523980"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/vorsamp/">u/vorsamp</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 01:49:20 UTC">16 Jun 2016 01:49</span>
+        </span>
+    </summary>
+    <div class="md"><p>For the purpose of my problem, you can assume input is always valid, there is always at least one integer before c==US.</p></div>
+            <details class="comment "
+         id="comment-voat_5524109"
+         data-depth="2"
+         data-id="voat_5524109"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/johnP/">u/johnP</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:02:02 UTC">16 Jun 2016 02:02</span>
+        </span>
+    </summary>
+    <div class="md"><p>Your problem is here:</p>
+<pre><code>char* inputBufferSubset = allocCharBuffer(inputBufferLength);
+</code></pre>
+<p>And inputBufferLength starts out at 0.  Anything else that happens in the program is up for grabs because you might be overwriting some data structure used by the allocator or something.</p></div>
+            <details class="comment "
+         id="comment-voat_5524153"
+         data-depth="3"
+         data-id="voat_5524153"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/vorsamp/">u/vorsamp</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:06:18 UTC">16 Jun 2016 02:06</span>
+        </span>
+    </summary>
+    <div class="md"><p>I have updated my post to indicate the assumption about input. There will always be an integer before a unit separator (US) is encountered. In C#, int and uint cannot be null.</p>
+<p><a href="https://gist.github.com/acidmath/4d0dee2462984ba78b5a85747e517a5f">my code that makes the request</a></p></div>
+            <details class="comment "
+         id="comment-voat_5524215"
+         data-depth="4"
+         data-id="voat_5524215"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/johnP/">u/johnP</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:12:04 UTC">16 Jun 2016 02:12</span>
+        </span>
+    </summary>
+    <div class="md"><p>Dude, that stuff doesn't matter.  You can't do this:</p>
+<pre><code>char* inputBufferSubset = allocCharBuffer(inputBufferLength);
+memcpy(inputBufferSubset, &amp;input[i-inputBufferLength], inputBufferLength);
+</code></pre>
+<p>inputBufferLength starts out at 0.  You're overwriting memory you're not supposed to.</p></div>
+            <details class="comment "
+         id="comment-voat_5524318"
+         data-depth="5"
+         data-id="voat_5524318"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/vorsamp/">u/vorsamp</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:22:02 UTC">16 Jun 2016 02:22</span>
+        </span>
+    </summary>
+    <div class="md"><p>Yes, inputBufferLength starts at 0. Given valid input, which I have indicated you can assume, at least one integer appears before c==US, so inputBufferLenght++ is called at least once, so you can assume inputBufferLength is at least 1 when this section of the switch statement is called.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_5524070"
+         data-depth="1"
+         data-id="voat_5524070"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/scandalous-goat/">u/scandalous-goat</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 01:58:14 UTC">16 Jun 2016 01:58</span>
+        </span>
+    </summary>
+    <div class="md"><p>No, it loops, while incrementing inputBufferLength, until it finds US and then allocate the memory. US is unit seperator, ASCII 31.</p></div>
+            <details class="comment "
+         id="comment-voat_5524180"
+         data-depth="2"
+         data-id="voat_5524180"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/johnP/">u/johnP</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:08:43 UTC">16 Jun 2016 02:08</span>
+        </span>
+    </summary>
+    <div class="md"><p>Doesn't matter what happens later.  He's modifying memory that's not been allocated properly.</p>
+<pre><code>char* inputBufferSubset = allocCharBuffer(inputBufferLength);
+memcpy(inputBufferSubset, &amp;input[i-inputBufferLength], inputBufferLength);
+</code></pre></div>
+            <details class="comment "
+         id="comment-voat_5524227"
+         data-depth="3"
+         data-id="voat_5524227"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/scandalous-goat/">u/scandalous-goat</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:12:53 UTC">16 Jun 2016 02:12</span>
+        </span>
+    </summary>
+    <div class="md"><p>(Based on the value he gave in its post) First time c is assigned, its value is 48. Since US is 31 and RS is 30, it will go down to the <em>else</em>, line 43, which increments inputBufferLength. It will not call malloc with a size of 0.</p></div>
+            <details class="comment "
+         id="comment-voat_5524359"
+         data-depth="4"
+         data-id="voat_5524359"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/johnP/">u/johnP</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:29:03 UTC">16 Jun 2016 02:29</span>
+        </span>
+    </summary>
+    <div class="md"><p>Yeah, didn't see that 'if' there.  My fault.</p></div>
+            <details class="comment "
+         id="comment-voat_5524380"
+         data-depth="5"
+         data-id="voat_5524380"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/vorsamp/">u/vorsamp</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:32:11 UTC">16 Jun 2016 02:32</span>
+        </span>
+    </summary>
+    <div class="md"><p>You have given very honest feedback. Do you think a switch statement would make my code more readable?</p></div>
+            <details class="comment "
+         id="comment-voat_5524436"
+         data-depth="6"
+         data-id="voat_5524436"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/johnP/">u/johnP</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 02:38:45 UTC">16 Jun 2016 02:38</span>
+        </span>
+    </summary>
+    <div class="md"><p>Nah, it's fine.  I just can't see!</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_5526254"
+         data-depth="0"
+         data-id="voat_5526254"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/rwbj/">u/rwbj</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 07:22:33 UTC">16 Jun 2016 07:22</span>
+        </span>
+    </summary>
+    <div class="md"><p>You're making assumptions about memory layout and allocation that are not valid. The result of malloc on a size of 0 is <em>undefined.</em> Don't do it. Exactly which region of memory malloc will allocate is also undefined. Don't make assumptions. You're doing both of these things. Allocate a global buffer and reuse that buffer obviously first nulling and ensuring that the buffer is large enough to handle your data. Don't repeatedly allocate and free. Don't make assumptions about what memory is allocated. </p>
+<p>Assuming you want to add in more complex stuff, you also might want to check out LEX/YACC. Great tools for lexical analysis and execution in C.</p>
+<p><strong>edit</strong> <em>Important note to add. Just because your code functions in one environment in C does not mean your code works. Your code in this project does not work. It assumes the result of a malloc of 0 which means the code is broken. Whether or not it gives you the right output for one specific scenario in one specific environment is immaterial to the question.</em></p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_5525296"
+         data-depth="0"
+         data-id="voat_5525296"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/CirdanValen/">u/CirdanValen</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2016-06-16 04:23:46 UTC">16 Jun 2016 04:23</span>
+        </span>
+    </summary>
+    <div class="md"><p>Some things I noticed</p>
+<p>1) You should be able to use <code>calloc</code> to allocate memory and zero it, so you don't have to loop and set it all to zero.</p>
+<p>2) I'm not quite sure what you're trying to do here, but I don't think <code>atoi(inputBufferSubset)</code> does what you think it does. If you want the value at <code>inputBufferSubset[0]</code> then you need to do <code>*inputBufferSubset</code>. In which case, you could just do <code>char position = *inputBufferSubset;</code> If you need the value of multiple <code>char</code>s, you'll need to combine the bytes into an integer. <code>(int)*inputBufferSubet</code> would work, but it would include the junk after the value. In this case you would need the length and mask it or bitshift. Alternatively, put the value into a zeroed <code>char[] coinCount;</code> and do <code>(int)*coinCount</code>.
+EDIT: I may be wrong with with this point. I tested it real quickly and it always returned 0..but in retrospect it should have worked.</p>
+<p>3) <code>positionCountArray = allocIntBuffer(8);  requestArray = allocIntBuffer(8);</code> There's probably more code than what is here, but hopefully you are freeing these at some point.</p>
+<p>I would write the code totally differently:</p>
+<pre><code>#define US 31
+void getToken(char* input, unsigned int inputLength, char* result, unsigned int* resultLength) 
+{   
+    int i = 0;
+    for(; i &lt; inputLength; i++) {
+        if(input[i] == US) {
+               break;
+        }
+    }
+    *resultLength = i;
+    memcpy(result, input, i);
+}
+void main(...) {
+    char input[8] = {48, 31, 49, 31, 49, 48, 31, 30};
+    int inputLength = 8; // Not going to use strlen because no \0
+    char token[8] = {}; // results can never be longer than the input
+    int resultLength = 0;
+    int index = 0;
+   // Get motor
+   getToken(&amp;input[index], inputLength, token, &amp;resultLength);
+   int motor = token[0];
+   index += resultLength + 1;
+   // Get second unit (ASCII 49)
+   getToken(&amp;input[index], inputLength-index, token, &amp;resultLength);
+   int secondUnit = token[0];
+  index += resultLength + 1;
+  // Get quantity
+  getToken(&amp;input[index], inputLength-index, token, &amp;resultLength);
+  int coinCount = (int)*token &amp; 0x0000FFFF; // Don't forget about endianness!
+     and bitshift to get the integer value. I can't imagine someone would want &gt; 99 coins, but who knows. */
+ // etc...
+}
+</code></pre>
+<p>It's really rough, incomplete, and probably broken but I think you get the idea. Your really should try to avoid calling malloc &amp; free so many times. Eventually the memory will become fragmented and memory allocation will fail. Hopefully this helps. </p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

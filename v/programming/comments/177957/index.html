@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="I am sorry for this stupid question, but I was unable to find a satisfying answer elsewhere. Regarding OOP, specifically class-based OOP... - v/programming">
+<meta name="keywords" content="programming, quot, class, sense, distance, pre, code, car, oop, colour">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/177957.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Newbie question regarding OOP">
+<meta property="og:description" content="I am sorry for this stupid question, but I was unable to find a satisfying answer elsewhere. Regarding OOP, specifically class-based OOP... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/177957.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Newbie question regarding OOP">
+<meta name="twitter:description" content="I am sorry for this stupid question, but I was unable to find a satisfying answer elsewhere. Regarding OOP, specifically class-based OOP... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Newbie question regarding OOP",
+  "author": {
+    "@type": "Person",
+    "name": "ThePenis"
+  },
+  "datePublished": "2015-06-28T12:40:47Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 7
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "I am sorry for this stupid question, but I was unable to find a satisfying answer elsewhere. Regarding OOP, specifically class-based OOP languages like C++ and C#, the question is: should methods be sort of actions pertaining to a class, or should they strictly be behaviours of that class? In other words, if a have a Point class, described by x and y coordinates, does it make sense for this class to have a distanceTo method, returning the distance from this Point to another Point, or would it..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Newbie question regarding OOP</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_177957">
+  <h3 class="title">
+      Newbie question regarding OOP
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 8">8</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2015-06-28 12:40:47 UTC">28 Jun 2015 12:40</span>
+    by <span ><a class="user-link" href="../../../../user/ThePenis/">u/ThePenis</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>I am sorry for this stupid question, but I was unable to find a satisfying answer elsewhere. Regarding OOP, specifically class-based OOP languages like C++ and C#, the question is: should methods be sort of actions pertaining to a class, or should they strictly be behaviours of that class?</p>
+<p>In other words, if a have a <strong>Point</strong> class, described by x and y coordinates, does it make sense for this class to have a <strong>distanceTo</strong> method, returning the distance from this Point to another Point, or would it be better to have a different static class with a <strong>distance</strong> method that took two points as parameters and returned their distance?</p>
+<p>Distance is an action that is applied <em>to the object</em>, or rather to two objects in this case, and intuitively, to me, it doesn't make sense to &quot;ask&quot; a Point how much it's away from another point, but it would intuitively make sense to have a different object perform a calculation.</p>
+<p>It makes sense if I think of methods as behaviour. A Point doesn't <strong>do</strong> anything, it's just a point.</p>
+<p>In the same vein, suppose I have a Car class. Would it make sense to have a setter change its colour, or would it make more sense to have a different class do it? As before, it's counterintuitive, to me, to &quot;tell&quot; a car to change its colour.</p>
+<p>Again, as a matter of behaviour, a car can accelerate, steer etc, but it cannot change its colour.</p>
+<p>So, which of the following snippets (in a sort-of pseudocode) makes more sense?</p>
+<pre><code>Point p1( x1, y1 ), p2( x2, y2 );
+distance = p1.distanceTo( p2 );
+</code></pre>
+<p>vs</p>
+<pre><code>Point p1( x1, y1 ), p2( x2, y2 );
+distance = Calculator::distance( p1, p2 ); // Here distance is a static method
+</code></pre>
+<p>and</p>
+<pre><code>Car c( &quot;red&quot; );
+c.setColour( &quot;blue&quot; );
+</code></pre>
+<p>vs</p>
+<pre><code>Car c( &quot;red&quot; );
+Carshop::paintjob( c, &quot;blue&quot; );
+</code></pre>
+<p>Obviously the first snippets are easier to implement, need less memory and have less overhead, but they make less intuitive sense to me. What is the correct way?</p>
+<p>Sorry if this is a stupid question, but I'm a newbie and need direction.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>21 comments</h4>
+        <details class="comment "
+         id="comment-voat_506207"
+         data-depth="0"
+         data-id="voat_506207"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 9">
+            9
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Stavon/">u/Stavon</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 12:57:44 UTC">28 Jun 2015 12:57</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>I am sorry for this stupid question</p>
+</blockquote>
+<p>This is not a stupid question, it's the sorrt of question people should aks.</p>
+<p>There is no correct way, you always have to choose between several options. Unless one way needs to be taken for performance reasons I strongly recommend you use the most readable one.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_506743"
+         data-depth="0"
+         data-id="voat_506743"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 4">
+            4
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/nefreat/">u/nefreat</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 14:39:32 UTC">28 Jun 2015 14:39</span>
+        </span>
+    </summary>
+    <div class="md"><p>There is not right answer but my <em>personal</em> preference is: Calculator::distance and Carshop::paintjob. I like Point and Car classes to be immutable data and have functions operate on the data. In fact I think Carshop should return a new Car instance. This approach translates nicely to F#</p></div>
+            <details class="comment "
+         id="comment-voat_506787"
+         data-depth="1"
+         data-id="voat_506787"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThePenis/">u/ThePenis</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 14:47:04 UTC">28 Jun 2015 14:47</span>
+        </span>
+    </summary>
+    <div class="md"><p>Yes, I just finished playing around with Haskell for a small personal project and that's the exact same thing I thought about immutability. I learned to trust Haskell garbage collector, is C#'s comparable? In fact in the future I'll more than gladly learn F#, but I'm starting with C# because I also need to find a programming job relatively soon, and functional languages don't sell over here.</p></div>
+            <details class="comment "
+         id="comment-voat_512553"
+         data-depth="2"
+         data-id="voat_512553"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/nefreat/">u/nefreat</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-29 01:01:34 UTC">29 Jun 2015 01:01</span>
+        </span>
+    </summary>
+    <div class="md"><p>I would expect C#'s <a href="http://blogs.msdn.com/b/dotnet/archive/2012/07/20/the-net-framework-4-5-includes-new-garbage-collector-enhancements-for-client-and-server-apps.aspx">garbage collector</a> to be superior to GHC's or any other platform outside of the JVM. The reason is simple, man centuries of optimization by a corporation that has the money to hire the best. Then again I haven't seen many papers talking about Haskell's GC.</p></div>
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_506531"
+         data-depth="0"
+         data-id="voat_506531"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/el_cordoba/">u/el_cordoba</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 13:55:35 UTC">28 Jun 2015 13:55</span>
+        </span>
+    </summary>
+    <div class="md"><p>Keep in mind that when you get to code in the real world you will find yourself cursing out the dev before you because they had no idea what they were doing. So while they did use &quot;OOP&quot; it was hardly correct. And they did it everywhere.</p>
+<p>Anyway, I would say it total depends. If you only have one class like Car then I would say just make it a method of that class. If you had many classes with the same type of method then I would explore other options in the interest of reusability. For example maybe you might want to make a more inclusive parent class and put the method there instead.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_506703"
+         data-depth="0"
+         data-id="voat_506703"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/fluffingtonthefifth/">u/fluffingtonthefifth</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 14:33:20 UTC">28 Jun 2015 14:33</span>
+        </span>
+    </summary>
+    <div class="md"><p>There's a whole sub for newbies: <a href="/v/learnprogramming">/v/learnprogramming</a>. You're welcome any time. :)</p></div>
+            <details class="comment "
+         id="comment-voat_506759"
+         data-depth="1"
+         data-id="voat_506759"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThePenis/">u/ThePenis</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 14:42:51 UTC">28 Jun 2015 14:42</span>
+        </span>
+    </summary>
+    <div class="md"><p>Thank you, I will check it out</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_506738"
+         data-depth="0"
+         data-id="voat_506738"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Master_Foo/">u/Master_Foo</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 14:39:01 UTC">28 Jun 2015 14:39</span>
+        </span>
+    </summary>
+    <div class="md"><p>As others have said, there isn't a &quot;correct&quot; way to do this... skinning cats and all. </p>
+<p>but there IS an OOP way to do this.</p>
+<p>My opinion is that the &quot;distance_to&quot; method should go in the &quot;point&quot; class. Why? Because the point of OOP is to marry data to the methods which manipulate that data.</p>
+<p>This way, everyone knows that if you want to measure distance between two points the methods to do that are in the &quot;point&quot; class. (Where else would it be? the &quot;Calculator&quot; class? Why the fuck is it there?)</p>
+<p>It also keeps code DRY.</p></div>
+            <details class="comment "
+         id="comment-voat_506809"
+         data-depth="1"
+         data-id="voat_506809"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThePenis/">u/ThePenis</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 14:51:35 UTC">28 Jun 2015 14:51</span>
+        </span>
+    </summary>
+    <div class="md"><p>That's what I meant, OOP way. Can you point me to a resource that explains and defines what the OOP way is?</p>
+<p>As <a href="/user/nefreat">/u/nefreat</a> suggested the second snippets cater more to immutability and a later-stage translation of the code to F#, both are things that I like but since C# is based on the OOP paradigm I'd like to learn the &quot;correct&quot; way to develop OOP code.</p></div>
+            <details class="comment "
+         id="comment-voat_506921"
+         data-depth="2"
+         data-id="voat_506921"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success"
+              title="Comment score: 2">
+            2
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Master_Foo/">u/Master_Foo</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 15:09:08 UTC">28 Jun 2015 15:09</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>Can you point me to a resource that explains and defines what the OOP way is?</p>
+</blockquote>
+<p>Not really, most OOP languages are actually &quot;Multi-Paradigm&quot; languages. In that, the language supports &quot;OOP&quot;, but also supports &quot;procedural&quot;, &quot;functional&quot;, and other common paradigms. So, now we are back to skinning cats. Which is fine, you shouldn't feel pressured into purely OOP programming styles.</p>
+<p>The main thing here, and someone already said this. Be consistent in the way you program. If you choose OOP try not to mix it up with &quot;functional&quot; unless there is a good case for it.</p>
+<p>It should also be noted that OOP (in compiled languages) doesn't give you any performance gain or loss. (Exception being virtual methods (usually). This is the rule with a few exceptions)</p>
+<p>All OOP is, is a method to organize your code to be more manageable for <strong>YOU</strong> the human reading the code. That is all.</p>
+<p>OOP is an illusion. It doesn't exist after it's been compiled. Keep this in mind.</p>
+<blockquote>
+<p>the second snippets cater more to immutability</p>
+</blockquote>
+<p>It could be. I'm not very familiar with C# and less so with F#. But I'm not sure he is correct if immutable works the same way in other languages. I'm assuming that if you are using the &quot;point&quot; object for a car, that &quot;point&quot; data is going to change as the car moves around the track. This would make it unsuitable for immutable data because immutable data isn't supposed to change.</p>
+<p>But, I'll admit my ignorance, maybe C# and F# have this covered. I'm fairly sure that such a thing would not fly in C++ though.</p></div>
+            <details class="comment "
+         id="comment-voat_507097"
+         data-depth="3"
+         data-id="voat_507097"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ThePenis/">u/ThePenis</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 15:31:40 UTC">28 Jun 2015 15:31</span>
+        </span>
+    </summary>
+    <div class="md"><p>Thank you, I had oped there would exist a sort document standardizing OOP code structure, or at least discussing various styles and their advantages and disadvantages, I guess I'll just stick to my own style then.</p>
+<p>The Point and Car examples were disjointed and just illustrative of the fact that I don't really know where to stuff the functionality in my program since C# doesn't support freestanding functions, so this prompted me to ask myself what the &quot;best&quot; course of action is (that is, what style represents the OOP way the most).</p>
+<p>Also, if you have 25-30 minutes I suggest you read <a href="http://bartoszmilewski.com/2013/11/13/functional-data-structures-in-c-lists/">this</a> article by Bartosz Milewski. I found it quite interesting.</p></div>
+            <details class="comment "
+         id="comment-voat_507138"
+         data-depth="4"
+         data-id="voat_507138"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Master_Foo/">u/Master_Foo</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 15:41:25 UTC">28 Jun 2015 15:41</span>
+        </span>
+    </summary>
+    <div class="md"><p>If you are really interested, I'd look into Python and Ruby which have the somewhat ignorant philosophy of &quot;Everything is an object&quot;. These are &quot;opinionated&quot; languages in that there is a &quot;Python&quot; way of doing things, or a &quot;Ruby&quot; way of doing things and they are both OOP heavy.</p>
+<p>The problem is, they are not really &quot;correct&quot; in any sense. They are simply &quot;opinionated&quot; about the way things &quot;should&quot; be done and people who use these languages generally conform to the standard.</p>
+<p>I tend to prefer Python myself. Python coders tend to understand that the &quot;Everything is an object&quot; philosopy is bullshit. Meanwhile, Rubyists have drank the coolaid.</p></div>
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_540829"
+         data-depth="3"
+         data-id="voat_540829"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Scaliwag/">u/Scaliwag</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-30 21:39:28 UTC">30 Jun 2015 21:39</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>I'm assuming that if you are using the &quot;point&quot; object for a car, that &quot;point&quot; data is going to change as the car moves around the track. This would make it unsuitable for immutable data because immutable data isn't supposed to change.</p>
+<p>But, I'll admit my ignorance, maybe C# and F# have this covered. I'm fairly sure that such a thing would not fly in C++ though.</p>
+</blockquote>
+<p>If you want to go the immutable route you would not mutate the point, just return a new one. This is not exclusive to F# by any means. It's pretty common in other languages,<a href="https://en.wikipedia.org/wiki/Immutable_object#C.2B.2B"> even in C++ you can work that way if you're const correct.</a></p></div>
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_507561"
+         data-depth="2"
+         data-id="voat_507561"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/112365365321/">u/112365365321</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 16:35:55 UTC">28 Jun 2015 16:35</span>
+        </span>
+    </summary>
+    <div class="md"><p>Java: Walls and Mirrors is a good book for OOP Java, which is similar to C#. The OOP way should still carry on to most languages, there is just a difference in syntax. It also contains more of an explanation as to why you would use OOP, its purpose and also includes information on separating implementation from interface. Like others have mentioned, there isn't a &quot;right&quot; way, but to choose a specific answer for your question the preferred OOP way is generally the 2nd versions of what you posted.</p></div>
+</details>
+
+</details>
+
+            <details class="comment "
+         id="comment-voat_535133"
+         data-depth="1"
+         data-id="voat_535133"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Scaliwag/">u/Scaliwag</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-30 14:31:05 UTC">30 Jun 2015 14:31</span>
+        </span>
+    </summary>
+    <div class="md"><blockquote>
+<p>It also keeps code DRY</p>
+</blockquote>
+<p>That is the OOP way. But by no means it guarantees DRY.</p>
+<p>What if you want to measure distances between points in a different coordinate system. Now points have to know about a bunch of coordinate systems. Oh and we want lines to do that too. Now you have to do the same code on the lines class, and then polygon, and so on.</p>
+<p>That's why a more functional approach where a generic CordinateSystem class could manipulate all kind of objects you give it, without those objects knowing how you want to use them. A point is a point, it doesn't matter if it represents cartesian coordinates, geographic coordinates, etc.</p></div>
+            <details class="comment "
+         id="comment-voat_537572"
+         data-depth="2"
+         data-id="voat_537572"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Master_Foo/">u/Master_Foo</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-30 17:09:49 UTC">30 Jun 2015 17:09</span>
+        </span>
+    </summary>
+    <div class="md"><p>Polymorphism and clever use of templates will solve those problems. I didn't mention it because OP's use case didn't require it.</p></div>
+            <details class="comment "
+         id="comment-voat_540527"
+         data-depth="3"
+         data-id="voat_540527"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Scaliwag/">u/Scaliwag</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-30 21:16:28 UTC">30 Jun 2015 21:16</span>
+        </span>
+    </summary>
+    <div class="md"><p>I think polymorphism would only make it less straightforward, though. Which increases boilerplate, reduces readability and so on.</p>
+<p>But we agree, a better solution would probably involve generic programming which can be bone using templates, for example. But that's would not be strict OOP, and purists would certainly frown upon it. Using templates would be a more functional approach, where you separate algorithms from the data they work upon, which is counter to OOP dogma. That's my point.</p></div>
+            <details class="comment "
+         id="comment-voat_540633"
+         data-depth="4"
+         data-id="voat_540633"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Master_Foo/">u/Master_Foo</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-30 21:25:35 UTC">30 Jun 2015 21:25</span>
+        </span>
+    </summary>
+    <div class="md"><p>I've already warned OP against purists. If someone wants strict dogmatic OOP they should drag their sandy vagina over to Ruby and play with the script kiddies.</p>
+<p>I mean, OOP is great. But it's not really a solution to a problem so much as syntax sugar.</p></div>
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_506894"
+         data-depth="0"
+         data-id="voat_506894"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Rhaelle/">u/Rhaelle</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 15:05:38 UTC">28 Jun 2015 15:05</span>
+        </span>
+    </summary>
+    <div class="md"><p>I don't consider myself an expert but here is my take. I think it should be best if the function is static to the class. I'm not sure if this is possible or a good practice in C++ as I have coded only a little bit and some time ago in the language but it is certainly possible in C#. So you would have Point.Distance(p1,p2); </p></div>
+            <details class="comment "
+         id="comment-voat_506947"
+         data-depth="1"
+         data-id="voat_506947"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-light"
+              title="Comment score: 1">
+            1
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/el_hombre/">u/el_hombre</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-06-28 15:12:11 UTC">28 Jun 2015 15:12</span>
+        </span>
+    </summary>
+    <div class="md"><p>I've been doing C# for over 10 years and this is usually how I have seen this type of stuff implemented. However, a recent project that I worked on has made me question the practice, mainly because of unit testing. We had one massive function that manipulated about a dozen other classes and when we came back and tried to add unit tests we found it nearly impossible (admittedly though the learning curve was a substantial factor). Unit testing static classes, while possible, is cumbersome and painful so I am almost of the opinion to not use them but in simple scenarios. </p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_543177"
+         data-depth="0"
+         data-id="voat_543177"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/recursive/">u/recursive</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-07-01 01:20:13 UTC">01 Jul 2015 01:20</span>
+        </span>
+    </summary>
+    <div class="md"><p>I'd put these methods inside the associated classes.  There are arguments both ways, but my primary reason is simple:  They're more easy to find there.</p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

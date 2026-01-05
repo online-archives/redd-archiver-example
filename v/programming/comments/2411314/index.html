@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="C# is not my strongest language, but I am currently refactoring some spaghetti code placed in my lap. I have a function similar to: public... - v/programming">
+<meta name="keywords" content="programming, command, quot, code, string, language, function, pre, blah, per">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/2411314.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: C# - What is the best way to dispatch a bunch of functions all with the same signature?">
+<meta property="og:description" content="C# is not my strongest language, but I am currently refactoring some spaghetti code placed in my lap. I have a function similar to: public... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/2411314.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: C# - What is the best way to dispatch a bunch of functions all with the same signature?">
+<meta name="twitter:description" content="C# is not my strongest language, but I am currently refactoring some spaghetti code placed in my lap. I have a function similar to: public... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "C# - What is the best way to dispatch a bunch of functions all with the same signature?",
+  "author": {
+    "@type": "Person",
+    "name": "aGameCalledCountries"
+  },
+  "datePublished": "2018-02-22T21:50:00Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 3
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "C# is not my strongest language, but I am currently refactoring some spaghetti code placed in my lap. I have a function similar to: public static rpcCommand(string command, string arguments) { switch(command) { case \"command1\": {...blah...} case \"command2\": {...blah...} ... goes on for about 150 commands and 2500 lines ... } } I would like to refactor this into a separate function per command. In another language, I would have some global variable of map[string]RpcCommandFunction, or maybe a..."
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: C# - What is the best way to dispatch a bunch of functions all with the same signature?</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_2411314">
+  <h3 class="title">
+      C# - What is the best way to dispatch a bunch of functions all with the same signature?
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 1">1</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2018-02-22 21:50:00 UTC">22 Feb 2018 21:50</span>
+    by <span ><a class="user-link" href="../../../../user/aGameCalledCountries/">u/aGameCalledCountries</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>C# is not my strongest language, but I am currently refactoring some spaghetti code placed in my lap.</p>
+<p>I have a function similar to:</p>
+<pre><code>public static rpcCommand(string command, string arguments) {
+    switch(command) {
+        case &quot;command1&quot;: {...blah...}
+        case &quot;command2&quot;: {...blah...}
+        ... goes on for about 150 commands and 2500 lines ...
+    }
+}
+</code></pre>
+<p>I would like to refactor this into a separate function per command.  In another language, I would have some global variable of map[string]RpcCommandFunction, or maybe a method per command and use reflection to discover if the command exists and execute it.  What is the best approach in C#?</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>7 comments</h4>
+        <details class="comment "
+         id="comment-voat_11999656"
+         data-depth="0"
+         data-id="voat_11999656"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-02-23 01:27:57 UTC">23 Feb 2018 01:27</span>
+        </span>
+    </summary>
+    <div class="md"><p>My experience with programming is that you can't predict what is the most efficient code. You need to try different ways and see which one works best for your problem. </p>
+<p>So I propose to create a small program (Any language you desire ) to read in this source file and parses the function into a new C# source code that you then can test.</p>
+<p>For speed, since the switch is a string, I would use some Dictionary collection so you can find fast look up the correct method/delegate/anonymous function for that command.</p>
+<p>I use delegates the most: 
+<a href="http://www.tutorialsteacher.com/csharp/csharp-delegates">http://www.tutorialsteacher.com/csharp/csharp-delegates</a></p></div>
+            <details class="comment "
+         id="comment-voat_11999821"
+         data-depth="1"
+         data-id="voat_11999821"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/aGameCalledCountries/">u/aGameCalledCountries</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2018-02-23 01:46:27 UTC">23 Feb 2018 01:46</span>
+        </span>
+    </summary>
+    <div class="md"><p>Performance wasn't the main concern with this problem.  Breaking apart the 2500 line function was.  I managed to solve the problem by creating a new class with static functions, then using the reflective GetMethod stuff.  One thing I couldn't figure out with the dictionary of delegates route was where to put and instantiate the dictionary.  Then there is the added problem of making sure all functions are in the dictionary for lookup.  My way, if the method exists, it is callable.</p></div>
+            <details class="comment "
+         id="comment-voat_11999956"
+         data-depth="2"
+         data-id="voat_11999956"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/roznak/">u/roznak</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-02-23 02:01:10 UTC">23 Feb 2018 02:01</span>
+        </span>
+    </summary>
+    <div class="md"><p>I am thinking you can use a  (Sorted)Dictionary, to convert the string fast to a single value (int).
+Then stage 2 is use that (int) value/Enum in the switch to call your methods.</p>
+<p>If speed is not an issue then your solution may be equally good. </p>
+<p>The problem with GetMethod() is that if some other developer changes the method name, then you end up with a bug. The compiler won't warn you. And the other developer may not realize that your code that contains Getmethod() is a switch.</p></div>
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_11999803"
+         data-depth="0"
+         data-id="voat_11999803"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/QuitWaistingOurMoney/">u/QuitWaistingOurMoney</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-02-23 01:44:19 UTC">23 Feb 2018 01:44</span>
+        </span>
+    </summary>
+    <div class="md"><p>I don't work with it on a day to day basis so would need to look myself, but I think you could achieve what you are trying to do with C#'s Reflection capabilities. </p>
+<p>Probably you can create a class to encapsulate all the various commands you have in separate methods named as their command name (maybe with an added constant like Command concatenated to it) then invoke it with reflection using the passed in name plus anything concatenated to it.</p></div>
+            <details class="comment "
+         id="comment-voat_11999865"
+         data-depth="1"
+         data-id="voat_11999865"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/aGameCalledCountries/">u/aGameCalledCountries</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2018-02-23 01:51:53 UTC">23 Feb 2018 01:51</span>
+        </span>
+    </summary>
+    <div class="md"><p>That's what I ended up doing :)</p></div>
+            <details class="comment "
+         id="comment-voat_11999911"
+         data-depth="2"
+         data-id="voat_11999911"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/QuitWaistingOurMoney/">u/QuitWaistingOurMoney</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-02-23 01:56:48 UTC">23 Feb 2018 01:56</span>
+        </span>
+    </summary>
+    <div class="md"><p>Cool glad you got it worked out.</p></div>
+</details>
+
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_12042290"
+         data-depth="0"
+         data-id="voat_12042290"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/carlosomar2/">u/carlosomar2</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2018-02-27 20:28:53 UTC">27 Feb 2018 20:28</span>
+        </span>
+    </summary>
+    <div class="md"><p>I think it looks like a good scenario for the command design pattern. <a href="http://www.dofactory.com/net/command-design-pattern">http://www.dofactory.com/net/command-design-pattern</a></p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

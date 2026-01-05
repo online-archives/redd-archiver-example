@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Is there anyone here that could clarify whether there&#39;s a benefit of using structs as opposed to using container-classes? Are structs... - v/programming">
+<meta name="keywords" content="programming, structs, classes, anyone, clarify, whether, benefit, opposed, container, faster">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/v/programming/comments/200361.html">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="v/programming: Structs vs Classes in C#">
+<meta property="og:description" content="Is there anyone here that could clarify whether there&#39;s a benefit of using structs as opposed to using container-classes? Are structs... - v/programming">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/v/programming/comments/200361.html">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v/programming: Structs vs Classes in C#">
+<meta name="twitter:description" content="Is there anyone here that could clarify whether there&#39;s a benefit of using structs as opposed to using container-classes? Are structs... - v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../../../static/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "headline": "Structs vs Classes in C#",
+  "author": {
+    "@type": "Person",
+    "name": "ArgumentException"
+  },
+  "datePublished": "2015-07-06T12:30:12Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": 4
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "v/programming Archive",
+    "url": "https://online-archives.github.io/redd-archiver-example"
+  },
+  "text": "Is there anyone here that could clarify whether there's a benefit of using structs as opposed to using container-classes? Are structs better for that kind of thing (faster? less memory usage?). Thanks"
+}
+</script>
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../../../static/css/redd-archiver-universal.css">
+
+
+    <title>v/programming: Structs vs Classes in C#</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="../../../../v/programming/index.html">v/programming</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index.html">score</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-comments/index.html">comments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../v/programming/index-date/index.html">date</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../../index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="submission pt-3" data-id="voat_200361">
+  <h3 class="title">
+      Structs vs Classes in C#
+    
+    
+    
+    
+    
+    
+  </h3>
+  <p>
+    <span class="badge badge-primary" title="Score: 9">9</span>
+    &nbsp;&nbsp;
+    <span title="Posted: 2015-07-06 12:30:12 UTC">06 Jul 2015 12:30</span>
+    by <span ><a class="user-link" href="../../../../user/ArgumentException/">u/ArgumentException</a>
+</span>
+    
+    
+    <span title=""></span>
+  </p>
+  <div class="card mt-3 mb-3">
+    <div class="card-body">
+      <div class="md"><p>Is there anyone here that could clarify whether there's a benefit of using structs as opposed to using container-classes? Are structs better for that kind of thing (faster? less memory usage?). </p>
+<p>Thanks</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <h4>5 comments</h4>
+        <details class="comment "
+         id="comment-voat_586760"
+         data-depth="0"
+         data-id="voat_586760"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-success-bright"
+              title="Comment score: 9">
+            9
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/inconspicuous/">u/inconspicuous</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-07-06 12:40:24 UTC">06 Jul 2015 12:40</span>
+        </span>
+    </summary>
+    <div class="md"><p>An important thing to note is that a class is a reference type (allocated on the heap) while a struct is a value type (allocated on the stack). Since structs are on the stack, allocation and deallocation are generally faster. There are other differences between value and reference types that you can research further.</p>
+<p>Consider defining a struct instead of a class if instances of the type are small and commonly short-lived or are commonly embedded in other objects.</p>
+<p>Avoid defining a struct unless the type has all of the following characteristics:</p>
+<ul>
+<li>It logically represents a single value, similar to primitive types (int, double, etc.).</li>
+<li>It has an instance size under 16 bytes.</li>
+<li>It is immutable.</li>
+<li>It will not have to be boxed frequently.</li>
+</ul>
+<p>A good resource is <a href="https://msdn.microsoft.com/en-us/library/ms229017">https://msdn.microsoft.com/en-us/library/ms229017</a></p></div>
+            <details class="comment "
+         id="comment-voat_589620"
+         data-depth="1"
+         data-id="voat_589620"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/ArgumentException/">u/ArgumentException</a>
+
+            </span>
+                <span class="op-badge" title="Original Poster">[OP]</span>
+            
+            
+            
+            <span title="Posted: 2015-07-06 16:29:33 UTC">06 Jul 2015 16:29</span>
+        </span>
+    </summary>
+    <div class="md"><p>Thanks for clearing this up! I appreciate it</p></div>
+</details>
+
+</details>
+
+        <details class="comment "
+         id="comment-voat_589713"
+         data-depth="0"
+         data-id="voat_589713"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/14d2025/">u/14d2025</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-07-06 16:35:26 UTC">06 Jul 2015 16:35</span>
+        </span>
+    </summary>
+    <div class="md"><p><a href="https://channel9.msdn.com/series/Twenty-C-Questions-Explained/01">When do you use structs vs classes</a>
+I recommend entire course in this series. Very informative for beginners.</p></div>
+</details>
+
+        <details class="comment "
+         id="comment-voat_635578"
+         data-depth="0"
+         data-id="voat_635578"
+open>
+    <summary class="comment-header">
+        <span class="badge badge-warning-orange"
+              title="Comment score: 0">
+            0
+        </span>
+        <span class="byline text-muted">
+            <span >
+                <a class="user-link" href="../../../../user/Hjorthenify/">u/Hjorthenify</a>
+
+            </span>
+            
+            
+            
+            <span title="Posted: 2015-07-07 19:04:16 UTC">07 Jul 2015 19:04</span>
+        </span>
+    </summary>
+    <div class="md"><p>I'd like to add that when copying a struct its done by value(resulting in the two structs being independent) as opposed to copying a class then only the reference is copied which essentially means that they both point to the same place in memory.
+<a href="http://www.albahari.com/valuevsreftypes.aspx">http://www.albahari.com/valuevsreftypes.aspx</a></p></div>
+</details>
+
+</div>
+    </main>
+
+<footer class="container-fluid">
+  <a class="to-top mt-1 mb-1 btn btn-lg btn-primary" href="#top">top of page</a>
+  <p class="small mb-0">
+    last archived 28 Apr 2020
+    <a href="https://github.com/19-84/redd-archiver">source code</a>
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>

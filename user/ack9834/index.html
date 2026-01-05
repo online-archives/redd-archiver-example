@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="View archived post by u/ack9834 in v/programming">
+<meta name="keywords" content="reddit, user, posts, archive, ack9834, programming">
+<meta name="author" content="Redd Archive Demo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://online-archives.github.io/redd-archiver-example/user/ack9834/">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="u/ack9834 - Archived Voat Post in v/programming">
+<meta property="og:description" content="View archived post by u/ack9834 in v/programming">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://online-archives.github.io/redd-archiver-example/user/ack9834/">
+<meta property="og:site_name" content="Redd Archive Demo">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="u/ack9834 - Archived Voat Post in v/programming">
+<meta name="twitter:description" content="View archived post by u/ack9834 in v/programming">
+
+    <!-- Favicon -->
+<link rel="icon" href="../../static/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../static/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../static/apple-touch-icon.png">
+    <link rel="manifest" href="../../static/site.webmanifest">
+
+    <!-- Font preload removed - using system fonts for instant rendering -->
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="dark-theme-toggle">
+
+    <!-- Universal CSS Build -->
+    <link rel="stylesheet" href="../../static/css/redd-archiver-universal.css">
+
+
+    <title>u/ack9834 - Archived Voat Post in v/programming</title>
+  </head>
+  <body>
+    <div class="site-content">
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="./">u/ack9834</a>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-toggler" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html">home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="../../search">search</a>
+        </li>
+        <li class="nav-item">
+          <label for="dark-theme-toggle" class="nav-link theme-toggle" title="Toggle dark theme"></label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <main role="main" class="container-fluid">
+<div class="user-profile-header pt-3">
+  <h2>u/ack9834</h2>
+  <p class="lead">
+    0 posts ·
+    1 comment ·
+    1 total
+  </p>
+  <p class="text-muted">Active in: v/programming (1)</p>
+</div>
+
+<ul class="pagination pagination-sm mt-3">
+  <li class="page-item first-page disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item skip-back disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item prev-page disabled"><a class="page-link" href="index-0.html" tabindex="-1">&lsaquo;</a></li>
+
+
+      <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+
+  <li class="page-item next-page disabled"><a class="page-link" href="index-1.html" tabindex="-1">&rsaquo;</a></li>
+
+  <li class="page-item skip-forward disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;</a></li>
+
+  <li class="page-item last-page disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;&rsaquo;</a></li>
+</ul>
+
+
+<div class="links">
+
+<div class="link mt-3">
+    <h6 class="comment-context mb-1">
+        <small class="text-muted">
+            Comment on: <a href="../../v/programming/comments/924782#4635152">Does the Go programming language have any future?</a>
+        </small>
+    </h6>
+    <div class="comment-body mb-2 p-2 bg-light rounded"><p>Go hit production &quot;1.0&quot; just a few years ago. It takes a long time for a new language to see adoption in large numbers, especially in enterprise. Its also important to remember that Google created Go for itself, as a more efficient and cleaner replacement for Python. </p>
+<p>That said, there are a good number of companies using Go for systems-side applications and services, which is where Go really seems to have its niche. I have used it to create a MMORPG server and its been very stable and performant. My company has used it to create a scalable api engine and for a few other projects like integration middleware, etc. Overall its been a very useful tool. </p>
+<p>The time-to-production on a new project is far less than most other compiled languages, and its easier for fresh grads to pick up and be productive with than something like C or C++. The simplicity of the language and built-in documenting system is nice and helps us reduce cost on the QC and code review side, since its quicker to read (both for the compiler and a human).</p>
+<p>The language has some warts, and the ecosystem is still fairly young, so you may end up creating a library that in other languages you'd just pull in from somewhere else, which has its pros and cons. Thankfully Go makes it pretty easy to subdivide into libraries and to pull in third party libraries from various hosts. In 1.5 they added 'vendoring' which I think was a much needed enterprise feature. Vendoring essentially lets you maintain a fork of specific version of a library within your own project source. For enterprise this is important, as you wouldn't want to be stuck refactoring off-schedule if an external library has a breaking change in a new verison. It was possible to do this before without vendoring, but now its much cleaner and easier to set up and track.</p>
+<p>TLDR; Yes, companies and people are using it. Its still a relatively new language and has a young ecosystem. It performs well and is easier to get fresh grads up to a productive level with. Is it going to have a future? Yes. Will it replace something like C? Doubtful. Will it compliment C well? Yes.</p>
+<p>Side-note: Go won't disappear. Look at D, which has an even smaller following and is quite old at this point. Languages generally tend to stick around. Will there be tons of Go jobs in the future? Who knows... but for a good developer, knowing the specific language isn't a barrier to getting the job anyway.</p></div>
+    <a href="../../v/programming/comments/924782#4635152">
+        <span class="badge badge-success-bright"
+              title="Comment score: 3">
+            3
+        </span>
+    </a>
+    <small class="text-muted">
+        <span title="Posted: 2016-03-17 14:39:18 UTC">17 Mar 2016 14:39</span>
+        <span ><a class="user-link" href="../../user/ack9834/">u/ack9834</a>
+</span>
+        
+        
+        in <a href="../../v/programming/">v/programming</a>
+    </small>
+</div></div>
+
+<ul class="pagination pagination-sm mt-3">
+  <li class="page-item first-page disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item skip-back disabled"><a class="page-link" href="index.html" tabindex="-1">&lsaquo;&lsaquo;</a></li>
+
+  <li class="page-item prev-page disabled"><a class="page-link" href="index-0.html" tabindex="-1">&lsaquo;</a></li>
+
+
+      <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+
+  <li class="page-item next-page disabled"><a class="page-link" href="index-1.html" tabindex="-1">&rsaquo;</a></li>
+
+  <li class="page-item skip-forward disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;</a></li>
+
+  <li class="page-item last-page disabled"><a class="page-link" href="index.html" tabindex="-1">&rsaquo;&rsaquo;&rsaquo;</a></li>
+</ul>
+
+    </main>
+
+<footer class="container-fluid">
+  <p class="small mb-0">
+    archive has 9,592 posts and 65,719 comments.
+    <a href="https://github.com/19-84/redd-archiver">source code</a>.
+  </p>
+</footer>
+    </div>
+
+  </body>
+</html>
